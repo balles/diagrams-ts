@@ -1,0 +1,23 @@
+{
+  "name": "diagrams-ts",
+  "version": "0.0.1",
+  "description": "TypeScript port of diagrams",
+  "main": "index.js",
+  "author": "balles",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "yarn eslint . --ext .ts"
+  },
+  "dependencies": {
+    "graphviz": "0.0.9"
+  },
+  "devDependencies": {
+    "@types/graphviz": "0.0.32",
+    "@typescript-eslint/eslint-plugin": "4.6.0",
+    "@typescript-eslint/parser": "4.6.0",
+    "eslint": "7.12.1",
+    "prettier": "2.1.2",
+    "typescript": "4.0.5"
+  }
+}
