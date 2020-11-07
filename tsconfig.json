@@ -8,6 +8,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules","dist", "**/*.spec.ts"]
+  "include": ["src/**/*", "test-render.ts"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
 }
