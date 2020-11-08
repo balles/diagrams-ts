@@ -1,11 +1,16 @@
+import { createDotGraph,Node,edge,nodes } from "./src/graph";
 import { renderDot } from "./src/render-dot";
 
-const dotInput = `digraph G {
-    "Hello" [ color = "blue", style = "filled" ];
-    "World";
-    "Hello" -> "World" [ color = "red" ];
-    "And" -> "Bye";
-}`;
+const graph=():string=>{
+  const helloNode: Node={label:"Hello"};
+  const worldNode: Node={label: "World"};
+  return `${nodes`${helloNode},${worldNode}`}
+  ${edge`${helloNode}->${worldNode}`}`
+}
+
+const dotInput = createDotGraph(graph);
+
+console.log(dotInput);
 
 renderDot({
   outputFile: "./output/test.webp",
