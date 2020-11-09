@@ -1,9 +1,6 @@
 import { spawn } from "child_process";
-import { promises } from "fs";
 
 // TODO: add Types for format
-// TODO: give temp file unique name
-// TODO: catch errors promises unlink!
 // TODO: tests
 
 export const renderDot = async ({
@@ -15,25 +12,24 @@ export const renderDot = async ({
   outputFile: string;
   input: string;
 }): Promise<string> => {
-  await promises.writeFile("temp.dot", input);
   return new Promise((resolve, reject) => {
-    const dot = spawn("dot", [`-o${outputFile}`, `-T${format}`, "temp.dot"]);
+    const dot = spawn("dot", [`-o${outputFile}`, `-T${format}`]);
+
     dot.stdout.on("data", function (msg) {
       console.log(`dot: ${msg.toString()}`);
     });
 
     dot.stderr.on("data", async (data) => {
-      await promises.unlink("temp.dot");
       reject(data.toString());
     });
 
-    dot.on("exit", async (code) => {
-      if (code === 0) {
-        await promises.unlink("temp.dot");
-        resolve(outputFile);
+    dot.on("exit", (code) => {
+      if (code !== 0) {
+        reject();
       }
+      resolve(outputFile);
     });
+    dot.stdin.write(input);
+    dot.stdin.end();
   });
 };
-
-
