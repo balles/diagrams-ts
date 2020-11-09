@@ -1,29 +1,28 @@
 export type Node = { label: string };
 
+export type RenderFunc = () => string //TODO should probably accept nodes
+
 export const edge = (
-  edges: TemplateStringsArray,
   nodeA: Node,
   nodeB: Node
-): string => {
-  console.log(edges);
-  return `"${nodeA.label}"->"${nodeB.label}";`;
+): RenderFunc => {
+    const render=() => `"${nodeA.label}"->"${nodeB.label}";`
+    return render;
 };
 
 export const nodes = (
-  strings: TemplateStringsArray,
   ...nodes: Node[]
-): string => {
-  return nodes.reduce((acc, nodeInstance) => {
-    acc += `"${nodeInstance.label}";\n`;
-    return acc;
-  }, "");
+): RenderFunc[] => {
+  return nodes.map((nodeInstance) => ()=> 
+     `"${nodeInstance.label}";`
+  );
 };
 
 // TODO: instead of directly returning string return render functions
 // TODO: subgraph which is can use nodes
 
-export const createDotGraph = (graph: () => string): string => {
+export const createDotGraph = (graph: ()=>RenderFunc[]): string => {
   return `digraph G {
-        ${graph()}
+        ${graph().map(renderFunction=>renderFunction()).join("")}
     }`;
 };
