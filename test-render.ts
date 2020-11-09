@@ -23,7 +23,12 @@ const graph = (): RenderFunc[] => {
   ]);
   const clusterGraph = cluster([
     ...nodes(clusterNodeA, clusterNodeA),
-    ...edges([{ nodes: [clusterNodeA, clusterNodeB] }]),
+    ...edges([
+      {
+        nodes: [clusterNodeA, clusterNodeB],
+        attributes: { arrowhead: "none" },
+      },
+    ]),
   ]);
   return [
     ...nodes(helloNode, worldNode),

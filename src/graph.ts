@@ -21,15 +21,29 @@ export const getUniqueNodeId = (): string => {
   return `a${nodeIdGenerator.next().value}`;
 };
 
-type EdgeChain = { nodes: ArrayTwoOrMore<Node> };
+// TODO: add better typings
+type EdgeChain = {
+  nodes: ArrayTwoOrMore<Node>;
+  attributes?: Record<string, string>;
+};
 
 export const edges = (edgesArray: EdgeChain[]): RenderFunc[] =>
   edgesArray.map((edgeChain) => () =>
-    `${edgeChain.nodes.map((node) => node.id).join("->")};`
+    `${edgeChain.nodes.map((node) => node.id).join("->")} ${
+      edgeChain.attributes
+        ? `[ ${Object.entries(edgeChain.attributes).map(
+            ([key, value]) => `${key}=${value}`
+          )} ]`
+        : ""
+    };`
   );
 
 export const nodes = (...nodes: Node[]): RenderFunc[] => {
-  return nodes.map((nodeInstance) => () => `"${nodeInstance.id}" ${nodeInstance.label?`[label=${nodeInstance.label}]`:""} ;`);
+  return nodes.map((nodeInstance) => () =>
+    `"${nodeInstance.id}" ${
+      nodeInstance.label ? `[label=${nodeInstance.label}]` : ""
+    } ;`
+  );
 };
 
 export const subgraph = (id: string) => (
