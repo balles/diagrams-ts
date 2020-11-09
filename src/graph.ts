@@ -1,28 +1,52 @@
-export type Node = { label: string };
+type ArrayTwoOrMore<T> = {
+  0: T;
+  1: T;
+} & Array<T>;
 
-export type RenderFunc = () => string //TODO should probably accept nodes
+export type Node = { id: string; label?: string };
+export type RenderFunc = () => string;
 
-export const edge = (
-  nodeA: Node,
-  nodeB: Node
-): RenderFunc => {
-    const render=() => `"${nodeA.label}"->"${nodeB.label}";`
-    return render;
+function* generateUniqueIds(): Generator<number, any, any> {
+  let i = 0;
+  while (true) {
+    yield i++;
+  }
+}
+
+const nodeIdGenerator = generateUniqueIds();
+
+const graphIdGenerator = generateUniqueIds();
+
+export const getUniqueNodeId = (): string => {
+  return `a${nodeIdGenerator.next().value}`;
 };
 
-export const nodes = (
-  ...nodes: Node[]
-): RenderFunc[] => {
-  return nodes.map((nodeInstance) => ()=> 
-     `"${nodeInstance.label}";`
+type EdgeChain = { nodes: ArrayTwoOrMore<Node> };
+
+export const edges = (edgesArray: EdgeChain[]): RenderFunc[] =>
+  edgesArray.map((edgeChain) => () =>
+    `${edgeChain.nodes.map((node) => node.id).join("->")};`
   );
+
+export const nodes = (...nodes: Node[]): RenderFunc[] => {
+  return nodes.map((nodeInstance) => () => `"${nodeInstance.id}" ${nodeInstance.label?`[label=${nodeInstance.label}]`:""} ;`);
 };
 
-// TODO: instead of directly returning string return render functions
-// TODO: subgraph which is can use nodes
+export const subgraph = (id: string) => (
+  elements: RenderFunc[]
+): RenderFunc => {
+  return () =>
+    `subgraph "${id}" {${elements
+      .map((renderFunction) => renderFunction())
+      .join("")}};`;
+};
 
-export const createDotGraph = (graph: ()=>RenderFunc[]): string => {
+export const cluster = subgraph(`cluster_${graphIdGenerator.next().value}`);
+
+export const createDotGraph = (graph: () => RenderFunc[]): string => {
   return `digraph G {
-        ${graph().map(renderFunction=>renderFunction()).join("")}
+        ${graph()
+          .map((renderFunction) => renderFunction())
+          .join("")}
     }`;
 };
