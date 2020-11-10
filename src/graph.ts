@@ -3,7 +3,7 @@ type ArrayTwoOrMore<T> = {
   1: T;
 } & Array<T>;
 
-export type Node = { id: string; label?: string };
+export type Node = { id: string; label?: string, image?: string };
 export type RenderFunc = () => string;
 
 function* generateUniqueIds(): Generator<number, any, any> {
@@ -42,25 +42,40 @@ export const nodes = (...nodes: Node[]): RenderFunc[] => {
   return nodes.map((nodeInstance) => () =>
     `"${nodeInstance.id}" ${
       nodeInstance.label ? `[label=${nodeInstance.label}]` : ""
-    } ;`
+      
+    }${nodeInstance.image ? `[image=${nodeInstance.image}]` : ""} ;`
   );
 };
 
-export const subgraph = (id: string) => (
+// TODO add better types
+export type NodeAttributes = Record<string, unknown>;
+export type EdgeAttributes = Record<string, unknown>;
+export type GraphAttributes = Record<string, unknown>;
+
+export const graph = (isSubgraph: boolean) => (id: string) => (
   elements: RenderFunc[]
+) => (
+  graphAtts: NodeAttributes | null = null,
+  nodeAtts: NodeAttributes | null = null
 ): RenderFunc => {
   return () =>
-    `subgraph "${id}" {${elements
-      .map((renderFunction) => renderFunction())
-      .join("")}};`;
+    `${isSubgraph ? "subgraph" : "digraph"} "${id}" {${
+      graphAtts
+        ? Object.entries(graphAtts).map(([key, value]) => `${key} = ${value};`).join(" ")
+        : ""
+    } ${
+      nodeAtts
+        ? `node [ ${Object.entries(nodeAtts)
+            .map(([key, value]) => `${key} = ${value} `)
+            .join(" ")} ];`
+        : ""
+    } ${elements.map((renderFunction) => renderFunction()).join("")}}`;
 };
+
+export const subgraph = graph(true);
 
 export const cluster = subgraph(`cluster_${graphIdGenerator.next().value}`);
 
-export const createDotGraph = (graph: () => RenderFunc[]): string => {
-  return `digraph G {
-        ${graph()
-          .map((renderFunction) => renderFunction())
-          .join("")}
-    }`;
+export const createDotGraph = (elements: RenderFunc[]): string => {
+  return graph(false)("g")(elements)()();
 };

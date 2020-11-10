@@ -22,26 +22,26 @@ const graph = (): RenderFunc[] => {
     ...edges([{ nodes: [andNode, byeNode] }]),
   ]);
   const clusterGraph = cluster([
-    ...nodes(clusterNodeA, clusterNodeA),
+    ...nodes(clusterNodeA, clusterNodeB),
     ...edges([
       {
         nodes: [clusterNodeA, clusterNodeB],
         attributes: { arrowhead: "none" },
       },
     ]),
-  ]);
+  ])({ color: "red"  },{color: "green"});
   return [
     ...nodes(helloNode, worldNode),
+    andByeGraph(),
+    clusterGraph,
     ...edges([
       { nodes: [helloNode, worldNode, andNode] },
       { nodes: [byeNode, clusterNodeA] },
     ]),
-    andByeGraph,
-    clusterGraph,
   ];
 };
 
-const dotInput = createDotGraph(graph);
+const dotInput = createDotGraph(graph());
 
 console.log(dotInput);
 
