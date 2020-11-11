@@ -11,10 +11,24 @@ import {
 import { renderDot } from "./src/render-dot";
 
 const graph = (): RenderFunc[] => {
-  const helloNode: Node = { label: "Hello", id: getUniqueNodeId() };
-  const worldNode: Node = { label: "World", id: getUniqueNodeId() };
-  const andNode = { label: "And", id: getUniqueNodeId() };
-  const byeNode = { label: "Bye", id: getUniqueNodeId() };
+  const helloNode: Node = {
+    attributes: { label: "Hello" },
+    id: getUniqueNodeId(),
+  };
+  const worldNode: Node = {
+    attributes: { label: "World" },
+    id: getUniqueNodeId(),
+  };
+  const andNode = { attributes: { label: "And" }, id: getUniqueNodeId() };
+  const byeNode = { attributes: { label: "Bye" }, id: getUniqueNodeId() };
+  const ec2Node = {
+    attributes: {
+      label: '""',
+      shape: "none",
+      image: '"assets/aws/compute/ec2.png"',
+    },
+    id: getUniqueNodeId(),
+  };
   const clusterNodeA = { id: getUniqueNodeId() };
   const clusterNodeB = { id: getUniqueNodeId() };
   const andByeGraph = subgraph("s_0")([
@@ -29,9 +43,9 @@ const graph = (): RenderFunc[] => {
         attributes: { arrowhead: "none" },
       },
     ]),
-  ])({ color: "red"  },{color: "green"});
+  ])({ color: "red" }, { color: "green" });
   return [
-    ...nodes(helloNode, worldNode),
+    ...nodes(helloNode, worldNode, ec2Node),
     andByeGraph(),
     clusterGraph,
     ...edges([

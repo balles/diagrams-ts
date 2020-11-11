@@ -3,7 +3,7 @@ type ArrayTwoOrMore<T> = {
   1: T;
 } & Array<T>;
 
-export type Node = { id: string; label?: string, image?: string };
+export type Node = { id: string; attributes?: NodeAttributes };
 export type RenderFunc = () => string;
 
 function* generateUniqueIds(): Generator<number, any, any> {
@@ -24,16 +24,16 @@ export const getUniqueNodeId = (): string => {
 // TODO: add better typings
 type EdgeChain = {
   nodes: ArrayTwoOrMore<Node>;
-  attributes?: Record<string, string>;
+  attributes?: EdgeAttributes;
 };
 
 export const edges = (edgesArray: EdgeChain[]): RenderFunc[] =>
   edgesArray.map((edgeChain) => () =>
     `${edgeChain.nodes.map((node) => node.id).join("->")} ${
       edgeChain.attributes
-        ? `[ ${Object.entries(edgeChain.attributes).map(
-            ([key, value]) => `${key}=${value}`
-          )} ]`
+        ? `[ ${Object.entries(edgeChain.attributes)
+            .map(([key, value]) => `${key}=${value}`)
+            .join(" ")} ]`
         : ""
     };`
   );
@@ -41,9 +41,12 @@ export const edges = (edgesArray: EdgeChain[]): RenderFunc[] =>
 export const nodes = (...nodes: Node[]): RenderFunc[] => {
   return nodes.map((nodeInstance) => () =>
     `"${nodeInstance.id}" ${
-      nodeInstance.label ? `[label=${nodeInstance.label}]` : ""
-      
-    }${nodeInstance.image ? `[image=${nodeInstance.image}]` : ""} ;`
+      nodeInstance.attributes && Object.keys(nodeInstance.attributes).length > 0
+        ? `[ ${Object.entries(nodeInstance.attributes)
+            .map(([key, value]) => `${key}=${value}`)
+            .join(" ")} ]`
+        : ""
+    }; `
   );
 };
 
@@ -61,7 +64,9 @@ export const graph = (isSubgraph: boolean) => (id: string) => (
   return () =>
     `${isSubgraph ? "subgraph" : "digraph"} "${id}" {${
       graphAtts
-        ? Object.entries(graphAtts).map(([key, value]) => `${key} = ${value};`).join(" ")
+        ? Object.entries(graphAtts)
+            .map(([key, value]) => `${key} = ${value};`)
+            .join(" ")
         : ""
     } ${
       nodeAtts

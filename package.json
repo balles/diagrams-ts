@@ -17,10 +17,12 @@
   "devDependencies": {
     "@types/graphviz": "0.0.32",
     "@types/node": "14.14.6",
+    "@types/rimraf": "3.0.0",
     "@typescript-eslint/eslint-plugin": "4.6.0",
     "@typescript-eslint/parser": "4.6.0",
     "eslint": "7.12.1",
     "prettier": "2.1.2",
+    "rimraf": "3.0.2",
     "typescript": "4.0.5"
   }
 }
