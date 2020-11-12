@@ -1,9 +1,9 @@
 import { createProvider } from "../../create-provider";
 
 export const key_vaults = createProvider(
-  '"assets/azure/security/key-vaults.png"'
+  "assets/azure/security/key-vaults.png"
 );
 export const security_center = createProvider(
-  '"assets/azure/security/security-center.png"'
+  "assets/azure/security/security-center.png"
 );
-export const sentinel = createProvider('"assets/azure/security/sentinel.png"');
+export const sentinel = createProvider("assets/azure/security/sentinel.png");

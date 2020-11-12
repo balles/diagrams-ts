@@ -1,3 +1,5 @@
+import { Edge } from "graphviz";
+
 type ArrayTwoOrMore<T> = {
   0: T;
   1: T;
@@ -32,7 +34,7 @@ export const edges = (edgesArray: EdgeChain[]): RenderFunc[] =>
     `${edgeChain.nodes.map((node) => node.id).join("->")} ${
       edgeChain.attributes
         ? `[ ${Object.entries(edgeChain.attributes)
-            .map(([key, value]) => `${key}=${value}`)
+            .map(([key, value]) => `${key}="${value}"`)
             .join(" ")} ]`
         : ""
     };`
@@ -43,7 +45,7 @@ export const nodes = (...nodes: Node[]): RenderFunc[] => {
     `"${nodeInstance.id}" ${
       nodeInstance.attributes && Object.keys(nodeInstance.attributes).length > 0
         ? `[ ${Object.entries(nodeInstance.attributes)
-            .map(([key, value]) => `${key}=${value}`)
+            .map(([key, value]) => `${key}="${value}"`)
             .join(" ")} ]`
         : ""
     }; `
@@ -58,23 +60,31 @@ export type GraphAttributes = Record<string, unknown>;
 export const graph = (isSubgraph: boolean) => (id: string) => (
   elements: RenderFunc[]
 ) => (
-  graphAtts: NodeAttributes | null = null,
-  nodeAtts: NodeAttributes | null = null
+  graphAtts: GraphAttributes | null = null,
+  nodeAtts: NodeAttributes | null = null,
+  edgeAtts: EdgeAttributes | null = null
 ): RenderFunc => {
   return () =>
     `${isSubgraph ? "subgraph" : "digraph"} "${id}" {${
       graphAtts
         ? Object.entries(graphAtts)
-            .map(([key, value]) => `${key} = ${value};`)
+            .map(([key, value]) => `${key} = "${value}";`)
             .join(" ")
         : ""
     } ${
       nodeAtts
         ? `node [ ${Object.entries(nodeAtts)
-            .map(([key, value]) => `${key} = ${value} `)
+            .map(([key, value]) => `${key} = "${value}" `)
             .join(" ")} ];`
         : ""
-    } ${elements.map((renderFunction) => renderFunction()).join("")}}`;
+    } ${
+      edgeAtts
+        ? `edge [ ${Object.entries(edgeAtts)
+            .map(([key, value]) => `${key} = "${value}" `)
+            .join(" ")} ];`
+        : ""
+    }
+    ${elements.map((renderFunction) => renderFunction()).join("")}}`;
 };
 
 export const subgraph = graph(true);

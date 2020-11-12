@@ -11,11 +11,11 @@ const getFactoryCode = (
   node: string
 ): string => {
   const factoryName = node.split(".")[0].toLowerCase().split("-").join("_");
-  return `export const ${factoryName} = createProvider('"${join(
+  return `export const ${factoryName} = createProvider("${join(
     srcProviderDirectory,
     category,
     node
-  )}"');`;
+  )}");`;
 };
 
 const generateProviderCategory = async (
