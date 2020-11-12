@@ -4,10 +4,6 @@ import { renderDot } from "./src/render-dot";
 
 const { aws } = diagrams;
 
-const ec2_A = aws.compute.ec2("A");
-const ec2_B = aws.compute.ec2("B");
-const aNode = aws.database.rds("rds");
-
 const defaultGraphAttributes = {
   pad: "2.0",
   splines: "ortho",
@@ -16,6 +12,8 @@ const defaultGraphAttributes = {
   fontname: "Sans-Serif",
   fontsize: "15",
   fontcolor: "#2D3436",
+  rankdir: "LR", // diagrams: direction
+  curvestyle: "ortho",
 };
 const defaultNodeAttributes = {
   shape: "box",
@@ -34,6 +32,10 @@ const defaultNodeAttributes = {
 const defaultEdgeAttributes = {
   color: "#7B8894",
 };
+
+const ec2_A = aws.compute.ec2("A");
+const ec2_B = aws.compute.ec2("B");
+const aNode = aws.database.rds("rds");
 
 const dotGraph = graph(false)("g")([
   ...nodes(ec2_A, ec2_B, aNode),

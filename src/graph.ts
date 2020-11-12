@@ -1,5 +1,3 @@
-import { Edge } from "graphviz";
-
 type ArrayTwoOrMore<T> = {
   0: T;
   1: T;
