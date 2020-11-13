@@ -22,7 +22,7 @@ export const getUniqueNodeId = (): string => {
 };
 
 // TODO: add better typings
-type EdgeChain = {
+export type EdgeChain = {
   nodes: ArrayTwoOrMore<Node>;
   attributes?: EdgeAttributes;
 };
