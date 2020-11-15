@@ -7,8 +7,8 @@ import {
   subgraph,
   cluster,
   getUniqueNodeId,
-} from "./src/graph";
-import { renderDot } from "./src/render-dot";
+} from "../src/graph";
+import { renderDot } from "../src/render-dot";
 
 const graph = (): RenderFunc[] => {
   const helloNode: Node = {
