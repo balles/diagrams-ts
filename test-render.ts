@@ -35,7 +35,7 @@ const graph = (): RenderFunc[] => {
     ...nodes(andNode, byeNode),
     ...edges([{ nodes: [andNode, byeNode] }]),
   ]);
-  const clusterGraph = cluster([
+  const clusterGraph = cluster()([
     ...nodes(clusterNodeA, clusterNodeB),
     ...edges([
       {

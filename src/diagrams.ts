@@ -16,10 +16,13 @@ import {
   graph,
   nodes,
   RenderFunc,
+  RenderProperties,
   EdgeChain,
   edges,
   Node,
   EdgeAttributes,
+  cluster,
+  GraphAttributes,
 } from "./graph";
 
 const defaultGraphAttributes = {
@@ -32,7 +35,7 @@ const defaultGraphAttributes = {
   fontcolor: "#2D3436",
   rankdir: "LR", // diagrams: direction
   curvestyle: "ortho",
-  label: "my diagram",
+  label: "",
 };
 const defaultNodeAttributes = {
   shape: "box",
@@ -51,6 +54,17 @@ const defaultNodeAttributes = {
 const defaultEdgeAttributes = {
   color: "#7B8894",
 };
+
+const defaultClusterGraphAttributes = {
+  shape: "box",
+  style: "rounded",
+  labeljust: "l",
+  pencolor: "#AEB6BE",
+  fontname: "Sans-Serif",
+  fontsize: "12",
+};
+
+const clusterBackgroundColors = ["#E5F5FD", "#EBF3E7", "#ECE8F6", "#FDF7E3"];
 
 type DiagramNode = Node & { isExternal?: boolean };
 type edgeTemplateInput = DiagramNode | DiagramNode[];
@@ -177,6 +191,30 @@ export const dg = (
       ]
     ),
   ];
+};
+
+// TODO: naming: cluster/ with cluster ? ...
+// TODO: Do we want cluster, edge and node attributes here, Add it before the call
+export const asCluster = (graphAtts: GraphAttributes = {}) => (
+  elements: RenderFunc[]
+): RenderFunc => {
+  const elementsInCluster = cluster()(elements);
+  return ((props: RenderProperties = {}) => {
+    // We start with depth 1 as 0 is the root digraph
+    const clusterDepth = props.clusterDepth
+      ? (props.clusterDepth as number) + 1
+      : 1;
+    return elementsInCluster({
+      ...defaultClusterGraphAttributes,
+      ...{
+        bgcolor:
+          clusterBackgroundColors[
+            (clusterDepth - 1) % clusterBackgroundColors.length
+          ],
+      },
+      ...graphAtts,
+    })({ ...props, clusterDepth });
+  }) as RenderFunc;
 };
 
 // TODO: what does "show" do?

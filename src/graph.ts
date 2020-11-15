@@ -3,8 +3,10 @@ type ArrayTwoOrMore<T> = {
   1: T;
 } & Array<T>;
 
+export type RenderProperties = Record<string, unknown>;
+
 export type Node = { id: string; attributes?: NodeAttributes };
-export type RenderFunc = () => string;
+export type RenderFunc = (props?: RenderProperties) => string;
 
 function* generateUniqueIds(): Generator<number, any, any> {
   let i = 0;
@@ -62,7 +64,7 @@ export const graph = (isSubgraph: boolean) => (id: string) => (
   nodeAtts: NodeAttributes | null = null,
   edgeAtts: EdgeAttributes | null = null
 ): RenderFunc => {
-  return () =>
+  return (props) =>
     `${isSubgraph ? "subgraph" : "digraph"} "${id}" {${
       graphAtts
         ? Object.entries(graphAtts)
@@ -82,12 +84,13 @@ export const graph = (isSubgraph: boolean) => (id: string) => (
             .join(" ")} ];`
         : ""
     }
-    ${elements.map((renderFunction) => renderFunction()).join("")}}`;
+    ${elements.map((renderFunction) => renderFunction(props)).join("")}}`;
 };
 
 export const subgraph = graph(true);
 
-export const cluster = subgraph(`cluster_${graphIdGenerator.next().value}`);
+export const cluster = () =>
+  subgraph(`cluster_${graphIdGenerator.next().value}`);
 
 export const createDotGraph = (elements: RenderFunc[]): string => {
   return graph(false)("g")(elements)()();

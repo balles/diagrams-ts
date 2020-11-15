@@ -1,18 +1,23 @@
 import * as diagrams from "./src/diagrams";
 import { renderDot } from "./src/render-dot";
 
-const { aws, onprem, initDiagram, ext, dg, nodes } = diagrams;
+const { aws, onprem, initDiagram, ext, dg, asCluster } = diagrams;
 
 const diagram = () => {
   const aNode = aws.database.rds("rds");
-  const mongo = onprem.database.mongodb("my database");
+  const mongo0 = onprem.database.mongodb("shard1");
+  const mongo1 = onprem.database.mongodb("shard0");
   const sql = onprem.database.mysql("sql database");
 
-  const someDiagram = dg`${[aws.compute.ec2("A"), aws.compute.ec2("B")]}>>${ext(
-    aNode
-  )}<<${[mongo, sql]}`;
+  const mongoCluster = asCluster()(dg`${mongo0}-${mongo1}`);
+  const dbCluster = asCluster()([mongoCluster, ...dg`${[sql]}`]);
 
-  return [...someDiagram, ...nodes(aNode)];
+  const someDiagram = dg`${[
+    aws.compute.ec2("A"),
+    aws.compute.ec2("B"),
+  ]}>>${aNode}<<${ext([mongo0, mongo1, sql])}`;
+
+  return [dbCluster, ...someDiagram];
 };
 
 const niceDiagram = initDiagram("Nice diagram");
