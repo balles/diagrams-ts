@@ -166,7 +166,7 @@ export const dg = (
   ...nodes: edgeTemplateInput[]
 ): RenderFunc[] => {
   const sanitizedOperators = operators
-    .map((operator) => operator.replace(/\s/, ""))
+    .map((operator) => operator.replace(/\s/g, ""))
     .filter((operator) => operator !== "");
 
   if (nodes.length !== sanitizedOperators.length + 1) {
