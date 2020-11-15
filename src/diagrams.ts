@@ -23,7 +23,25 @@ import {
   EdgeAttributes,
   cluster,
   GraphAttributes,
+  NodeAttributes,
 } from "./graph";
+
+export const providers = {
+  aws,
+  alibabacloud,
+  azure,
+  elastic,
+  firebase,
+  gcp,
+  generic,
+  k8s,
+  oci,
+  onprem,
+  openstack,
+  outscale,
+  programming,
+  saas,
+};
 
 const defaultGraphAttributes = {
   pad: 2.0,
@@ -194,54 +212,44 @@ export const dg = (
 };
 
 // TODO: naming: cluster/ with cluster ? ...
-// TODO: Do we want cluster, edge and node attributes here, Add it before the call
-export const asCluster = (graphAtts: GraphAttributes = {}) => (
-  elements: RenderFunc[]
-): RenderFunc => {
+// TODO: Add it before or after the call?
+export const asCluster = (
+  graphAtts: GraphAttributes = {},
+  nodeAtts?: NodeAttributes,
+  edgeAtts?: EdgeAttributes
+) => (elements: RenderFunc[]): RenderFunc => {
   const elementsInCluster = cluster()(elements);
   return ((props: RenderProperties = {}) => {
     // We start with depth 1 as 0 is the root digraph
     const clusterDepth = props.clusterDepth
       ? (props.clusterDepth as number) + 1
       : 1;
-    return elementsInCluster({
-      ...defaultClusterGraphAttributes,
-      ...{
-        bgcolor:
-          clusterBackgroundColors[
-            (clusterDepth - 1) % clusterBackgroundColors.length
-          ],
+    return elementsInCluster(
+      {
+        ...defaultClusterGraphAttributes,
+        ...{
+          bgcolor:
+            clusterBackgroundColors[
+              (clusterDepth - 1) % clusterBackgroundColors.length
+            ],
+        },
+        ...graphAtts,
       },
-      ...graphAtts,
-    })({ ...props, clusterDepth });
+      nodeAtts,
+      edgeAtts
+    )({ ...props, clusterDepth });
   }) as RenderFunc;
 };
 
-// TODO: what does "show" do?
-export const initDiagram = (label?: string, show?: boolean) => (
+export const initDiagram = (label = "", direction?: string) => (
   diagram: () => RenderFunc[]
 ): string => {
   return graph(false)("diagrams")(diagram())(
-    defaultGraphAttributes,
+    {
+      ...defaultGraphAttributes,
+      ...{ ...(direction ? { rankdir: direction } : {}), label },
+    },
     defaultNodeAttributes,
     defaultEdgeAttributes
   )();
-};
-
-export {
-  aws,
-  alibabacloud,
-  azure,
-  elastic,
-  firebase,
-  gcp,
-  generic,
-  k8s,
-  oci,
-  onprem,
-  openstack,
-  outscale,
-  programming,
-  saas,
-  nodes,
 };
