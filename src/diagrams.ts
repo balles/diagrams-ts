@@ -17,7 +17,7 @@ import {
   nodes,
   RenderFunc,
   EdgeChain,
-  edges as graphEdges,
+  edges,
   Node,
   EdgeAttributes,
 } from "./graph";
@@ -52,31 +52,14 @@ const defaultEdgeAttributes = {
   color: "#7B8894",
 };
 
-type edgeTemplateInput = Node | Node[];
+type DiagramNode = Node & { isExternal?: boolean };
+type edgeTemplateInput = DiagramNode | DiagramNode[];
 
 const mapOperatorsToStyle = {
   ">>": {},
   "<<": { dir: "back" },
   "-": { arrowtail: "none", arrowhead: "none" },
 };
-
-// a     d     e
-//
-// b           f
-//
-// c
-// Algorithm: highest count of nodes All nodes , a -> d -> e, b -> d -> f, c -> d
-// This case is easy: Left to right
-
-// a  ->  d -> f
-//
-// b  ->  e
-//
-// c
-
-// First step: connect all nodes for from 1 and 2, here: [a,d],[a,e],[b,e]...[c,e]
-// continue till node/array n-1 and n, here: [d,f],[e,f]
-// Join edges where possible: last node == first node  (for the joins use nodeIds)
 
 const mergeEdges = (leftSide: Node[][], rightSide: Node[][]): Node[][] => {
   let outArray: Node[][] = [];
@@ -123,7 +106,7 @@ const createEdgeChains = (
     return mergeEdges(acc, value);
   }, singleEdges[0]);
   // Create render functions
-  return graphEdges(
+  return edges(
     mergedEdges.map((mergedEdge) => ({
       nodes: mergedEdge,
       attributes: edgeAtts,
@@ -131,18 +114,29 @@ const createEdgeChains = (
   );
 };
 
+const createNodes = (inputNodes: edgeTemplateInput[]): RenderFunc[] => {
+  const internalNodes = inputNodes.flat(1).filter((node) => !node.isExternal);
+  const nodesToRender = new Set(internalNodes);
+  return nodes(...nodesToRender);
+};
+
+export const ext = (nodes: edgeTemplateInput): edgeTemplateInput => {
+  if (!Array.isArray(nodes)) {
+    return { ...nodes, isExternal: true };
+  }
+  return nodes.map((node) => ({ ...node, isExternal: true }));
+};
+
 type Operator = "<<" | ">>" | "-";
 
-export const edges = (
+export const dg = (
   operators: TemplateStringsArray,
   ...nodes: edgeTemplateInput[]
 ): RenderFunc[] => {
   const sanitizedOperators = operators
     .map((operator) => operator.replace(/\s/, ""))
     .filter((operator) => operator !== "");
-  if (sanitizedOperators.length <= 0) {
-    return [];
-  }
+
   if (nodes.length !== sanitizedOperators.length + 1) {
     throw Error(
       "Invalid edge input: number of nodes must be equal to number of edges + 1"
@@ -154,12 +148,10 @@ export const edges = (
   if (invalidEdges.length > 0) {
     throw Error(`Invalid edge input: ${invalidEdges} are invalid edges`);
   }
-
-  // TODO Reduce, use Edgechains and use correct edge mapping.
-  // TODO Map operators correctly (chaining,arrays! >>)
-  // TODO use flatMap (doesn't work with ts-node right now)
-  // TODO split by operator use sanitizedOperator)
-  let renderFuncs: RenderFunc[] = [];
+  let renderFuncs: RenderFunc[] = createNodes(nodes);
+  if (sanitizedOperators.length <= 0) {
+    return renderFuncs;
+  }
   let startIndex = 0;
   let lastOperator = sanitizedOperators[0];
   sanitizedOperators.forEach((operator, index) => {
@@ -175,11 +167,6 @@ export const edges = (
       startIndex = index;
     }
   });
-
-  // Nodes 0  Nodes 1 Nodes 2
-  // >> 0 - 1
-  // 0: do nothing
-  // 1:  edge with (nodes 0, nodes 1) ==> lastOperator = -  startIndex=1
 
   return [
     ...renderFuncs,
