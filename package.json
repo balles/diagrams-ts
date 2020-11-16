@@ -11,11 +11,7 @@
     "lint": "yarn eslint . --ext .ts",
     "format": "yarn prettier . --write"
   },
-  "dependencies": {
-    "graphviz": "0.0.9"
-  },
   "devDependencies": {
-    "@types/graphviz": "0.0.32",
     "@types/node": "14.14.6",
     "@types/rimraf": "3.0.0",
     "@typescript-eslint/eslint-plugin": "4.6.0",
