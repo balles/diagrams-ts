@@ -70,7 +70,7 @@ renderDot({
 
 If you'll run it will create the "aws-flow.png" in the output folder:
 
-[AWS Flow diagram](examples/aws-flow.png)
+![AWS Flow diagram](examples/aws-flow.png)
 
 For more examples of the syntax you can take look at the examples folder. In order to run them, you can use `ts-node` e.g.:
 
