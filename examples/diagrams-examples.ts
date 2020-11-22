@@ -1,4 +1,3 @@
-import { mainModule, title } from "process";
 import * as diagrams from "../src/diagrams";
 import { RenderFunc } from "../src/graph";
 import { renderDot } from "../src/render-dot";
