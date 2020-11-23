@@ -6,6 +6,7 @@ const {
   initDiagram,
   ext,
   dg,
+  styled,
   asCluster,
 } = diagrams;
 
@@ -15,7 +16,7 @@ const diagram = () => {
   const mongo1 = onprem.database.mongodb("shard0");
   const sql = onprem.database.mysql("sql database");
 
-  const mongoCluster = asCluster({ label: "Atlas" })(dg`${mongo0}-${mongo1}`);
+  const mongoCluster = asCluster({ label: "Atlas" })(styled({color:"red"})`${mongo0}-${mongo1}`);
   const dbCluster = asCluster({ label: "Databases" })([
     mongoCluster,
     ...dg`${[sql]}`,

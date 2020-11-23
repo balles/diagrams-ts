@@ -47,7 +47,7 @@ import { renderDot } from "../src/render-dot";
 const {
   providers: { aws },
   initDiagram,
-  dg,
+  diagram,
 } = diagrams;
 
 const awsFlow = () => {
@@ -56,7 +56,7 @@ const awsFlow = () => {
   const consumer = aws.compute.lambda("Consumer");
   const bucket = aws.storage.simple_storage_service_s3("My Bucket");
 
-  return dg`${producer}>>${queue}>>${consumer}>>${bucket}`;
+  return diagram`${producer}>>${queue}>>${consumer}>>${bucket}`;
 };
 
 const dotGraph = initDiagram("AWS Flow")(awsFlow);

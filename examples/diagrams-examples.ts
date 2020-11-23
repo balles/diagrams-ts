@@ -6,7 +6,7 @@ const {
   providers: { aws },
   initDiagram,
   ext,
-  dg,
+  diagram,
   asCluster,
 } = diagrams;
 
@@ -19,7 +19,7 @@ const {
 } = aws;
 
 const groupedWorkers = () => {
-  return dg`${ELB("lb")} >> ${[
+  return diagram`${ELB("lb")} >> ${[
     EC2("worker1"),
     EC2("worker2"),
     EC2("worker3"),
@@ -45,14 +45,14 @@ const eventProcessing = () => {
   const source = EKS("k8s source");
   const workers = [ECS("worker1"), ECS("worker2"), ECS("worker3")];
   const eventWorkerCluster = asCluster({ label: "Event Workers" })(
-    dg`${workers}`
+    diagram`${workers}`
   );
   const queue = SQS("event queue");
   const handlers = [Lambda("proc1"), Lambda("proc2"), Lambda("proc3")];
-  const processingCluster = asCluster({ label: "Processing" })(dg`${handlers}`);
+  const processingCluster = asCluster({ label: "Processing" })(diagram`${handlers}`);
   const eventFlowCluster = asCluster({ label: "Event Flows" })([
     eventWorkerCluster,
-    ...dg`${queue}`,
+    ...diagram`${queue}`,
     processingCluster,
   ]);
 
@@ -61,9 +61,9 @@ const eventProcessing = () => {
 
   return [
     eventFlowCluster,
-    ...dg`${source} >> ${ext(workers)} >> ${ext(queue)} >> ${ext(handlers)}`,
-    ...dg`${ext(handlers)} >> ${store}`,
-    ...dg`${ext(handlers)} >> ${dw}`,
+    ...diagram`${source} >> ${ext(workers)} >> ${ext(queue)} >> ${ext(handlers)}`,
+    ...diagram`${ext(handlers)} >> ${store}`,
+    ...diagram`${ext(handlers)} >> ${dw}`,
   ];
 };
 
