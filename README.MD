@@ -86,7 +86,6 @@ yarn ts-node ./examples/show-diagram.ts
 ## Known Issues
 
 - Merging edges has a bug
-- Edges style can't directly be set
 - Naming of nodes is not yet completely the same as in python
 - Name of "switch" breaks generation
 - "Direct rendering" is not yet possible
