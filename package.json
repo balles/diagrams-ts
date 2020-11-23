@@ -10,7 +10,9 @@
   "scripts": {
     "build": "yarn tsc",
     "lint": "yarn eslint . --ext .ts",
-    "format": "yarn prettier . --write"
+    "format": "yarn prettier . --write",
+    "generate-providers": "yarn ts-node scripts/generate-providers && yarn format",
+    "create-logo": "yarn ts-node scripts/create-logo"
   },
   "devDependencies": {
     "@types/node": "14.14.6",

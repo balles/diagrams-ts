@@ -1,6 +1,6 @@
 # diagrams-ts
 
-![logo](examples/logo.png)
+![logo](generated-assets/logo.png)
 
 `TypeScript`-Port of the python library [`diagrams` by mingrammer](https://diagrams.mingrammer.com/).
 Creating architecture diagrams directly from code.
@@ -62,7 +62,7 @@ const awsFlow = () => {
 const dotGraph = initDiagram("AWS Flow")(awsFlow);
 
 renderDot({
-  outputFile: "./output/aws-flow.png",
+  outputFile: "./generated-assets/aws-flow.png",
   input: dotGraph,
   format: "png",
 })
@@ -72,7 +72,7 @@ renderDot({
 
 If you'll run it will create the "aws-flow.png" in the output folder:
 
-![AWS Flow diagram](examples/aws-flow.png)
+![AWS Flow diagram](generated-assets/aws-flow.png)
 
 For more examples of the syntax you can take look at the examples folder. In order to run them, you can use `ts-node` e.g.:
 
@@ -88,5 +88,6 @@ yarn ts-node ./examples/show-diagram.ts
 - Merging edges has a bug
 - Edges style can't directly be set
 - Naming of nodes is not yet completely the same as in python
+- Name of "switch" breaks generation
 - "Direct rendering" is not yet possible
-- Node Label rendering
+- Node Label positioning

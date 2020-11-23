@@ -1,6 +1,6 @@
 import * as diagrams from "../src/diagrams";
 import { RenderFunc } from "../src/graph";
-import { renderDot } from "../src/render-dot";
+import { renderDot } from "../src/graph/render-dot";
 
 const {
   providers: { aws },

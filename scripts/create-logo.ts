@@ -1,5 +1,5 @@
-import * as diagrams from "./diagrams";
-import { renderDot } from "./render-dot";
+import * as diagrams from "../src/diagrams";
+import { renderDot } from "../src/graph/render-dot";
 
 const {
   providers: {
@@ -15,14 +15,14 @@ const {
 
 const logo = () => {
   const tsNode = typescript("");
-  const atts= {
+  const atts = {
     labelloc: "c",
     fontsize: "24",
     fontname: "Ubuntu Mono",
     pencolor: "white",
-    fillcolor:"#ECE8F6",
-    style:"filled"
-  }
+    fillcolor: "#ECE8F6",
+    style: "filled",
+  };
   const aNode = {
     id: "aNode",
     attributes: {
@@ -41,7 +41,7 @@ const logo = () => {
   return [
     asCluster()([
       ...dg`${ext([aNode, bNode])}>>${tsNode}`,
-      asCluster()(dg`${[aNode,bNode]}`),
+      asCluster()(dg`${[aNode, bNode]}`),
     ]),
   ];
 };
@@ -51,7 +51,7 @@ const input = initDiagram("", "LR")(logo);
 console.log(input);
 
 renderDot({
-  outputFile: "./output/logo.png",
+  outputFile: "./generated-assets/logo.png",
   input: input,
   format: "png",
 })

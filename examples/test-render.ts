@@ -8,7 +8,7 @@ import {
   cluster,
   getUniqueNodeId,
 } from "../src/graph";
-import { renderDot } from "../src/render-dot";
+import { renderDot } from "../src/graph/render-dot";
 
 const graph = (): RenderFunc[] => {
   const helloNode: Node = {
