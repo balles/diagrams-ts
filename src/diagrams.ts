@@ -161,8 +161,7 @@ export const ext = (nodes: edgeTemplateInput): edgeTemplateInput => {
 
 type Operator = "<<" | ">>" | "-";
 
-export const createSubDiagram = (edgeAttributes?: EdgeAttributes) =>
- (
+export const createSubDiagram = (edgeAttributes?: EdgeAttributes) => (
   operators: TemplateStringsArray,
   ...nodes: edgeTemplateInput[]
 ): RenderFunc[] => {
@@ -191,13 +190,10 @@ export const createSubDiagram = (edgeAttributes?: EdgeAttributes) =>
     if (operator !== lastOperator) {
       renderFuncs = [
         ...renderFuncs,
-        ...createEdgeChains(
-          nodes.slice(startIndex, index + 1),
-          {
-            ...edgeAttributes?edgeAttributes:{},
-            ...mapOperatorsToStyle[lastOperator as Operator]
-          }
-        ),
+        ...createEdgeChains(nodes.slice(startIndex, index + 1), {
+          ...(edgeAttributes ? edgeAttributes : {}),
+          ...mapOperatorsToStyle[lastOperator as Operator],
+        }),
       ];
       lastOperator = operator;
       startIndex = index;
@@ -209,16 +205,16 @@ export const createSubDiagram = (edgeAttributes?: EdgeAttributes) =>
     ...createEdgeChains(
       nodes.slice(startIndex, sanitizedOperators.length + 1),
       {
-        ...edgeAttributes?edgeAttributes:{},
-        ...mapOperatorsToStyle[lastOperator as Operator]
+        ...(edgeAttributes ? edgeAttributes : {}),
+        ...mapOperatorsToStyle[lastOperator as Operator],
       }
     ),
   ];
 };
 
-export const diagram = createSubDiagram(); 
+export const diagram = createSubDiagram();
 export const dg = diagram;
-export const styled = createSubDiagram; 
+export const styled = createSubDiagram;
 
 // TODO: naming: cluster/ with cluster ? ...
 // TODO: Add it before or after the call?

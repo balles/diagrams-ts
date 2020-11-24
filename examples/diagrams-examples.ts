@@ -49,7 +49,9 @@ const eventProcessing = () => {
   );
   const queue = SQS("event queue");
   const handlers = [Lambda("proc1"), Lambda("proc2"), Lambda("proc3")];
-  const processingCluster = asCluster({ label: "Processing" })(diagram`${handlers}`);
+  const processingCluster = asCluster({ label: "Processing" })(
+    diagram`${handlers}`
+  );
   const eventFlowCluster = asCluster({ label: "Event Flows" })([
     eventWorkerCluster,
     ...diagram`${queue}`,
@@ -61,7 +63,9 @@ const eventProcessing = () => {
 
   return [
     eventFlowCluster,
-    ...diagram`${source} >> ${ext(workers)} >> ${ext(queue)} >> ${ext(handlers)}`,
+    ...diagram`${source} >> ${ext(workers)} >> ${ext(queue)} >> ${ext(
+      handlers
+    )}`,
     ...diagram`${ext(handlers)} >> ${store}`,
     ...diagram`${ext(handlers)} >> ${dw}`,
   ];

@@ -9,6 +9,12 @@
     "skipLibCheck": true,
     "declaration": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "**/*.spec.ts", "examples/**/*"]
+  "include": ["src/**/*", "examples/create-logo.ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts",
+    "examples/**/*",
+    "scripts/**/*"
+  ]
 }
