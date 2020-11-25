@@ -2,7 +2,7 @@ import { promises } from "fs";
 
 type ScrapedAttribute = {
   name: string;
-  graphVizType: string;
+  graphVizTypes: string[];
   default: string;
   minimum: string;
   notes: string;
@@ -19,6 +19,13 @@ const mapGraphvizToTs: Map = {
   bool: "boolean",
 };
 
+const getTypesFromGraphvizTypes = (graphvizTypes: string[]) => {
+  const types = graphvizTypes.map(
+    (graphvizType) => mapGraphvizToTs[graphvizType] || "string"
+  );
+  return [...new Set(types)];
+};
+
 const generateAttributeSet = (
   key: string,
   attributes: ScrapedAttribute[]
@@ -28,8 +35,8 @@ const generateAttributeSet = (
   return `export type ${capitalized}Attributes = {
         ${attributes
           .map(
-            ({ name, graphVizType }) =>
-              `${name}?:${mapGraphvizToTs[graphVizType] || "string"};
+            ({ name, graphVizTypes }) =>
+              `${name}?:${getTypesFromGraphvizTypes(graphVizTypes).join(" | ")};
             `
           )
           .join("")}

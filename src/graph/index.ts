@@ -5,6 +5,8 @@ import {
   ClusterAttributes,
 } from "./generated/attributes";
 
+export * from "./generated/attributes";
+
 type ArrayTwoOrMore<T> = {
   0: T;
   1: T;
@@ -62,7 +64,7 @@ export const nodes = (...nodes: Node[]): RenderFunc[] => {
 export const graph = (isSubgraph: boolean) => (id: string) => (
   elements: RenderFunc[]
 ) => (
-  graphAtts: GraphAttributes | null = null,
+  graphAtts: GraphAttributes | ClusterAttributes | null = null,
   nodeAtts: NodeAttributes | null = null,
   edgeAtts: EdgeAttributes | null = null
 ): RenderFunc => {

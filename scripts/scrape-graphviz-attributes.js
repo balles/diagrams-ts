@@ -15,6 +15,13 @@ const validateTableHead = (tableHead) => {
   );
 };
 
+const getGraphvizTypes = (cell) => {
+  const nodesArray = Object.values(cell.childNodes);
+  return nodesArray
+    .map((childNode) => childNode.textContent)
+    .filter((value) => value != "");
+};
+
 (async () => {
   const response = await fetch("https://graphviz.org/doc/info/attrs.html");
   const {
@@ -31,7 +38,7 @@ const validateTableHead = (tableHead) => {
     (acc, { cells }) => {
       const attribute = {
         name: cells[0].textContent,
-        graphVizType: cells[2].textContent,
+        graphVizTypes: getGraphvizTypes(cells[2]),
         default: cells[3].textContent,
         minimum: cells[4].textContent,
         notes: cells[5].textContent,
