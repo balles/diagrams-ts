@@ -79,7 +79,7 @@ const defaultClusterGraphAttributes = {
   labeljust: "l",
   pencolor: "#AEB6BE",
   fontname: "Sans-Serif",
-  fontsize: "12",
+  fontsize: 12,
 };
 
 const clusterBackgroundColors = ["#E5F5FD", "#EBF3E7", "#ECE8F6", "#FDF7E3"];
