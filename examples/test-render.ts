@@ -56,15 +56,18 @@ const graph = (): RenderFunc[] => {
 };
 
 (async () => {
-  const dotInput = await createDotGraph(graph());
+  try {
+    const dotInput = await createDotGraph(graph());
 
-  console.log(dotInput);
+    console.log(dotInput);
 
-  renderDot({
-    outputFile: "./output/test.webp",
-    input: dotInput,
-    format: "webp",
-  })
-    .then((outPut) => console.log(outPut))
-    .catch((reason) => console.log(reason));
+    const out = await renderDot({
+      outputFile: "./output/test.webp",
+      input: dotInput,
+      format: "webp",
+    });
+    console.log(out);
+  } catch (error) {
+    console.log(error);
+  }
 })();

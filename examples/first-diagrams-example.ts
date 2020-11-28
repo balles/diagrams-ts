@@ -36,14 +36,16 @@ const diagram = () => {
 
 const niceDiagram = initDiagram("Example diagram");
 
-const dotGraph = niceDiagram(diagram);
+(async () => {
+  try {
+    const dotGraph = await niceDiagram(diagram);
 
-console.log(dotGraph);
-
-renderDot({
-  outputFile: "./output/test.png",
-  input: dotGraph,
-  format: "png",
-})
-  .then((outPut) => console.log(outPut))
-  .catch((reason) => console.log(reason));
+    await renderDot({
+      outputFile: "./output/test.png",
+      input: dotGraph,
+      format: "png",
+    });
+  } catch (error) {
+    console.log(error);
+  }
+})();
