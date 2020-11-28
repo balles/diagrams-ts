@@ -13,17 +13,17 @@ import * as outscale from "./providers/generated/outscale/index";
 import * as programming from "./providers/generated/programming/index";
 import * as saas from "./providers/generated/saas/index";
 import {
+  cluster,
+  EdgeAttributes,
+  EdgeChain,
+  edges,
   graph,
+  GraphAttributes,
+  Node,
+  NodeAttributes,
   nodes,
   RenderFunc,
   RenderProperties,
-  EdgeChain,
-  edges,
-  Node,
-  EdgeAttributes,
-  cluster,
-  GraphAttributes,
-  NodeAttributes,
 } from "./graph";
 
 export const providers = {
@@ -248,7 +248,7 @@ export const asCluster = (
 
 export const initDiagram = (label = "", direction?: string) => (
   diagram: () => RenderFunc[]
-): string => {
+): Promise<string> => {
   return graph(false)("diagrams")(diagram())(
     {
       ...defaultGraphAttributes,
