@@ -59,15 +59,20 @@ const awsFlow = () => {
   return diagram`${producer}>>${queue}>>${consumer}>>${bucket}`;
 };
 
-const dotGraph = initDiagram("AWS Flow")(awsFlow);
+(async () => {
+  try {
+    const dotGraph = await initDiagram("AWS Flow")(awsFlow);
 
-renderDot({
-  outputFile: "./generated-assets/aws-flow.png",
-  input: dotGraph,
-  format: "png",
-})
-  .then((outPut) => console.log(outPut))
-  .catch((reason) => console.log(reason));
+    const outPut = await renderDot({
+      outputFile: "./generated-assets/aws-flow.png",
+      input: dotGraph,
+      format: "png",
+    });
+    console.log(outPut);
+  } catch (error) {
+    console.log(error);
+  }
+})();
 ```
 
 If you'll run it will create the "aws-flow.png" in the output folder:

@@ -17,7 +17,7 @@ const logo = () => {
   const tsNode = typescript("");
   const atts = {
     labelloc: "c",
-    fontsize: "24",
+    fontsize: 24,
     fontname: "Ubuntu Mono",
     pencolor: "white",
     fillcolor: "#ECE8F6",
@@ -46,14 +46,14 @@ const logo = () => {
   ];
 };
 
-const input = initDiagram("", "LR")(logo);
+async () => {
+  const input = await initDiagram("", "LR")(logo);
 
-console.log(input);
+  console.log(input);
 
-renderDot({
-  outputFile: "./generated-assets/logo.png",
-  input: input,
-  format: "png",
-})
-  .then((outPut) => console.log(outPut))
-  .catch((reason) => console.log(reason));
+  await renderDot({
+    outputFile: "./generated-assets/logo.png",
+    input: input,
+    format: "png",
+  });
+};

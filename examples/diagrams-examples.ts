@@ -83,7 +83,7 @@ const renderExample = async (
   { title, direction, diagram }: Example,
   index: number
 ): Promise<void> => {
-  const dotGraph = initDiagram(title, direction)(diagram);
+  const dotGraph = await initDiagram(title, direction)(diagram);
   await renderDot({
     outputFile: `./output/example.${index + 1}.png`,
     input: dotGraph,
