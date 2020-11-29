@@ -84,8 +84,8 @@ const defaultClusterGraphAttributes = {
 
 const clusterBackgroundColors = ["#E5F5FD", "#EBF3E7", "#ECE8F6", "#FDF7E3"];
 
-type DiagramNode = Node & { isExternal?: boolean };
-type edgeTemplateInput = DiagramNode | DiagramNode[];
+export type DiagramNode = Node & { isExternal?: boolean };
+export type edgeTemplateInput = DiagramNode | DiagramNode[];
 
 const mapOperatorsToStyle = {
   ">>": {},

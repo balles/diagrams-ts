@@ -1,24 +1,19 @@
-import * as diagrams from "../src/diagrams";
-import { renderDot } from "../src/graph/render-dot";
-
-const {
-  providers: {
-    programming: {
-      language: { typescript },
-    },
-  },
+import  {
   initDiagram,
   ext,
   dg,
   asCluster,
-} = diagrams;
+  DiagramNode,
+} from "../src/diagrams";
+import { renderDot } from "../src/graph/render-dot";
 
 const logo = () => {
-  const tsNode = typescript("");
+  
   const atts = {
     labelloc: "c",
     fontsize: 24,
     fontname: "Ubuntu Mono",
+    fontcolor: "#7B8894",
     pencolor: "white",
     fillcolor: "#ECE8F6",
     style: "filled",
@@ -37,6 +32,14 @@ const logo = () => {
       label: "Grams",
     },
   };
+  const tsNode: DiagramNode = {
+    id: "tsNode",
+    attributes: {
+      ...atts,
+      label: "TS",
+      fontcolor: "grey"
+    },
+  };
 
   return [
     asCluster()([
@@ -46,7 +49,7 @@ const logo = () => {
   ];
 };
 
-async () => {
+(async () => {
   const input = await initDiagram("", "LR")(logo);
 
   console.log(input);
@@ -56,4 +59,4 @@ async () => {
     input: input,
     format: "png",
   });
-};
+})();
