@@ -10,7 +10,7 @@ const streamPipeline = promisify(pipeline);
 export type Node = {
   id: string;
   attributes?: NodeAttributes;
-  imageDownload?: boolean;
+  retrieveImage?: boolean;
 };
 
 const imageCacheDir = path.join(__dirname, "../../image-cache");
@@ -88,7 +88,7 @@ export const nodes = (...nodes: Node[]): RenderFunc[] => {
     `"${nodeInstance.id}" ${
       nodeInstance.attributes && Object.keys(nodeInstance.attributes).length > 0
         ? `[ ${Object.entries(
-            nodeInstance.imageDownload
+            nodeInstance.retrieveImage
               ? await retrieveImage(nodeInstance.attributes)
               : nodeInstance.attributes
           )
