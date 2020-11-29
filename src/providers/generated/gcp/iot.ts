@@ -1,3 +1,5 @@
 import { createProvider } from "../../create-provider";
 
-export const iot_core = createProvider("assets/gcp/iot/iot-core.png");
+export const iot_core = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/iot/iot-core.png"
+);

@@ -1,11 +1,17 @@
 import { createProvider } from "../../create-provider";
 
-export const apm = createProvider("assets/elastic/observability/apm.png");
-export const logs = createProvider("assets/elastic/observability/logs.png");
+export const apm = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/elastic/observability/apm.png"
+);
+export const logs = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/elastic/observability/logs.png"
+);
 export const metrics = createProvider(
-  "assets/elastic/observability/metrics.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/elastic/observability/metrics.png"
 );
 export const observability = createProvider(
-  "assets/elastic/observability/observability.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/elastic/observability/observability.png"
 );
-export const uptime = createProvider("assets/elastic/observability/uptime.png");
+export const uptime = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/elastic/observability/uptime.png"
+);

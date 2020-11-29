@@ -5,24 +5,45 @@ import rimraf from "rimraf";
 const assetDirectory = "./assets";
 const targetDirectory = "./src/providers/generated";
 
+const defaultCommit = "dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb";
+
+const getRepositoryUrl = ({
+  commit = defaultCommit,
+  provider,
+  category,
+  node,
+}: {
+  commit?: string;
+  provider: string;
+  category: string;
+  node: string;
+}): string =>
+  `https://github.com/mingrammer/diagrams/raw/${commit}/resources/${provider}/${category}/${node}`;
+
 const getFactoryCode = (
-  srcProviderDirectory: string,
+  provider: string,
   category: string,
   node: string
 ): string => {
   const factoryName = node.split(".")[0].toLowerCase().split("-").join("_");
-  return `export const ${factoryName} = createProvider("${join(
-    srcProviderDirectory,
+  return `export const ${factoryName} = createProvider("${getRepositoryUrl({
+    provider,
     category,
-    node
-  )}");`;
+    node,
+  })}");`;
 };
 
-const generateProviderCategory = async (
-  category: string,
-  srcProviderDirectory: string,
-  targetProviderDirectory: string
-): Promise<void> => {
+const generateProviderCategory = async ({
+  provider,
+  category,
+  srcProviderDirectory,
+  targetProviderDirectory,
+}: {
+  provider: string;
+  category: string;
+  srcProviderDirectory: string;
+  targetProviderDirectory: string;
+}): Promise<void> => {
   const categoryFile = join(targetProviderDirectory, `${category}.ts`);
   const files = (
     await promises.readdir(join(srcProviderDirectory, category))
@@ -31,9 +52,7 @@ const generateProviderCategory = async (
     categoryFile,
     `import { createProvider } from "../../create-provider";
 
-    ${files
-      .map((file) => getFactoryCode(srcProviderDirectory, category, file))
-      .join("\n")}
+    ${files.map((file) => getFactoryCode(provider, category, file)).join("\n")}
     `
   );
 };
@@ -47,11 +66,12 @@ const generateProvider = async (provider: string): Promise<void> => {
   );
   await Promise.all(
     subDirectories.map(async (category) =>
-      generateProviderCategory(
+      generateProviderCategory({
+        provider,
         category,
         srcProviderDirectory,
-        targetProviderDirectory
-      )
+        targetProviderDirectory,
+      })
     )
   );
   await promises.writeFile(

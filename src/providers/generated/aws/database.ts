@@ -1,33 +1,47 @@
 import { createProvider } from "../../create-provider";
 
-export const aurora = createProvider("assets/aws/database/aurora.png");
-export const database_migration_service = createProvider(
-  "assets/aws/database/database-migration-service.png"
+export const aurora = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/aurora.png"
 );
-export const database = createProvider("assets/aws/database/database.png");
+export const database_migration_service = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/database-migration-service.png"
+);
+export const database = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/database.png"
+);
 export const documentdb_mongodb_compatibility = createProvider(
-  "assets/aws/database/documentdb-mongodb-compatibility.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/documentdb-mongodb-compatibility.png"
 );
 export const dynamodb_dax = createProvider(
-  "assets/aws/database/dynamodb-dax.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/dynamodb-dax.png"
 );
 export const dynamodb_global_secondary_index = createProvider(
-  "assets/aws/database/dynamodb-global-secondary-index.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/dynamodb-global-secondary-index.png"
 );
 export const dynamodb_table = createProvider(
-  "assets/aws/database/dynamodb-table.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/dynamodb-table.png"
 );
-export const dynamodb = createProvider("assets/aws/database/dynamodb.png");
+export const dynamodb = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/dynamodb.png"
+);
 export const elasticache = createProvider(
-  "assets/aws/database/elasticache.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/elasticache.png"
 );
-export const neptune = createProvider("assets/aws/database/neptune.png");
+export const neptune = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/neptune.png"
+);
 export const quantum_ledger_database_qldb = createProvider(
-  "assets/aws/database/quantum-ledger-database-qldb.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/quantum-ledger-database-qldb.png"
 );
 export const rds_on_vmware = createProvider(
-  "assets/aws/database/rds-on-vmware.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/rds-on-vmware.png"
 );
-export const rds = createProvider("assets/aws/database/rds.png");
-export const redshift = createProvider("assets/aws/database/redshift.png");
-export const timestream = createProvider("assets/aws/database/timestream.png");
+export const rds = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/rds.png"
+);
+export const redshift = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/redshift.png"
+);
+export const timestream = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/timestream.png"
+);

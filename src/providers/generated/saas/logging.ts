@@ -1,4 +1,8 @@
 import { createProvider } from "../../create-provider";
 
-export const datadog = createProvider("assets/saas/logging/datadog.png");
-export const papertrail = createProvider("assets/saas/logging/papertrail.png");
+export const datadog = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/saas/logging/datadog.png"
+);
+export const papertrail = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/saas/logging/papertrail.png"
+);

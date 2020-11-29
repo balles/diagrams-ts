@@ -1,23 +1,35 @@
 import { createProvider } from "../../create-provider";
 
-export const disk = createProvider("assets/aws/general/disk.png");
-export const general = createProvider("assets/aws/general/general.png");
+export const disk = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/disk.png"
+);
+export const general = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/general.png"
+);
 export const generic_database = createProvider(
-  "assets/aws/general/generic-database.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/generic-database.png"
 );
 export const generic_firewall = createProvider(
-  "assets/aws/general/generic-firewall.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/generic-firewall.png"
 );
 export const generic_office_building = createProvider(
-  "assets/aws/general/generic-office-building.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/generic-office-building.png"
 );
 export const generic_saml_token = createProvider(
-  "assets/aws/general/generic-saml-token.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/generic-saml-token.png"
 );
-export const generic_sdk = createProvider("assets/aws/general/generic-sdk.png");
-export const marketplace = createProvider("assets/aws/general/marketplace.png");
+export const generic_sdk = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/generic-sdk.png"
+);
+export const marketplace = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/marketplace.png"
+);
 export const traditional_server = createProvider(
-  "assets/aws/general/traditional-server.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/traditional-server.png"
 );
-export const user = createProvider("assets/aws/general/user.png");
-export const users = createProvider("assets/aws/general/users.png");
+export const user = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/user.png"
+);
+export const users = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/users.png"
+);

@@ -1,14 +1,14 @@
 import { createProvider } from "../../create-provider";
 
 export const app_search = createProvider(
-  "assets/elastic/enterprisesearch/app-search.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/elastic/enterprisesearch/app-search.png"
 );
 export const enterprise_search = createProvider(
-  "assets/elastic/enterprisesearch/enterprise-search.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/elastic/enterprisesearch/enterprise-search.png"
 );
 export const site_search = createProvider(
-  "assets/elastic/enterprisesearch/site-search.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/elastic/enterprisesearch/site-search.png"
 );
 export const workplace_search = createProvider(
-  "assets/elastic/enterprisesearch/workplace-search.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/elastic/enterprisesearch/workplace-search.png"
 );

@@ -1,8 +1,8 @@
 import { createProvider } from "../../create-provider";
 
 export const buzzfeed_sso = createProvider(
-  "assets/onprem/auth/buzzfeed-sso.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/auth/buzzfeed-sso.png"
 );
 export const oauth2_proxy = createProvider(
-  "assets/onprem/auth/oauth2-proxy.png"
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/auth/oauth2-proxy.png"
 );
