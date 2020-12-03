@@ -1,56 +1,56 @@
 import { createProvider } from "../../create-provider";
 
-export const autonomous_white = createProvider(
+export const AutonomousWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/autonomous-white.png"
 );
-export const autonomous = createProvider(
+export const Autonomous = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/autonomous.png"
 );
-export const bigdata_service_white = createProvider(
+export const BigdataServiceWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/bigdata-service-white.png"
 );
-export const bigdata_service = createProvider(
+export const BigdataService = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/bigdata-service.png"
 );
-export const database_service_white = createProvider(
+export const DatabaseServiceWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/database-service-white.png"
 );
-export const database_service = createProvider(
+export const DatabaseService = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/database-service.png"
 );
-export const dataflow_apache_white = createProvider(
+export const DataflowApacheWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/dataflow-apache-white.png"
 );
-export const dataflow_apache = createProvider(
+export const DataflowApache = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/dataflow-apache.png"
 );
-export const dcat_white = createProvider(
+export const DcatWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/dcat-white.png"
 );
-export const dcat = createProvider(
+export const Dcat = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/dcat.png"
 );
-export const dis_white = createProvider(
+export const DisWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/dis-white.png"
 );
-export const dis = createProvider(
+export const Dis = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/dis.png"
 );
-export const dms_white = createProvider(
+export const DMSWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/dms-white.png"
 );
-export const dms = createProvider(
+export const DMS = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/dms.png"
 );
-export const science_white = createProvider(
+export const ScienceWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/science-white.png"
 );
-export const science = createProvider(
+export const Science = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/science.png"
 );
-export const stream_white = createProvider(
+export const StreamWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/stream-white.png"
 );
-export const stream = createProvider(
+export const Stream = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/database/stream.png"
 );

@@ -1,50 +1,50 @@
 import { createProvider } from "../../create-provider";
 
-export const cloud_guard_white = createProvider(
+export const CloudGuardWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/cloud-guard-white.png"
 );
-export const cloud_guard = createProvider(
+export const CloudGuard = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/cloud-guard.png"
 );
-export const ddos_white = createProvider(
+export const DDOSWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/ddos-white.png"
 );
-export const ddos = createProvider(
+export const DDOS = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/ddos.png"
 );
-export const encryption_white = createProvider(
+export const EncryptionWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/encryption-white.png"
 );
-export const encryption = createProvider(
+export const Encryption = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/encryption.png"
 );
-export const id_access_white = createProvider(
+export const IDAccessWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/id-access-white.png"
 );
-export const id_access = createProvider(
+export const IDAccess = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/id-access.png"
 );
-export const key_management_white = createProvider(
+export const KeyManagementWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/key-management-white.png"
 );
-export const key_management = createProvider(
+export const KeyManagement = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/key-management.png"
 );
-export const max_security_zone_white = createProvider(
+export const MaxSecurityZoneWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/max-security-zone-white.png"
 );
-export const max_security_zone = createProvider(
+export const MaxSecurityZone = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/max-security-zone.png"
 );
-export const vault_white = createProvider(
+export const VaultWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/vault-white.png"
 );
-export const vault = createProvider(
+export const Vault = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/vault.png"
 );
-export const waf_white = createProvider(
+export const WAFWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/waf-white.png"
 );
-export const waf = createProvider(
+export const WAF = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/security/waf.png"
 );

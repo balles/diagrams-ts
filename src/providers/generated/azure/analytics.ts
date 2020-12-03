@@ -1,35 +1,35 @@
 import { createProvider } from "../../create-provider";
 
-export const analysis_services = createProvider(
+export const AnalysisServices = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/analysis-services.png"
 );
-export const data_explorer_clusters = createProvider(
+export const DataExplorerClusters = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/data-explorer-clusters.png"
 );
-export const data_factories = createProvider(
+export const DataFactories = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/data-factories.png"
 );
-export const data_lake_analytics = createProvider(
+export const DataLakeAnalytics = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/data-lake-analytics.png"
 );
-export const data_lake_store_gen1 = createProvider(
+export const DataLakeStoreGen1 = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/data-lake-store-gen1.png"
 );
-export const databricks = createProvider(
+export const Databricks = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/databricks.png"
 );
-export const event_hub_clusters = createProvider(
+export const EventHubClusters = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/event-hub-clusters.png"
 );
-export const event_hubs = createProvider(
+export const EventHubs = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/event-hubs.png"
 );
-export const hdinsightclusters = createProvider(
+export const Hdinsightclusters = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/hdinsightclusters.png"
 );
-export const log_analytics_workspaces = createProvider(
+export const LogAnalyticsWorkspaces = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/log-analytics-workspaces.png"
 );
-export const stream_analytics_jobs = createProvider(
+export const StreamAnalyticsJobs = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/analytics/stream-analytics-jobs.png"
 );

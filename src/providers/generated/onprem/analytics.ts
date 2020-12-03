@@ -1,38 +1,38 @@
 import { createProvider } from "../../create-provider";
 
-export const beam = createProvider(
+export const Beam = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/beam.png"
 );
-export const databricks = createProvider(
+export const Databricks = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/databricks.png"
 );
-export const dbt = createProvider(
+export const Dbt = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/dbt.png"
 );
-export const flink = createProvider(
+export const Flink = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/flink.png"
 );
-export const hadoop = createProvider(
+export const Hadoop = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/hadoop.png"
 );
-export const hive = createProvider(
+export const Hive = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/hive.png"
 );
-export const metabase = createProvider(
+export const Metabase = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/metabase.png"
 );
-export const norikra = createProvider(
+export const Norikra = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/norikra.png"
 );
-export const singer = createProvider(
+export const Singer = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/singer.png"
 );
-export const spark = createProvider(
+export const Spark = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/spark.png"
 );
-export const storm = createProvider(
+export const Storm = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/storm.png"
 );
-export const tableau = createProvider(
+export const Tableau = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/analytics/tableau.png"
 );

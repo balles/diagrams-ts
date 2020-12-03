@@ -1,53 +1,55 @@
 import { createProvider } from "../../create-provider";
 
-export const armor = createProvider(
+export const Armor = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/armor.png"
 );
-export const cdn = createProvider(
+export const CDN = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/cdn.png"
 );
-export const dedicated_interconnect = createProvider(
+export const DedicatedInterconnect = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/dedicated-interconnect.png"
 );
-export const dns = createProvider(
+export const DNS = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/dns.png"
 );
-export const external_ip_addresses = createProvider(
+export const ExternalIpAddresses = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/external-ip-addresses.png"
 );
-export const firewall_rules = createProvider(
+export const FirewallRules = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/firewall-rules.png"
 );
-export const load_balancing = createProvider(
+export const LoadBalancing = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/load-balancing.png"
 );
-export const nat = createProvider(
+export const NAT = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/nat.png"
 );
-export const network = createProvider(
+export const Network = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/network.png"
 );
-export const partner_interconnect = createProvider(
+export const PartnerInterconnect = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/partner-interconnect.png"
 );
-export const premium_network_tier = createProvider(
+export const PremiumNetworkTier = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/premium-network-tier.png"
 );
-export const router = createProvider(
+export const Router = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/router.png"
 );
-export const routes = createProvider(
+export const Routes = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/routes.png"
 );
-export const standard_network_tier = createProvider(
+export const StandardNetworkTier = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/standard-network-tier.png"
 );
-export const traffic_director = createProvider(
+export const TrafficDirector = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/traffic-director.png"
 );
-export const virtual_private_cloud = createProvider(
+export const VirtualPrivateCloud = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/virtual-private-cloud.png"
 );
-export const vpn = createProvider(
+export const VPN = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/network/vpn.png"
 );
+
+export const VPC = VirtualPrivateCloud;

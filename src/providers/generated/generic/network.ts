@@ -1,17 +1,17 @@
 import { createProvider } from "../../create-provider";
 
-export const firewall = createProvider(
+export const Firewall = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/network/firewall.png"
 );
-export const router = createProvider(
+export const Router = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/network/router.png"
 );
-export const subnet = createProvider(
+export const Subnet = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/network/subnet.png"
 );
-export const ntw_switch = createProvider(
+export const Switch = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/network/switch.png"
 );
-export const vpn = createProvider(
+export const VPN = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/network/vpn.png"
 );

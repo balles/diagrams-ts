@@ -1,35 +1,37 @@
 import { createProvider } from "../../create-provider";
 
-export const disk = createProvider(
+export const Disk = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/disk.png"
 );
-export const general = createProvider(
+export const General = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/general.png"
 );
-export const generic_database = createProvider(
+export const GenericDatabase = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/generic-database.png"
 );
-export const generic_firewall = createProvider(
+export const GenericFirewall = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/generic-firewall.png"
 );
-export const generic_office_building = createProvider(
+export const GenericOfficeBuilding = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/generic-office-building.png"
 );
-export const generic_saml_token = createProvider(
+export const GenericSamlToken = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/generic-saml-token.png"
 );
-export const generic_sdk = createProvider(
+export const GenericSDK = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/generic-sdk.png"
 );
-export const marketplace = createProvider(
+export const Marketplace = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/marketplace.png"
 );
-export const traditional_server = createProvider(
+export const TraditionalServer = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/traditional-server.png"
 );
-export const user = createProvider(
+export const User = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/user.png"
 );
-export const users = createProvider(
+export const Users = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/general/users.png"
 );
+
+export const OfficeBuilding = GenericOfficeBuilding;

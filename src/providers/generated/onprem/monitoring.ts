@@ -1,29 +1,29 @@
 import { createProvider } from "../../create-provider";
 
-export const cortex = createProvider(
+export const Cortex = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/monitoring/cortex.png"
 );
-export const datadog = createProvider(
+export const Datadog = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/monitoring/datadog.png"
 );
-export const grafana = createProvider(
+export const Grafana = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/monitoring/grafana.png"
 );
-export const prometheus_operator = createProvider(
+export const PrometheusOperator = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/monitoring/prometheus-operator.png"
 );
-export const prometheus = createProvider(
+export const Prometheus = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/monitoring/prometheus.png"
 );
-export const sentry = createProvider(
+export const Sentry = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/monitoring/sentry.png"
 );
-export const splunk = createProvider(
+export const Splunk = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/monitoring/splunk.png"
 );
-export const thanos = createProvider(
+export const Thanos = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/monitoring/thanos.png"
 );
-export const zabbix = createProvider(
+export const Zabbix = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/monitoring/zabbix.png"
 );

@@ -1,44 +1,44 @@
 import { createProvider } from "../../create-provider";
 
-export const audit_white = createProvider(
+export const AuditWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/audit-white.png"
 );
-export const audit = createProvider(
+export const Audit = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/audit.png"
 );
-export const compartments_white = createProvider(
+export const CompartmentsWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/compartments-white.png"
 );
-export const compartments = createProvider(
+export const Compartments = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/compartments.png"
 );
-export const groups_white = createProvider(
+export const GroupsWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/groups-white.png"
 );
-export const groups = createProvider(
+export const Groups = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/groups.png"
 );
-export const logging_white = createProvider(
+export const LoggingWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/logging-white.png"
 );
-export const logging = createProvider(
+export const Logging = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/logging.png"
 );
-export const ocid_white = createProvider(
+export const OCIDWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/ocid-white.png"
 );
-export const ocid = createProvider(
+export const OCID = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/ocid.png"
 );
-export const policies_white = createProvider(
+export const PoliciesWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/policies-white.png"
 );
-export const policies = createProvider(
+export const Policies = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/policies.png"
 );
-export const tagging_white = createProvider(
+export const TaggingWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/tagging-white.png"
 );
-export const tagging = createProvider(
+export const Tagging = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/governance/tagging.png"
 );

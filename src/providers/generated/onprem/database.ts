@@ -1,56 +1,68 @@
 import { createProvider } from "../../create-provider";
 
-export const cassandra = createProvider(
+export const Cassandra = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/cassandra.png"
 );
-export const clickhouse = createProvider(
+export const Clickhouse = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/clickhouse.png"
 );
-export const cockroachdb = createProvider(
+export const Cockroachdb = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/cockroachdb.png"
 );
-export const couchbase = createProvider(
+export const Couchbase = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/couchbase.png"
 );
-export const couchdb = createProvider(
+export const Couchdb = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/couchdb.png"
 );
-export const dgraph = createProvider(
+export const Dgraph = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/dgraph.png"
 );
-export const druid = createProvider(
+export const Druid = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/druid.png"
 );
-export const hbase = createProvider(
+export const Hbase = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/hbase.png"
 );
-export const influxdb = createProvider(
+export const Influxdb = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/influxdb.png"
 );
-export const janusgraph = createProvider(
+export const Janusgraph = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/janusgraph.png"
 );
-export const mariadb = createProvider(
+export const Mariadb = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/mariadb.png"
 );
-export const mongodb = createProvider(
+export const Mongodb = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/mongodb.png"
 );
-export const mssql = createProvider(
+export const Mssql = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/mssql.png"
 );
-export const mysql = createProvider(
+export const Mysql = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/mysql.png"
 );
-export const neo4j = createProvider(
+export const Neo4j = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/neo4j.png"
 );
-export const oracle = createProvider(
+export const Oracle = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/oracle.png"
 );
-export const postgresql = createProvider(
+export const Postgresql = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/postgresql.png"
 );
-export const scylla = createProvider(
+export const Scylla = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/database/scylla.png"
 );
+
+export const ClickHouse = Clickhouse;
+export const CockroachDB = Cockroachdb;
+export const CouchDB = Couchdb;
+export const HBase = Hbase;
+export const InfluxDB = Influxdb;
+export const JanusGraph = Janusgraph;
+export const MariaDB = Mariadb;
+export const MongoDB = Mongodb;
+export const MSSQL = Mssql;
+export const MySQL = Mysql;
+export const PostgreSQL = Postgresql;
