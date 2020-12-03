@@ -1,56 +1,56 @@
 import { createProvider } from "../../create-provider";
 
-export const backbone_white = createProvider(
+export const BackboneWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/backbone-white.png"
 );
-export const backbone = createProvider(
+export const Backbone = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/backbone.png"
 );
-export const cdn_white = createProvider(
+export const CDNWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/cdn-white.png"
 );
-export const cdn = createProvider(
+export const CDN = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/cdn.png"
 );
-export const customer_datacenter = createProvider(
+export const CustomerDatacenter = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/customer-datacenter.png"
 );
-export const customer_datacntr_white = createProvider(
+export const CustomerDatacntrWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/customer-datacntr-white.png"
 );
-export const customer_premise_white = createProvider(
+export const CustomerPremiseWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/customer-premise-white.png"
 );
-export const customer_premise = createProvider(
+export const CustomerPremise = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/customer-premise.png"
 );
-export const disconnected_regions_white = createProvider(
+export const DisconnectedRegionsWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/disconnected-regions-white.png"
 );
-export const disconnected_regions = createProvider(
+export const DisconnectedRegions = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/disconnected-regions.png"
 );
-export const dns_white = createProvider(
+export const DNSWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/dns-white.png"
 );
-export const dns = createProvider(
+export const DNS = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/dns.png"
 );
-export const fast_connect_white = createProvider(
+export const FastConnectWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/fast-connect-white.png"
 );
-export const fast_connect = createProvider(
+export const FastConnect = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/fast-connect.png"
 );
-export const nat_gateway_white = createProvider(
+export const NATGatewayWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/nat-gateway-white.png"
 );
-export const nat_gateway = createProvider(
+export const NATGateway = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/nat-gateway.png"
 );
-export const vpn_white = createProvider(
+export const VPNWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/vpn-white.png"
 );
-export const vpn = createProvider(
+export const VPN = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/connectivity/vpn.png"
 );

@@ -1,74 +1,86 @@
 import { createProvider } from "../../create-provider";
 
-export const artifact = createProvider(
+export const Artifact = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/artifact.png"
 );
-export const certificate_manager = createProvider(
+export const CertificateManager = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/certificate-manager.png"
 );
-export const cloud_directory = createProvider(
+export const CloudDirectory = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/cloud-directory.png"
 );
-export const cloudhsm = createProvider(
+export const Cloudhsm = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/cloudhsm.png"
 );
-export const cognito = createProvider(
+export const Cognito = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/cognito.png"
 );
-export const detective = createProvider(
+export const Detective = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/detective.png"
 );
-export const directory_service = createProvider(
+export const DirectoryService = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/directory-service.png"
 );
-export const firewall_manager = createProvider(
+export const FirewallManager = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/firewall-manager.png"
 );
-export const guardduty = createProvider(
+export const Guardduty = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/guardduty.png"
 );
-export const identity_and_access_management_iam_access_analyzer = createProvider(
+export const IdentityAndAccessManagementIamAccessAnalyzer = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/identity-and-access-management-iam-access-analyzer.png"
 );
-export const identity_and_access_management_iam_aws_sts = createProvider(
+export const IdentityAndAccessManagementIamAWSSts = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/identity-and-access-management-iam-aws-sts.png"
 );
-export const identity_and_access_management_iam_permissions = createProvider(
+export const IdentityAndAccessManagementIamPermissions = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/identity-and-access-management-iam-permissions.png"
 );
-export const identity_and_access_management_iam_role = createProvider(
+export const IdentityAndAccessManagementIamRole = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/identity-and-access-management-iam-role.png"
 );
-export const identity_and_access_management_iam = createProvider(
+export const IdentityAndAccessManagementIam = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/identity-and-access-management-iam.png"
 );
-export const inspector = createProvider(
+export const Inspector = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/inspector.png"
 );
-export const key_management_service = createProvider(
+export const KeyManagementService = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/key-management-service.png"
 );
-export const macie = createProvider(
+export const Macie = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/macie.png"
 );
-export const resource_access_manager = createProvider(
+export const ResourceAccessManager = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/resource-access-manager.png"
 );
-export const secrets_manager = createProvider(
+export const SecretsManager = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/secrets-manager.png"
 );
-export const security_hub = createProvider(
+export const SecurityHub = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/security-hub.png"
 );
-export const security_identity_and_compliance = createProvider(
+export const SecurityIdentityAndCompliance = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/security-identity-and-compliance.png"
 );
-export const shield = createProvider(
+export const Shield = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/shield.png"
 );
-export const single_sign_on = createProvider(
+export const SingleSignOn = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/single-sign-on.png"
 );
-export const waf = createProvider(
+export const WAF = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/security/waf.png"
 );
+
+export const ACM = CertificateManager;
+export const CloudHSM = Cloudhsm;
+export const DS = DirectoryService;
+export const FMS = FirewallManager;
+export const IAMAccessAnalyzer = IdentityAndAccessManagementIamAccessAnalyzer;
+export const IAMAWSSts = IdentityAndAccessManagementIamAWSSts;
+export const IAMPermissions = IdentityAndAccessManagementIamPermissions;
+export const IAMRole = IdentityAndAccessManagementIamRole;
+export const IAM = IdentityAndAccessManagementIam;
+export const KMS = KeyManagementService;
+export const RAM = ResourceAccessManager;

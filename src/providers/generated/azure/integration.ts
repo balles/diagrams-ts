@@ -1,53 +1,53 @@
 import { createProvider } from "../../create-provider";
 
-export const api_for_fhir = createProvider(
+export const APIForFhir = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/api-for-fhir.png"
 );
-export const api_management = createProvider(
+export const APIManagement = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/api-management.png"
 );
-export const app_configuration = createProvider(
+export const AppConfiguration = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/app-configuration.png"
 );
-export const data_catalog = createProvider(
+export const DataCatalog = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/data-catalog.png"
 );
-export const event_grid_domains = createProvider(
+export const EventGridDomains = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/event-grid-domains.png"
 );
-export const event_grid_subscriptions = createProvider(
+export const EventGridSubscriptions = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/event-grid-subscriptions.png"
 );
-export const event_grid_topics = createProvider(
+export const EventGridTopics = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/event-grid-topics.png"
 );
-export const integration_accounts = createProvider(
+export const IntegrationAccounts = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/integration-accounts.png"
 );
-export const integration_service_environments = createProvider(
+export const IntegrationServiceEnvironments = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/integration-service-environments.png"
 );
-export const logic_apps_custom_connector = createProvider(
+export const LogicAppsCustomConnector = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/logic-apps-custom-connector.png"
 );
-export const logic_apps = createProvider(
+export const LogicApps = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/logic-apps.png"
 );
-export const sendgrid_accounts = createProvider(
+export const SendgridAccounts = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/sendgrid-accounts.png"
 );
-export const service_bus_relays = createProvider(
+export const ServiceBusRelays = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/service-bus-relays.png"
 );
-export const service_bus = createProvider(
+export const ServiceBus = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/service-bus.png"
 );
-export const service_catalog_managed_application_definitions = createProvider(
+export const ServiceCatalogManagedApplicationDefinitions = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/service-catalog-managed-application-definitions.png"
 );
-export const software_as_a_service = createProvider(
+export const SoftwareAsAService = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/software-as-a-service.png"
 );
-export const storsimple_device_managers = createProvider(
+export const StorsimpleDeviceManagers = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/integration/storsimple-device-managers.png"
 );

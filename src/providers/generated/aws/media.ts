@@ -1,35 +1,35 @@
 import { createProvider } from "../../create-provider";
 
-export const elastic_transcoder = createProvider(
+export const ElasticTranscoder = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elastic-transcoder.png"
 );
-export const elemental_conductor = createProvider(
+export const ElementalConductor = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elemental-conductor.png"
 );
-export const elemental_delta = createProvider(
+export const ElementalDelta = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elemental-delta.png"
 );
-export const elemental_live = createProvider(
+export const ElementalLive = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elemental-live.png"
 );
-export const elemental_mediaconnect = createProvider(
+export const ElementalMediaconnect = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elemental-mediaconnect.png"
 );
-export const elemental_mediaconvert = createProvider(
+export const ElementalMediaconvert = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elemental-mediaconvert.png"
 );
-export const elemental_medialive = createProvider(
+export const ElementalMedialive = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elemental-medialive.png"
 );
-export const elemental_mediapackage = createProvider(
+export const ElementalMediapackage = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elemental-mediapackage.png"
 );
-export const elemental_mediastore = createProvider(
+export const ElementalMediastore = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elemental-mediastore.png"
 );
-export const elemental_mediatailor = createProvider(
+export const ElementalMediatailor = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elemental-mediatailor.png"
 );
-export const elemental_server = createProvider(
+export const ElementalServer = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/media/elemental-server.png"
 );

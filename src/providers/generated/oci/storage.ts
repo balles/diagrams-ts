@@ -1,56 +1,56 @@
 import { createProvider } from "../../create-provider";
 
-export const backup_restore_white = createProvider(
+export const BackupRestoreWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/backup-restore-white.png"
 );
-export const backup_restore = createProvider(
+export const BackupRestore = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/backup-restore.png"
 );
-export const block_storage_clone_white = createProvider(
+export const BlockStorageCloneWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/block-storage-clone-white.png"
 );
-export const block_storage_clone = createProvider(
+export const BlockStorageClone = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/block-storage-clone.png"
 );
-export const block_storage_white = createProvider(
+export const BlockStorageWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/block-storage-white.png"
 );
-export const block_storage = createProvider(
+export const BlockStorage = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/block-storage.png"
 );
-export const buckets_white = createProvider(
+export const BucketsWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/buckets-white.png"
 );
-export const buckets = createProvider(
+export const Buckets = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/buckets.png"
 );
-export const data_transfer_white = createProvider(
+export const DataTransferWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/data-transfer-white.png"
 );
-export const data_transfer = createProvider(
+export const DataTransfer = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/data-transfer.png"
 );
-export const elastic_performance_white = createProvider(
+export const ElasticPerformanceWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/elastic-performance-white.png"
 );
-export const elastic_performance = createProvider(
+export const ElasticPerformance = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/elastic-performance.png"
 );
-export const file_storage_white = createProvider(
+export const FileStorageWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/file-storage-white.png"
 );
-export const file_storage = createProvider(
+export const FileStorage = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/file-storage.png"
 );
-export const object_storage_white = createProvider(
+export const ObjectStorageWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/object-storage-white.png"
 );
-export const object_storage = createProvider(
+export const ObjectStorage = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/object-storage.png"
 );
-export const storage_gateway_white = createProvider(
+export const StorageGatewayWhite = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/storage-gateway-white.png"
 );
-export const storage_gateway = createProvider(
+export const StorageGateway = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/storage/storage-gateway.png"
 );

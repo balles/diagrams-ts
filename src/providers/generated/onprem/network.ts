@@ -1,83 +1,90 @@
 import { createProvider } from "../../create-provider";
 
-export const apache = createProvider(
+export const Apache = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/apache.png"
 );
-export const bind_9 = createProvider(
+export const Bind9 = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/bind-9.png"
 );
-export const caddy = createProvider(
+export const Caddy = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/caddy.png"
 );
-export const consul = createProvider(
+export const Consul = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/consul.png"
 );
-export const envoy = createProvider(
+export const Envoy = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/envoy.png"
 );
-export const etcd = createProvider(
+export const Etcd = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/etcd.png"
 );
-export const glassfish = createProvider(
+export const Glassfish = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/glassfish.png"
 );
-export const gunicorn = createProvider(
+export const Gunicorn = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/gunicorn.png"
 );
-export const haproxy = createProvider(
+export const Haproxy = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/haproxy.png"
 );
-export const internet = createProvider(
+export const Internet = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/internet.png"
 );
-export const istio = createProvider(
+export const Istio = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/istio.png"
 );
-export const jbossas = createProvider(
+export const Jbossas = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/jbossas.png"
 );
-export const jetty = createProvider(
+export const Jetty = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/jetty.png"
 );
-export const kong = createProvider(
+export const Kong = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/kong.png"
 );
-export const linkerd = createProvider(
+export const Linkerd = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/linkerd.png"
 );
-export const nginx = createProvider(
+export const Nginx = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/nginx.png"
 );
-export const ocelot = createProvider(
+export const Ocelot = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/ocelot.png"
 );
-export const open_service_mesh = createProvider(
+export const OpenServiceMesh = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/open-service-mesh.png"
 );
-export const opnsense = createProvider(
+export const Opnsense = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/opnsense.png"
 );
-export const pfsense = createProvider(
+export const Pfsense = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/pfsense.png"
 );
-export const pomerium = createProvider(
+export const Pomerium = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/pomerium.png"
 );
-export const powerdns = createProvider(
+export const Powerdns = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/powerdns.png"
 );
-export const tomcat = createProvider(
+export const Tomcat = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/tomcat.png"
 );
-export const traefik = createProvider(
+export const Traefik = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/traefik.png"
 );
-export const vyos = createProvider(
+export const Vyos = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/vyos.png"
 );
-export const wildfly = createProvider(
+export const Wildfly = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/wildfly.png"
 );
-export const zookeeper = createProvider(
+export const Zookeeper = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/network/zookeeper.png"
 );
+
+export const ETCD = Etcd;
+export const HAProxy = Haproxy;
+export const OSM = OpenServiceMesh;
+export const OPNSense = Opnsense;
+export const PFSense = Pfsense;
+export const VyOS = Vyos;

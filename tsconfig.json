@@ -7,7 +7,8 @@
     "outDir": "dist/",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "declaration": true
+    "declaration": true,
+    "resolveJsonModule": true
   },
   "include": ["src/**/*", "examples/create-logo.ts"],
   "exclude": [

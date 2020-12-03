@@ -1,65 +1,72 @@
 import { createProvider } from "../../create-provider";
 
-export const application_auto_scaling = createProvider(
+export const ApplicationAutoScaling = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/application-auto-scaling.png"
 );
-export const batch = createProvider(
+export const Batch = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/batch.png"
 );
-export const compute = createProvider(
+export const Compute = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/compute.png"
 );
-export const ec2_container_registry = createProvider(
+export const EC2ContainerRegistry = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/ec2-container-registry.png"
 );
-export const ec2 = createProvider(
+export const EC2 = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/ec2.png"
 );
-export const elastic_beanstalk = createProvider(
+export const ElasticBeanstalk = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/elastic-beanstalk.png"
 );
-export const elastic_container_service = createProvider(
+export const ElasticContainerService = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/elastic-container-service.png"
 );
-export const elastic_kubernetes_service = createProvider(
+export const ElasticKubernetesService = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/elastic-kubernetes-service.png"
 );
-export const fargate = createProvider(
+export const Fargate = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/fargate.png"
 );
-export const lambda = createProvider(
+export const Lambda = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/lambda.png"
 );
-export const lightsail = createProvider(
+export const Lightsail = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/lightsail.png"
 );
-export const outposts = createProvider(
+export const Outposts = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/outposts.png"
 );
-export const serverless_application_repository = createProvider(
+export const ServerlessApplicationRepository = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/serverless-application-repository.png"
 );
-export const thinkbox_deadline = createProvider(
+export const ThinkboxDeadline = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/thinkbox-deadline.png"
 );
-export const thinkbox_draft = createProvider(
+export const ThinkboxDraft = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/thinkbox-draft.png"
 );
-export const thinkbox_frost = createProvider(
+export const ThinkboxFrost = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/thinkbox-frost.png"
 );
-export const thinkbox_krakatoa = createProvider(
+export const ThinkboxKrakatoa = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/thinkbox-krakatoa.png"
 );
-export const thinkbox_sequoia = createProvider(
+export const ThinkboxSequoia = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/thinkbox-sequoia.png"
 );
-export const thinkbox_stoke = createProvider(
+export const ThinkboxStoke = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/thinkbox-stoke.png"
 );
-export const thinkbox_xmesh = createProvider(
+export const ThinkboxXmesh = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/thinkbox-xmesh.png"
 );
-export const vmware_cloud_on_aws = createProvider(
+export const VmwareCloudOnAWS = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/compute/vmware-cloud-on-aws.png"
 );
+
+export const AutoScaling = ApplicationAutoScaling;
+export const ECR = EC2ContainerRegistry;
+export const EB = ElasticBeanstalk;
+export const ECS = ElasticContainerService;
+export const EKS = ElasticKubernetesService;
+export const SAR = ServerlessApplicationRepository;

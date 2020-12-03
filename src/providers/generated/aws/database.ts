@@ -1,47 +1,56 @@
 import { createProvider } from "../../create-provider";
 
-export const aurora = createProvider(
+export const Aurora = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/aurora.png"
 );
-export const database_migration_service = createProvider(
+export const DatabaseMigrationService = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/database-migration-service.png"
 );
-export const database = createProvider(
+export const Database = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/database.png"
 );
-export const documentdb_mongodb_compatibility = createProvider(
+export const DocumentdbMongodbCompatibility = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/documentdb-mongodb-compatibility.png"
 );
-export const dynamodb_dax = createProvider(
+export const DynamodbDax = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/dynamodb-dax.png"
 );
-export const dynamodb_global_secondary_index = createProvider(
+export const DynamodbGlobalSecondaryIndex = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/dynamodb-global-secondary-index.png"
 );
-export const dynamodb_table = createProvider(
+export const DynamodbTable = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/dynamodb-table.png"
 );
-export const dynamodb = createProvider(
+export const Dynamodb = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/dynamodb.png"
 );
-export const elasticache = createProvider(
+export const Elasticache = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/elasticache.png"
 );
-export const neptune = createProvider(
+export const Neptune = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/neptune.png"
 );
-export const quantum_ledger_database_qldb = createProvider(
+export const QuantumLedgerDatabaseQldb = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/quantum-ledger-database-qldb.png"
 );
-export const rds_on_vmware = createProvider(
+export const RDSOnVmware = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/rds-on-vmware.png"
 );
-export const rds = createProvider(
+export const RDS = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/rds.png"
 );
-export const redshift = createProvider(
+export const Redshift = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/redshift.png"
 );
-export const timestream = createProvider(
+export const Timestream = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/database/timestream.png"
 );
+
+export const DMS = DatabaseMigrationService;
+export const DB = Database;
+export const DocumentDB = DocumentdbMongodbCompatibility;
+export const DAX = DynamodbDax;
+export const DynamodbGSI = DynamodbGlobalSecondaryIndex;
+export const DDB = Dynamodb;
+export const ElastiCache = Elasticache;
+export const QLDB = QuantumLedgerDatabaseQldb;

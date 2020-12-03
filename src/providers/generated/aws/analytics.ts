@@ -1,71 +1,73 @@
 import { createProvider } from "../../create-provider";
 
-export const analytics = createProvider(
+export const Analytics = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/analytics.png"
 );
-export const athena = createProvider(
+export const Athena = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/athena.png"
 );
-export const cloudsearch_search_documents = createProvider(
+export const CloudsearchSearchDocuments = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/cloudsearch-search-documents.png"
 );
-export const cloudsearch = createProvider(
+export const Cloudsearch = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/cloudsearch.png"
 );
-export const data_pipeline = createProvider(
+export const DataPipeline = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/data-pipeline.png"
 );
-export const elasticsearch_service = createProvider(
+export const ElasticsearchService = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/elasticsearch-service.png"
 );
-export const emr_cluster = createProvider(
+export const EMRCluster = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/emr-cluster.png"
 );
-export const emr_hdfs_cluster = createProvider(
+export const EMRHdfsCluster = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/emr-hdfs-cluster.png"
 );
-export const emr = createProvider(
+export const EMR = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/emr.png"
 );
-export const glue_crawlers = createProvider(
+export const GlueCrawlers = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/glue-crawlers.png"
 );
-export const glue_data_catalog = createProvider(
+export const GlueDataCatalog = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/glue-data-catalog.png"
 );
-export const glue = createProvider(
+export const Glue = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/glue.png"
 );
-export const kinesis_data_analytics = createProvider(
+export const KinesisDataAnalytics = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/kinesis-data-analytics.png"
 );
-export const kinesis_data_firehose = createProvider(
+export const KinesisDataFirehose = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/kinesis-data-firehose.png"
 );
-export const kinesis_data_streams = createProvider(
+export const KinesisDataStreams = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/kinesis-data-streams.png"
 );
-export const kinesis_video_streams = createProvider(
+export const KinesisVideoStreams = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/kinesis-video-streams.png"
 );
-export const kinesis = createProvider(
+export const Kinesis = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/kinesis.png"
 );
-export const lake_formation = createProvider(
+export const LakeFormation = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/lake-formation.png"
 );
-export const managed_streaming_for_kafka = createProvider(
+export const ManagedStreamingForKafka = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/managed-streaming-for-kafka.png"
 );
-export const quicksight = createProvider(
+export const Quicksight = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/quicksight.png"
 );
-export const redshift_dense_compute_node = createProvider(
+export const RedshiftDenseComputeNode = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/redshift-dense-compute-node.png"
 );
-export const redshift_dense_storage_node = createProvider(
+export const RedshiftDenseStorageNode = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/redshift-dense-storage-node.png"
 );
-export const redshift = createProvider(
+export const Redshift = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/analytics/redshift.png"
 );
+
+export const ES = ElasticsearchService;

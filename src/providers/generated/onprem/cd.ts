@@ -1,11 +1,11 @@
 import { createProvider } from "../../create-provider";
 
-export const spinnaker = createProvider(
+export const Spinnaker = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/cd/spinnaker.png"
 );
-export const tekton_cli = createProvider(
+export const TektonCli = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/cd/tekton-cli.png"
 );
-export const tekton = createProvider(
+export const Tekton = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/cd/tekton.png"
 );

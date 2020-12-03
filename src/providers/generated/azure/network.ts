@@ -1,83 +1,83 @@
 import { createProvider } from "../../create-provider";
 
-export const application_gateway = createProvider(
+export const ApplicationGateway = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/application-gateway.png"
 );
-export const application_security_groups = createProvider(
+export const ApplicationSecurityGroups = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/application-security-groups.png"
 );
-export const cdn_profiles = createProvider(
+export const CDNProfiles = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/cdn-profiles.png"
 );
-export const connections = createProvider(
+export const Connections = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/connections.png"
 );
-export const ddos_protection_plans = createProvider(
+export const DDOSProtectionPlans = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/ddos-protection-plans.png"
 );
-export const dns_private_zones = createProvider(
+export const DNSPrivateZones = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/dns-private-zones.png"
 );
-export const dns_zones = createProvider(
+export const DNSZones = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/dns-zones.png"
 );
-export const expressroute_circuits = createProvider(
+export const ExpressrouteCircuits = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/expressroute-circuits.png"
 );
-export const firewall = createProvider(
+export const Firewall = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/firewall.png"
 );
-export const front_doors = createProvider(
+export const FrontDoors = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/front-doors.png"
 );
-export const load_balancers = createProvider(
+export const LoadBalancers = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/load-balancers.png"
 );
-export const local_network_gateways = createProvider(
+export const LocalNetworkGateways = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/local-network-gateways.png"
 );
-export const network_interfaces = createProvider(
+export const NetworkInterfaces = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/network-interfaces.png"
 );
-export const network_security_groups_classic = createProvider(
+export const NetworkSecurityGroupsClassic = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/network-security-groups-classic.png"
 );
-export const network_watcher = createProvider(
+export const NetworkWatcher = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/network-watcher.png"
 );
-export const on_premises_data_gateways = createProvider(
+export const OnPremisesDataGateways = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/on-premises-data-gateways.png"
 );
-export const public_ip_addresses = createProvider(
+export const PublicIpAddresses = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/public-ip-addresses.png"
 );
-export const reserved_ip_addresses_classic = createProvider(
+export const ReservedIpAddressesClassic = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/reserved-ip-addresses-classic.png"
 );
-export const route_filters = createProvider(
+export const RouteFilters = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/route-filters.png"
 );
-export const route_tables = createProvider(
+export const RouteTables = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/route-tables.png"
 );
-export const service_endpoint_policies = createProvider(
+export const ServiceEndpointPolicies = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/service-endpoint-policies.png"
 );
-export const subnets = createProvider(
+export const Subnets = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/subnets.png"
 );
-export const traffic_manager_profiles = createProvider(
+export const TrafficManagerProfiles = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/traffic-manager-profiles.png"
 );
-export const virtual_network_classic = createProvider(
+export const VirtualNetworkClassic = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/virtual-network-classic.png"
 );
-export const virtual_network_gateways = createProvider(
+export const VirtualNetworkGateways = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/virtual-network-gateways.png"
 );
-export const virtual_networks = createProvider(
+export const VirtualNetworks = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/virtual-networks.png"
 );
-export const virtual_wans = createProvider(
+export const VirtualWans = createProvider(
   "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/network/virtual-wans.png"
 );
