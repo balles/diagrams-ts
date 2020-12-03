@@ -51,10 +51,10 @@ const {
 } = diagrams;
 
 const awsFlow = () => {
-  const producer = aws.compute.lambda("Producer");
-  const queue = aws.integration.simple_queue_service_sqs("Queue");
-  const consumer = aws.compute.lambda("Consumer");
-  const bucket = aws.storage.simple_storage_service_s3("My Bucket");
+  const producer = aws.compute.Lambda("Producer");
+  const queue = aws.integration.SQS("Queue");
+  const consumer = aws.compute.Lambda("Consumer");
+  const bucket = aws.storage.S3("My Bucket");
 
   return diagram`${producer}>>${queue}>>${consumer}>>${bucket}`;
 };
@@ -91,7 +91,5 @@ yarn ts-node ./examples/show-diagram.ts
 ## Known Issues
 
 - Merging edges has a bug
-- Naming of nodes is not yet completely the same as in python
-- Name of "switch" breaks generation
 - "Direct rendering" is not yet possible
 - Node Label positioning
