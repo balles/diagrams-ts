@@ -11,7 +11,7 @@ const upperWords = generationConfig.upperWords as UpperWords;
 const titleWords = generationConfig.titleWords as TitleWords;
 const aliases = generationConfig.aliases as Aliases;
 
-const assetDirectory = "./assets";
+const assetDirectory = "./diagrams-python/resources";
 const targetDirectory = "./src/providers/generated";
 
 const getRepositoryUrl = ({
