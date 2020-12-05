@@ -1,48 +1,50 @@
 import { createProvider } from "../../create-provider";
 
-export const archive_storage = createProvider(
-  "assets/azure/storage/archive-storage.png"
+export const ArchiveStorage = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/archive-storage.png"
 );
-export const azurefxtedgefiler = createProvider(
-  "assets/azure/storage/azurefxtedgefiler.png"
+export const Azurefxtedgefiler = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/azurefxtedgefiler.png"
 );
-export const blob_storage = createProvider(
-  "assets/azure/storage/blob-storage.png"
+export const BlobStorage = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/blob-storage.png"
 );
-export const data_box_edge___data_box_gateway = createProvider(
-  "assets/azure/storage/data-box-edge---data-box-gateway.png"
+export const DataBoxEdgeDataBoxGateway = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/data-box-edge---data-box-gateway.png"
 );
-export const data_box = createProvider("assets/azure/storage/data-box.png");
-export const data_lake_storage = createProvider(
-  "assets/azure/storage/data-lake-storage.png"
+export const DataBox = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/data-box.png"
 );
-export const general_storage = createProvider(
-  "assets/azure/storage/general-storage.png"
+export const DataLakeStorage = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/data-lake-storage.png"
 );
-export const netapp_files = createProvider(
-  "assets/azure/storage/netapp-files.png"
+export const GeneralStorage = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/general-storage.png"
 );
-export const queues_storage = createProvider(
-  "assets/azure/storage/queues-storage.png"
+export const NetappFiles = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/netapp-files.png"
 );
-export const storage_accounts_classic = createProvider(
-  "assets/azure/storage/storage-accounts-classic.png"
+export const QueuesStorage = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/queues-storage.png"
 );
-export const storage_accounts = createProvider(
-  "assets/azure/storage/storage-accounts.png"
+export const StorageAccountsClassic = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/storage-accounts-classic.png"
 );
-export const storage_explorer = createProvider(
-  "assets/azure/storage/storage-explorer.png"
+export const StorageAccounts = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/storage-accounts.png"
 );
-export const storage_sync_services = createProvider(
-  "assets/azure/storage/storage-sync-services.png"
+export const StorageExplorer = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/storage-explorer.png"
 );
-export const storsimple_data_managers = createProvider(
-  "assets/azure/storage/storsimple-data-managers.png"
+export const StorageSyncServices = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/storage-sync-services.png"
 );
-export const storsimple_device_managers = createProvider(
-  "assets/azure/storage/storsimple-device-managers.png"
+export const StorsimpleDataManagers = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/storsimple-data-managers.png"
 );
-export const table_storage = createProvider(
-  "assets/azure/storage/table-storage.png"
+export const StorsimpleDeviceManagers = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/storsimple-device-managers.png"
+);
+export const TableStorage = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/storage/table-storage.png"
 );

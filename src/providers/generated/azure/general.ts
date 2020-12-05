@@ -1,62 +1,80 @@
 import { createProvider } from "../../create-provider";
 
-export const allresources = createProvider(
-  "assets/azure/general/allresources.png"
+export const Allresources = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/allresources.png"
 );
-export const azurehome = createProvider("assets/azure/general/azurehome.png");
-export const developertools = createProvider(
-  "assets/azure/general/developertools.png"
+export const Azurehome = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/azurehome.png"
 );
-export const helpsupport = createProvider(
-  "assets/azure/general/helpsupport.png"
+export const Developertools = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/developertools.png"
 );
-export const information = createProvider(
-  "assets/azure/general/information.png"
+export const Helpsupport = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/helpsupport.png"
 );
-export const managementgroups = createProvider(
-  "assets/azure/general/managementgroups.png"
+export const Information = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/information.png"
 );
-export const marketplace = createProvider(
-  "assets/azure/general/marketplace.png"
+export const Managementgroups = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/managementgroups.png"
 );
-export const quickstartcenter = createProvider(
-  "assets/azure/general/quickstartcenter.png"
+export const Marketplace = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/marketplace.png"
 );
-export const recent = createProvider("assets/azure/general/recent.png");
-export const reservations = createProvider(
-  "assets/azure/general/reservations.png"
+export const Quickstartcenter = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/quickstartcenter.png"
 );
-export const resource = createProvider("assets/azure/general/resource.png");
-export const resourcegroups = createProvider(
-  "assets/azure/general/resourcegroups.png"
+export const Recent = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/recent.png"
 );
-export const servicehealth = createProvider(
-  "assets/azure/general/servicehealth.png"
+export const Reservations = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/reservations.png"
 );
-export const shareddashboard = createProvider(
-  "assets/azure/general/shareddashboard.png"
+export const Resource = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/resource.png"
 );
-export const subscriptions = createProvider(
-  "assets/azure/general/subscriptions.png"
+export const Resourcegroups = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/resourcegroups.png"
 );
-export const support = createProvider("assets/azure/general/support.png");
-export const supportrequests = createProvider(
-  "assets/azure/general/supportrequests.png"
+export const Servicehealth = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/servicehealth.png"
 );
-export const tag = createProvider("assets/azure/general/tag.png");
-export const tags = createProvider("assets/azure/general/tags.png");
-export const templates = createProvider("assets/azure/general/templates.png");
-export const twousericon = createProvider(
-  "assets/azure/general/twousericon.png"
+export const Shareddashboard = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/shareddashboard.png"
 );
-export const userhealthicon = createProvider(
-  "assets/azure/general/userhealthicon.png"
+export const Subscriptions = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/subscriptions.png"
 );
-export const usericon = createProvider("assets/azure/general/usericon.png");
-export const userprivacy = createProvider(
-  "assets/azure/general/userprivacy.png"
+export const Support = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/support.png"
 );
-export const userresource = createProvider(
-  "assets/azure/general/userresource.png"
+export const Supportrequests = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/supportrequests.png"
 );
-export const whatsnew = createProvider("assets/azure/general/whatsnew.png");
+export const Tag = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/tag.png"
+);
+export const Tags = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/tags.png"
+);
+export const Templates = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/templates.png"
+);
+export const Twousericon = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/twousericon.png"
+);
+export const Userhealthicon = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/userhealthicon.png"
+);
+export const Usericon = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/usericon.png"
+);
+export const Userprivacy = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/userprivacy.png"
+);
+export const Userresource = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/userresource.png"
+);
+export const Whatsnew = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/azure/general/whatsnew.png"
+);

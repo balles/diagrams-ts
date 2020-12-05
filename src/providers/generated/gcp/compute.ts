@@ -1,16 +1,31 @@
 import { createProvider } from "../../create-provider";
 
-export const app_engine = createProvider("assets/gcp/compute/app-engine.png");
-export const compute_engine = createProvider(
-  "assets/gcp/compute/compute-engine.png"
+export const AppEngine = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/compute/app-engine.png"
 );
-export const container_optimized_os = createProvider(
-  "assets/gcp/compute/container-optimized-os.png"
+export const ComputeEngine = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/compute/compute-engine.png"
 );
-export const functions = createProvider("assets/gcp/compute/functions.png");
-export const gke_on_prem = createProvider("assets/gcp/compute/gke-on-prem.png");
-export const gpu = createProvider("assets/gcp/compute/gpu.png");
-export const kubernetes_engine = createProvider(
-  "assets/gcp/compute/kubernetes-engine.png"
+export const ContainerOptimizedOS = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/compute/container-optimized-os.png"
 );
-export const run = createProvider("assets/gcp/compute/run.png");
+export const Functions = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/compute/functions.png"
+);
+export const GKEOnPrem = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/compute/gke-on-prem.png"
+);
+export const GPU = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/compute/gpu.png"
+);
+export const KubernetesEngine = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/compute/kubernetes-engine.png"
+);
+export const Run = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/compute/run.png"
+);
+
+export const GAE = AppEngine;
+export const GCE = ComputeEngine;
+export const GCF = Functions;
+export const GKE = KubernetesEngine;

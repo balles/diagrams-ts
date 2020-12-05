@@ -1,3 +1,5 @@
 import { createProvider } from "../../create-provider";
 
-export const sumerian = createProvider("assets/aws/ar/sumerian.png");
+export const Sumerian = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/aws/ar/sumerian.png"
+);

@@ -1,3 +1,5 @@
 import { createProvider } from "../../create-provider";
 
-export const cloudinary = createProvider("assets/saas/media/cloudinary.png");
+export const Cloudinary = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/saas/media/cloudinary.png"
+);

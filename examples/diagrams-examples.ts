@@ -13,9 +13,9 @@ const {
 // Example 1: Grouped workers simple, unidirected graph, no clusters
 
 const {
-  compute: { ec2: EC2 },
-  database: { rds: RDS },
-  network: { elastic_load_balancing: ELB },
+  compute: { EC2 },
+  database: { RDS },
+  network: { ELB },
 } = aws;
 
 const groupedWorkers = () => {
@@ -32,13 +32,13 @@ const groupedWorkers = () => {
 
 const {
   compute: {
-    elastic_container_service: ECS,
-    elastic_kubernetes_service: EKS,
-    lambda: Lambda,
+    ECS,
+    EKS,
+    Lambda,
   },
-  database: { redshift: Redshift },
-  integration: { simple_queue_service_sqs: SQS },
-  storage: { simple_storage_service_s3: S3 },
+  database: { Redshift },
+  integration: { SQS },
+  storage: { S3 },
 } = aws;
 
 const eventProcessing = () => {

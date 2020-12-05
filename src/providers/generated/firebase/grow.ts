@@ -1,20 +1,28 @@
 import { createProvider } from "../../create-provider";
 
-export const ab_testing = createProvider("assets/firebase/grow/ab-testing.png");
-export const app_indexing = createProvider(
-  "assets/firebase/grow/app-indexing.png"
+export const ABTesting = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/grow/ab-testing.png"
 );
-export const dynamic_links = createProvider(
-  "assets/firebase/grow/dynamic-links.png"
+export const AppIndexing = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/grow/app-indexing.png"
 );
-export const in_app_messaging = createProvider(
-  "assets/firebase/grow/in-app-messaging.png"
+export const DynamicLinks = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/grow/dynamic-links.png"
 );
-export const invites = createProvider("assets/firebase/grow/invites.png");
-export const messaging = createProvider("assets/firebase/grow/messaging.png");
-export const predictions = createProvider(
-  "assets/firebase/grow/predictions.png"
+export const InAppMessaging = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/grow/in-app-messaging.png"
 );
-export const remote_config = createProvider(
-  "assets/firebase/grow/remote-config.png"
+export const Invites = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/grow/invites.png"
 );
+export const Messaging = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/grow/messaging.png"
+);
+export const Predictions = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/grow/predictions.png"
+);
+export const RemoteConfig = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/grow/remote-config.png"
+);
+
+export const FCM = Messaging;

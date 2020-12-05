@@ -1,35 +1,49 @@
 import { createProvider } from "../../create-provider";
 
-export const build = createProvider("assets/gcp/devtools/build.png");
-export const code_for_intellij = createProvider(
-  "assets/gcp/devtools/code-for-intellij.png"
+export const Build = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/build.png"
 );
-export const code = createProvider("assets/gcp/devtools/code.png");
-export const container_registry = createProvider(
-  "assets/gcp/devtools/container-registry.png"
+export const CodeForIntellij = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/code-for-intellij.png"
 );
-export const gradle_app_engine_plugin = createProvider(
-  "assets/gcp/devtools/gradle-app-engine-plugin.png"
+export const Code = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/code.png"
 );
-export const ide_plugins = createProvider(
-  "assets/gcp/devtools/ide-plugins.png"
+export const ContainerRegistry = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/container-registry.png"
 );
-export const maven_app_engine_plugin = createProvider(
-  "assets/gcp/devtools/maven-app-engine-plugin.png"
+export const GradleAppEnginePlugin = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/gradle-app-engine-plugin.png"
 );
-export const scheduler = createProvider("assets/gcp/devtools/scheduler.png");
-export const sdk = createProvider("assets/gcp/devtools/sdk.png");
-export const source_repositories = createProvider(
-  "assets/gcp/devtools/source-repositories.png"
+export const IdePlugins = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/ide-plugins.png"
 );
-export const tasks = createProvider("assets/gcp/devtools/tasks.png");
-export const test_lab = createProvider("assets/gcp/devtools/test-lab.png");
-export const tools_for_eclipse = createProvider(
-  "assets/gcp/devtools/tools-for-eclipse.png"
+export const MavenAppEnginePlugin = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/maven-app-engine-plugin.png"
 );
-export const tools_for_powershell = createProvider(
-  "assets/gcp/devtools/tools-for-powershell.png"
+export const Scheduler = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/scheduler.png"
 );
-export const tools_for_visual_studio = createProvider(
-  "assets/gcp/devtools/tools-for-visual-studio.png"
+export const SDK = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/sdk.png"
 );
+export const SourceRepositories = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/source-repositories.png"
+);
+export const Tasks = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/tasks.png"
+);
+export const TestLab = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/test-lab.png"
+);
+export const ToolsForEclipse = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/tools-for-eclipse.png"
+);
+export const ToolsForPowershell = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/tools-for-powershell.png"
+);
+export const ToolsForVisualStudio = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/devtools/tools-for-visual-studio.png"
+);
+
+export const GCR = ContainerRegistry;

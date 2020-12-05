@@ -1,11 +1,23 @@
 import { createProvider } from "../../create-provider";
 
-export const android = createProvider("assets/generic/os/android.png");
-export const centos = createProvider("assets/generic/os/centos.png");
-export const ios = createProvider("assets/generic/os/ios.png");
-export const linux_general = createProvider(
-  "assets/generic/os/linux-general.png"
+export const Android = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/os/android.png"
 );
-export const suse = createProvider("assets/generic/os/suse.png");
-export const ubuntu = createProvider("assets/generic/os/ubuntu.png");
-export const windows = createProvider("assets/generic/os/windows.png");
+export const Centos = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/os/centos.png"
+);
+export const IOS = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/os/ios.png"
+);
+export const LinuxGeneral = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/os/linux-general.png"
+);
+export const Suse = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/os/suse.png"
+);
+export const Ubuntu = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/os/ubuntu.png"
+);
+export const Windows = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/generic/os/windows.png"
+);

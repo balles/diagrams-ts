@@ -1,42 +1,56 @@
 import { createProvider } from "../../create-provider";
 
-export const alarm_white = createProvider(
-  "assets/oci/monitoring/alarm-white.png"
+export const AlarmWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/alarm-white.png"
 );
-export const alarm = createProvider("assets/oci/monitoring/alarm.png");
-export const email_white = createProvider(
-  "assets/oci/monitoring/email-white.png"
+export const Alarm = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/alarm.png"
 );
-export const email = createProvider("assets/oci/monitoring/email.png");
-export const events_white = createProvider(
-  "assets/oci/monitoring/events-white.png"
+export const EmailWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/email-white.png"
 );
-export const events = createProvider("assets/oci/monitoring/events.png");
-export const health_check_white = createProvider(
-  "assets/oci/monitoring/health-check-white.png"
+export const Email = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/email.png"
 );
-export const health_check = createProvider(
-  "assets/oci/monitoring/health-check.png"
+export const EventsWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/events-white.png"
 );
-export const notifications_white = createProvider(
-  "assets/oci/monitoring/notifications-white.png"
+export const Events = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/events.png"
 );
-export const notifications = createProvider(
-  "assets/oci/monitoring/notifications.png"
+export const HealthCheckWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/health-check-white.png"
 );
-export const queue_white = createProvider(
-  "assets/oci/monitoring/queue-white.png"
+export const HealthCheck = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/health-check.png"
 );
-export const queue = createProvider("assets/oci/monitoring/queue.png");
-export const search_white = createProvider(
-  "assets/oci/monitoring/search-white.png"
+export const NotificationsWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/notifications-white.png"
 );
-export const search = createProvider("assets/oci/monitoring/search.png");
-export const telemetry_white = createProvider(
-  "assets/oci/monitoring/telemetry-white.png"
+export const Notifications = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/notifications.png"
 );
-export const telemetry = createProvider("assets/oci/monitoring/telemetry.png");
-export const workflow_white = createProvider(
-  "assets/oci/monitoring/workflow-white.png"
+export const QueueWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/queue-white.png"
 );
-export const workflow = createProvider("assets/oci/monitoring/workflow.png");
+export const Queue = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/queue.png"
+);
+export const SearchWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/search-white.png"
+);
+export const Search = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/search.png"
+);
+export const TelemetryWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/telemetry-white.png"
+);
+export const Telemetry = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/telemetry.png"
+);
+export const WorkflowWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/workflow-white.png"
+);
+export const Workflow = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/monitoring/workflow.png"
+);

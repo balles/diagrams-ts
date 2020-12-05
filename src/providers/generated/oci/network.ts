@@ -1,38 +1,50 @@
 import { createProvider } from "../../create-provider";
 
-export const drg_white = createProvider("assets/oci/network/drg-white.png");
-export const drg = createProvider("assets/oci/network/drg.png");
-export const firewall_white = createProvider(
-  "assets/oci/network/firewall-white.png"
+export const DrgWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/drg-white.png"
 );
-export const firewall = createProvider("assets/oci/network/firewall.png");
-export const internet_gateway_white = createProvider(
-  "assets/oci/network/internet-gateway-white.png"
+export const Drg = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/drg.png"
 );
-export const internet_gateway = createProvider(
-  "assets/oci/network/internet-gateway.png"
+export const FirewallWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/firewall-white.png"
 );
-export const load_balancer_white = createProvider(
-  "assets/oci/network/load-balancer-white.png"
+export const Firewall = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/firewall.png"
 );
-export const load_balancer = createProvider(
-  "assets/oci/network/load-balancer.png"
+export const InternetGatewayWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/internet-gateway-white.png"
 );
-export const route_table_white = createProvider(
-  "assets/oci/network/route-table-white.png"
+export const InternetGateway = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/internet-gateway.png"
 );
-export const route_table = createProvider("assets/oci/network/route-table.png");
-export const security_lists_white = createProvider(
-  "assets/oci/network/security-lists-white.png"
+export const LoadBalancerWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/load-balancer-white.png"
 );
-export const security_lists = createProvider(
-  "assets/oci/network/security-lists.png"
+export const LoadBalancer = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/load-balancer.png"
 );
-export const service_gateway_white = createProvider(
-  "assets/oci/network/service-gateway-white.png"
+export const RouteTableWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/route-table-white.png"
 );
-export const service_gateway = createProvider(
-  "assets/oci/network/service-gateway.png"
+export const RouteTable = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/route-table.png"
 );
-export const vcn_white = createProvider("assets/oci/network/vcn-white.png");
-export const vcn = createProvider("assets/oci/network/vcn.png");
+export const SecurityListsWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/security-lists-white.png"
+);
+export const SecurityLists = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/security-lists.png"
+);
+export const ServiceGatewayWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/service-gateway-white.png"
+);
+export const ServiceGateway = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/service-gateway.png"
+);
+export const VcnWhite = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/vcn-white.png"
+);
+export const Vcn = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/oci/network/vcn.png"
+);

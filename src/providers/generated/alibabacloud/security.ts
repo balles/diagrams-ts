@@ -1,56 +1,63 @@
 import { createProvider } from "../../create-provider";
 
-export const anti_bot_service = createProvider(
-  "assets/alibabacloud/security/anti-bot-service.png"
+export const AntiBotService = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/anti-bot-service.png"
 );
-export const anti_ddos_basic = createProvider(
-  "assets/alibabacloud/security/anti-ddos-basic.png"
+export const AntiDdosBasic = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/anti-ddos-basic.png"
 );
-export const anti_ddos_pro = createProvider(
-  "assets/alibabacloud/security/anti-ddos-pro.png"
+export const AntiDdosPro = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/anti-ddos-pro.png"
 );
-export const antifraud_service = createProvider(
-  "assets/alibabacloud/security/antifraud-service.png"
+export const AntifraudService = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/antifraud-service.png"
 );
-export const bastion_host = createProvider(
-  "assets/alibabacloud/security/bastion-host.png"
+export const BastionHost = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/bastion-host.png"
 );
-export const cloud_firewall = createProvider(
-  "assets/alibabacloud/security/cloud-firewall.png"
+export const CloudFirewall = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/cloud-firewall.png"
 );
-export const cloud_security_scanner = createProvider(
-  "assets/alibabacloud/security/cloud-security-scanner.png"
+export const CloudSecurityScanner = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/cloud-security-scanner.png"
 );
-export const content_moderation = createProvider(
-  "assets/alibabacloud/security/content-moderation.png"
+export const ContentModeration = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/content-moderation.png"
 );
-export const crowdsourced_security_testing = createProvider(
-  "assets/alibabacloud/security/crowdsourced-security-testing.png"
+export const CrowdsourcedSecurityTesting = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/crowdsourced-security-testing.png"
 );
-export const data_encryption_service = createProvider(
-  "assets/alibabacloud/security/data-encryption-service.png"
+export const DataEncryptionService = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/data-encryption-service.png"
 );
-export const db_audit = createProvider(
-  "assets/alibabacloud/security/db-audit.png"
+export const DbAudit = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/db-audit.png"
 );
-export const game_shield = createProvider(
-  "assets/alibabacloud/security/game-shield.png"
+export const GameShield = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/game-shield.png"
 );
-export const id_verification = createProvider(
-  "assets/alibabacloud/security/id-verification.png"
+export const IdVerification = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/id-verification.png"
 );
-export const managed_security_service = createProvider(
-  "assets/alibabacloud/security/managed-security-service.png"
+export const ManagedSecurityService = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/managed-security-service.png"
 );
-export const security_center = createProvider(
-  "assets/alibabacloud/security/security-center.png"
+export const SecurityCenter = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/security-center.png"
 );
-export const server_guard = createProvider(
-  "assets/alibabacloud/security/server-guard.png"
+export const ServerGuard = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/server-guard.png"
 );
-export const ssl_certificates = createProvider(
-  "assets/alibabacloud/security/ssl-certificates.png"
+export const SslCertificates = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/ssl-certificates.png"
 );
-export const web_application_firewall = createProvider(
-  "assets/alibabacloud/security/web-application-firewall.png"
+export const WebApplicationFirewall = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/security/web-application-firewall.png"
 );
+
+export const ABS = AntiBotService;
+export const AS = AntifraudService;
+export const CFW = CloudFirewall;
+export const CM = ContentModeration;
+export const DES = DataEncryptionService;
+export const WAF = WebApplicationFirewall;

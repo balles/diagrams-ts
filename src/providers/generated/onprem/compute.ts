@@ -1,4 +1,8 @@
 import { createProvider } from "../../create-provider";
 
-export const nomad = createProvider("assets/onprem/compute/nomad.png");
-export const server = createProvider("assets/onprem/compute/server.png");
+export const Nomad = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/compute/nomad.png"
+);
+export const Server = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/compute/server.png"
+);

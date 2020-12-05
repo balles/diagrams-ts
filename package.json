@@ -11,7 +11,7 @@
     "build": "yarn tsc",
     "lint": "yarn eslint . --ext .ts",
     "format": "yarn prettier . --write",
-    "generate-providers": "yarn ts-node scripts/generate-providers && yarn format",
+    "generate-providers": "yarn ts-node scripts/generate-providers $DIAGRAMS_COMMIT && yarn format",
     "create-logo": "yarn ts-node scripts/create-logo"
   },
   "devDependencies": {
