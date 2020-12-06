@@ -9,10 +9,16 @@ jobs:
       - uses: actions/checkout@v2
       - name: Check for change
         run: |
-          DIAGRAMS_COMMIT = curl https://api.github.com/repos/mingrammer/diagrams/contents/ | jq '.[] | select(.name=="resources") | .sha'
+          DIAGRAMS_COMMIT=$(curl https://api.github.com/repos/mingrammer/diagrams/contents/ | jq '.[] | select(.name=="resources") | .sha')
+          CURRENT_DIAGRAMS_COMMIT=$(cat package.json | jq '."diagrams-python-sha"')
           echo "::set-output name=diagrams-sha::$DIAGRAMS_COMMIT"
+          if [ $DIAGRAMS_COMMIT != $CURRENT_DIAGRAMS_COMMIT ]; then
+          echo "::set-output name=changed::true"
+          fi
         id: check-for-change
       - run:  echo "Diagrams sh is ${{steps.check-for-change.diagrams-sha}} "
+      - run: echo "Changed is set, this job runs."
+        if: steps.check-for-change.changed
       # - name: Use Node.js
       #   uses: actions/setup-node@v1
       #   with:
