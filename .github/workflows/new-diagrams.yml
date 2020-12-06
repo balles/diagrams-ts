@@ -19,9 +19,9 @@ jobs:
           fi
           echo "::set-output name=action_fruit::strawberry"
         id: check-for-change
-      - run:  echo "Diagrams sh is ${{steps.check-for-change.diagrams-sha}}, fruit is ${{steps.check-for-change.strawberry}}"
+      - run:  echo "Diagrams sh is ${{steps.check-for-change.outputs.diagrams-sha}}, fruit is ${{steps.check-for-change.outputs.strawberry}}"
       - run: echo "Changed is set, this job runs."
-        if: steps.check-for-change.changed
+        if: steps.check-for-change.outputs.changed
       # - name: Use Node.js
       #   uses: actions/setup-node@v1
       #   with:
