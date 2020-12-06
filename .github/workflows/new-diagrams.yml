@@ -1,15 +1,22 @@
 name: create-pr-for-new-diagrams
 on: workflow_dispatch
 jobs:
+
   create-pr:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: "14.x"
-      - run: yarn
-      - run: git clone https://github.com/mingrammer/diagrams.git diagrams-python
-      - run: $DIAGRAMS_COMMIT dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb yarn generate-providers
+      - name: Check for change
+        run: |
+          DIAGRAMS_COMMIT = curl https://api.github.com/repos/mingrammer/diagrams/contents/ | jq '.[] | select(.name=="resources") | .sha'
+          echo "::set-output name=diagrams-sha::$DIAGRAMS_COMMIT"
+        id: check-for-change
+      - run:  echo "Diagrams sh is ${{steps.check-for-change.diagrams-sha}} "
+      # - name: Use Node.js
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: "14.x"
+      # - run: yarn 
+      # - run: git clone https://github.com/mingrammer/diagrams.git diagrams-python
+      # - run: $DIAGRAMS_COMMIT dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb yarn generate-providers
