@@ -1,5 +1,7 @@
 name: create-pr-for-new-diagrams
-on: workflow_dispatch
+on: 
+  schedule:
+    - cron: "7 20 * * *"
 jobs:
 
   create-pr:
@@ -44,4 +46,5 @@ jobs:
           commit-message: 'chore(diagrams): auto update resources'
           branch: update-diagrams-${{steps.check-for-change.outputs.diagrams-sha}}
           title: 'Automatic update resources'
+          base: master
           reviewers: balles
