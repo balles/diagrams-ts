@@ -38,6 +38,7 @@ jobs:
           yarn 
           $DIAGRAMS_COMMIT ${{steps.check-for-change.outputs.diagrams-sha}} yarn generate-providers
       - name: Create Pull Request
+        if: steps.check-for-change.outputs.changed
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: 'chore(diagrams): auto update resources'
