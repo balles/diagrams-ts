@@ -1,14 +1,50 @@
 name: create-pr-for-new-diagrams
 on: 
-  workflow_dispatch
-jobs: 
+  schedule:
+    - cron: "9 20 * * *"
+jobs:
+
   create-pr:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '14.x'
-    - run: node -v
+      - uses: actions/checkout@v2
+      - name: Check for change
+        run: |
+          DIAGRAMS_COMMIT=$(curl https://api.github.com/repos/mingrammer/diagrams/contents/ | jq '.[] | select(.name=="resources") | .sha')
+          CURRENT_DIAGRAMS_COMMIT=$(cat package.json | jq '."diagrams-python-sha"')
+          echo "::set-output name=diagrams-sha::$DIAGRAMS_COMMIT"
+          if [ $DIAGRAMS_COMMIT != $CURRENT_DIAGRAMS_COMMIT ]; then
+          echo "::set-output name=changed::true"
+          fi
+        id: check-for-change
+      - name: setup node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - name: Update generated providers
+        if: steps.check-for-change.outputs.changed
+        run: |
+          echo "Changed. Create PR for ${{steps.check-for-change.outputs.diagrams-sha}}"
+          yarn
+          git clone https://github.com/mingrammer/diagrams.git diagrams-python
+          # We won't checkout here, the cloned repo should be the same state
+          # cd diagrams-python
+          # git checkout ${{steps.check-for-change.outputs.diagrams-sha}}
+          # cd ..
+          echo "Updating package.json"
+          mv package.json old-package.json
+          cat old-package.json | jq ".\"diagrams-python-sha\"=\"${{steps.check-for-change.outputs.diagrams-sha}}\"" >> package.json
+          rm old-package.json
+          echo "Generating updated providers"
+          yarn 
+          DIAGRAMS_COMMIT=${{steps.check-for-change.outputs.diagrams-sha}} yarn generate-providers
+      - name: Create Pull Request
+        if: steps.check-for-change.outputs.changed
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: 'chore(diagrams): auto update resources'
+          branch: update-diagrams-${{steps.check-for-change.outputs.diagrams-sha}}
+          title: 'Automatic update resources'
+          base: master
+          reviewers: balles

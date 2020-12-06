@@ -1,3 +1,5 @@
+/* eslint @typescript-eslint/no-var-requires: 0 */
+
 const { JSDOM } = require("jsdom");
 const fetch = require("node-fetch");
 const {
