@@ -11,21 +11,34 @@ jobs:
         run: |
           DIAGRAMS_COMMIT=$(curl https://api.github.com/repos/mingrammer/diagrams/contents/ | jq '.[] | select(.name=="resources") | .sha')
           CURRENT_DIAGRAMS_COMMIT=$(cat package.json | jq '."diagrams-python-sha"')
-          echo $DIAGRAMS_COMMIT
-          echo $CURRENT_DIAGRAMS_COMMIT
           echo "::set-output name=diagrams-sha::$DIAGRAMS_COMMIT"
           if [ $DIAGRAMS_COMMIT != $CURRENT_DIAGRAMS_COMMIT ]; then
           echo "::set-output name=changed::true"
           fi
-          echo "::set-output name=action_fruit::strawberry"
         id: check-for-change
-      - run:  echo "Diagrams sh is ${{steps.check-for-change.outputs.diagrams-sha}}, fruit is ${{steps.check-for-change.outputs.strawberry}}"
-      - run: echo "Changed is set, this job runs."
+      - name: setup node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - name: Update generated providers
         if: steps.check-for-change.outputs.changed
-      # - name: Use Node.js
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: "14.x"
-      # - run: yarn 
-      # - run: git clone https://github.com/mingrammer/diagrams.git diagrams-python
-      # - run: $DIAGRAMS_COMMIT dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb yarn generate-providers
+        run: |
+          echo "Changed. Create PR for ${{steps.check-for-change.outputs.diagrams-sha}}"
+          yarn
+          git clone https://github.com/mingrammer/diagrams.git diagrams-python
+          cd diagrams-python && git checkout ${{steps.check-for-change.outputs.diagrams-sha}}
+          cd ..
+          echo "Updating package.json"
+          mv package.json old-package.json
+          cat old-package.json | jq ".\"diagrams-python-sha\"=${DIAGRAMS_COMMIT}" >> package.json
+          rm old-package.json
+          echo "Generating updated providers"
+          yarn 
+          $DIAGRAMS_COMMIT ${{steps.check-for-change.outputs.diagrams-sha}} yarn generate-providers
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: 'chore(diagrams): auto update resources'
+          branch: update-diagrams-${{steps.check-for-change.outputs.diagrams-sha}}
+          title: 'Automatic update resources'
+          reviewers: balles
