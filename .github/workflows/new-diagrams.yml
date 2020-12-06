@@ -30,7 +30,7 @@ jobs:
           cd ..
           echo "Updating package.json"
           mv package.json old-package.json
-          cat old-package.json | jq ".\"diagrams-python-sha\"=${DIAGRAMS_COMMIT}" >> package.json
+          cat old-package.json | jq ".\"diagrams-python-sha\"=${{steps.check-for-change.outputs.diagrams-sha}}" >> package.json
           rm old-package.json
           echo "Generating updated providers"
           yarn 
