@@ -5,3 +5,4 @@ output
 *.code-workspace
 todo.md
 scripts/scraped-attributes.json
+diagrams-python/
