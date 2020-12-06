@@ -36,7 +36,7 @@ jobs:
           rm old-package.json
           echo "Generating updated providers"
           yarn 
-          $DIAGRAMS_COMMIT ${{steps.check-for-change.outputs.diagrams-sha}} yarn generate-providers
+          DIAGRAMS_COMMIT=${{steps.check-for-change.outputs.diagrams-sha}} yarn generate-providers
       - name: Create Pull Request
         if: steps.check-for-change.outputs.changed
         uses: peter-evans/create-pull-request@v3
