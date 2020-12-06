@@ -26,13 +26,13 @@ jobs:
           echo "Changed. Create PR for ${{steps.check-for-change.outputs.diagrams-sha}}"
           yarn
           git clone https://github.com/mingrammer/diagrams.git diagrams-python
-          # We can't checkout here, we use master instead
+          # We won't checkout here, the cloned repo should be the same state
           # cd diagrams-python
           # git checkout ${{steps.check-for-change.outputs.diagrams-sha}}
           # cd ..
           echo "Updating package.json"
           mv package.json old-package.json
-          cat old-package.json | jq ".\"diagrams-python-sha\"=${{steps.check-for-change.outputs.diagrams-sha}}" >> package.json
+          cat old-package.json | jq ".\"diagrams-python-sha\"=\"${{steps.check-for-change.outputs.diagrams-sha}}\"" >> package.json
           rm old-package.json
           echo "Generating updated providers"
           yarn 
