@@ -1,7 +1,7 @@
 name: create-pr-for-new-diagrams
 on: 
   schedule:
-    - cron: "6 45 * * *"
+    - cron: "55 6 * * *"
 jobs:
 
   create-pr:
