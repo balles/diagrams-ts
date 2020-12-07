@@ -1,9 +1,8 @@
 name: create-pr-for-new-diagrams
-on: 
+on:
   schedule:
     - cron: "0 8 * * *"
 jobs:
-
   create-pr:
     runs-on: ubuntu-latest
 
@@ -43,9 +42,9 @@ jobs:
         if: steps.check-for-change.outputs.changed
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: 'chore(diagrams): auto update resources'
+          commit-message: "chore(diagrams): auto update resources"
           branch: update-diagrams-${{steps.check-for-change.outputs.diagrams-sha}}
-          title: 'Automatic update resources'
+          title: "Automatic update resources"
           base: master
           reviewers: balles
           token: ${{secrets.DIAGRAMS_PR_TOKEN}}

@@ -1,23 +1,23 @@
 import { createProvider } from "../../create-provider";
 
 export const Authentication = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/develop/authentication.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/firebase/develop/authentication.png"
 );
 export const Firestore = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/develop/firestore.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/firebase/develop/firestore.png"
 );
 export const Functions = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/develop/functions.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/firebase/develop/functions.png"
 );
 export const Hosting = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/develop/hosting.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/firebase/develop/hosting.png"
 );
 export const MLKit = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/develop/ml-kit.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/firebase/develop/ml-kit.png"
 );
 export const RealtimeDatabase = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/develop/realtime-database.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/firebase/develop/realtime-database.png"
 );
 export const Storage = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/firebase/develop/storage.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/firebase/develop/storage.png"
 );

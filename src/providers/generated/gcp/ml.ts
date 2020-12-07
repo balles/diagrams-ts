@@ -1,67 +1,67 @@
 import { createProvider } from "../../create-provider";
 
 export const AdvancedSolutionsLab = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/advanced-solutions-lab.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/advanced-solutions-lab.png"
 );
 export const AIHub = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/ai-hub.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/ai-hub.png"
 );
 export const AIPlatformDataLabelingService = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/ai-platform-data-labeling-service.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/ai-platform-data-labeling-service.png"
 );
 export const AIPlatform = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/ai-platform.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/ai-platform.png"
 );
 export const AutomlNaturalLanguage = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/automl-natural-language.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/automl-natural-language.png"
 );
 export const AutomlTables = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/automl-tables.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/automl-tables.png"
 );
 export const AutomlTranslation = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/automl-translation.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/automl-translation.png"
 );
 export const AutomlVideoIntelligence = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/automl-video-intelligence.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/automl-video-intelligence.png"
 );
 export const AutomlVision = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/automl-vision.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/automl-vision.png"
 );
 export const Automl = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/automl.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/automl.png"
 );
 export const DialogFlowEnterpriseEdition = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/dialog-flow-enterprise-edition.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/dialog-flow-enterprise-edition.png"
 );
 export const InferenceAPI = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/inference-api.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/inference-api.png"
 );
 export const JobsAPI = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/jobs-api.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/jobs-api.png"
 );
 export const NaturalLanguageAPI = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/natural-language-api.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/natural-language-api.png"
 );
 export const RecommendationsAI = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/recommendations-ai.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/recommendations-ai.png"
 );
 export const SpeechToText = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/speech-to-text.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/speech-to-text.png"
 );
 export const TextToSpeech = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/text-to-speech.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/text-to-speech.png"
 );
 export const TPU = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/tpu.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/tpu.png"
 );
 export const TranslationAPI = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/translation-api.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/translation-api.png"
 );
 export const VideoIntelligenceAPI = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/video-intelligence-api.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/video-intelligence-api.png"
 );
 export const VisionAPI = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/gcp/ml/vision-api.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/gcp/ml/vision-api.png"
 );
 
 export const AutoML = Automl;

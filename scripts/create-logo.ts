@@ -1,14 +1,7 @@
-import  {
-  initDiagram,
-  ext,
-  dg,
-  asCluster,
-  DiagramNode,
-} from "../src/diagrams";
+import { initDiagram, ext, dg, asCluster, DiagramNode } from "../src/diagrams";
 import { renderDot } from "../src/graph/render-dot";
 
 const logo = () => {
-  
   const atts = {
     labelloc: "c",
     fontsize: 24,
@@ -37,7 +30,7 @@ const logo = () => {
     attributes: {
       ...atts,
       label: "TS",
-      fontcolor: "grey"
+      fontcolor: "grey",
     },
   };
 

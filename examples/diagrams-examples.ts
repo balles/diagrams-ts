@@ -31,11 +31,7 @@ const groupedWorkers = () => {
 // Example 2: Event Processing on AWS
 
 const {
-  compute: {
-    ECS,
-    EKS,
-    Lambda,
-  },
+  compute: { ECS, EKS, Lambda },
   database: { Redshift },
   integration: { SQS },
   storage: { S3 },
