@@ -1,7 +1,7 @@
 name: create-pr-for-new-diagrams
 on: 
   schedule:
-    - cron: "55 6 * * *"
+    - cron: "0 8 * * *"
 jobs:
 
   create-pr:
@@ -48,4 +48,4 @@ jobs:
           title: 'Automatic update resources'
           base: master
           reviewers: balles
-          token: DIAGRAMS_PR_TOKEN
+          token: ${{secrets.DIAGRAMS_PR_TOKEN}}
