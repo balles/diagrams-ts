@@ -1,28 +1,28 @@
 import { createProvider } from "../../create-provider";
 
 export const CloudStorageGateway = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/storage/cloud-storage-gateway.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/alibabacloud/storage/cloud-storage-gateway.png"
 );
 export const FileStorageHdfs = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/storage/file-storage-hdfs.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/alibabacloud/storage/file-storage-hdfs.png"
 );
 export const FileStorageNas = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/storage/file-storage-nas.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/alibabacloud/storage/file-storage-nas.png"
 );
 export const HybridBackupRecovery = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/storage/hybrid-backup-recovery.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/alibabacloud/storage/hybrid-backup-recovery.png"
 );
 export const HybridCloudDisasterRecovery = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/storage/hybrid-cloud-disaster-recovery.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/alibabacloud/storage/hybrid-cloud-disaster-recovery.png"
 );
 export const Imm = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/storage/imm.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/alibabacloud/storage/imm.png"
 );
 export const ObjectStorageService = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/storage/object-storage-service.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/alibabacloud/storage/object-storage-service.png"
 );
 export const ObjectTableStore = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/alibabacloud/storage/object-table-store.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/alibabacloud/storage/object-table-store.png"
 );
 
 export const HDFS = FileStorageHdfs;

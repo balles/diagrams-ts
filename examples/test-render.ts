@@ -23,9 +23,9 @@ const graph = (): RenderFunc[] => {
   const byeNode = { attributes: { label: "Bye" }, id: getUniqueNodeId() };
   const ec2Node = {
     attributes: {
-      label: '',
+      label: "",
       shape: "none",
-      image: 'assets/aws/compute/ec2.png',
+      image: "assets/aws/compute/ec2.png",
     },
     id: getUniqueNodeId(),
   };

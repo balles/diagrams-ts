@@ -1,8 +1,8 @@
 import { createProvider } from "../../create-provider";
 
 export const Trivy = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/security/trivy.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/onprem/security/trivy.png"
 );
 export const Vault = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/dfd8e0a52c8c4d1c3ce95dc7161c23bb2eaf0acb/resources/onprem/security/vault.png"
+  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/onprem/security/vault.png"
 );
