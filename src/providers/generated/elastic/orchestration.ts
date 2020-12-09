@@ -1,8 +1,8 @@
 import { createProvider } from "../../create-provider";
 
 export const ECE = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/elastic/orchestration/ece.png"
+  "https://github.com/mingrammer/diagrams/raw/master/resources/elastic/orchestration/ece.png"
 );
 export const ECK = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/4cb6e555333075e05da2e6f2feea67db4dc29fc6/resources/elastic/orchestration/eck.png"
+  "https://github.com/mingrammer/diagrams/raw/master/resources/elastic/orchestration/eck.png"
 );
