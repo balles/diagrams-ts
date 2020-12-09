@@ -44,26 +44,32 @@ main.ts:
 import * as diagrams from "../src/diagrams";
 
 const {
-  providers: { aws: {compute:{Lambda},integration:{SQS},storage:{S3}} },
+  providers: {
+    aws: {
+      compute: { Lambda },
+      integration: { SQS },
+      storage: { S3 },
+    },
+  },
   createDiagram,
   diagram,
 } = diagrams;
 
-const awsFlow =
+const awsFlow = () => {
+  const producer = Lambda("Producer");
+  const queue = SQS("Queue");
+  const consumer = Lambda("Consumer");
+  const bucket = S3("My Bucket");
+
+  return diagram`${producer}>>${queue}>>${consumer}>>${bucket}`;
 };
 
 (async () => {
   try {
     await createDiagram({
       label: "AWS Flow",
-      fileName: "./generated-assets/aws-flow.png",
-    })(() => {
-  const producer = aws.compute.Lambda("Producer");
-  const queue = aws.integration.SQS("Queue");
-  const consumer = aws.compute.Lambda("Consumer");
-  const bucket = aws.storage.S3("My Bucket");
-
-  return diagram`${producer}>>${queue}>>${consumer}>>${bucket}`;});
+      filename: "./generated-assets/aws-flow.png",
+    })(awsFlow());
   } catch (error) {
     console.log(error);
   }
