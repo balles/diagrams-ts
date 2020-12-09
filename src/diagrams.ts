@@ -22,9 +22,12 @@ import {
   Node,
   NodeAttributes,
   nodes,
+  Renderer,
   RenderFunc,
   RenderProperties,
 } from "./graph";
+import { Stream } from "stream";
+import { CliRenderer } from "./graph/render-dot";
 
 export const providers = {
   aws,
@@ -216,8 +219,6 @@ export const diagram = createSubDiagram();
 export const dg = diagram;
 export const styled = createSubDiagram;
 
-// TODO: naming: cluster/ with cluster ? ...
-// TODO: Add it before or after the call?
 export const asCluster = (
   graphAtts: GraphAttributes = {},
   nodeAtts?: NodeAttributes,
@@ -246,7 +247,7 @@ export const asCluster = (
   }) as RenderFunc;
 };
 
-export const initDiagram = (label = "", direction?: string) => (
+export const initDiagram = (label: string, direction?: string) => (
   diagram: () => RenderFunc[]
 ): Promise<string> => {
   return graph(false)("diagrams")(diagram())(
@@ -257,4 +258,47 @@ export const initDiagram = (label = "", direction?: string) => (
     defaultNodeAttributes,
     defaultEdgeAttributes
   )();
+};
+
+//graph_attr, node_attr and edge_attr
+
+export type CreateDiagramArguments<T> = {
+  label: string;
+  direction?: string;
+  outformat?: string;
+  filename?: string;
+  graphAttr?: GraphAttributes;
+  nodeAttr?: NodeAttributes;
+  edgeAttr?: EdgeAttributes;
+  renderer?: Renderer<T>;
+};
+
+export const createDiagram = ({
+  label,
+  direction,
+  outformat = "png",
+  filename = `${label}.${outformat}`,
+  graphAttr,
+  nodeAttr,
+  edgeAttr,
+  renderer = CliRenderer as Renderer<string>,
+}: CreateDiagramArguments<string | Stream>) => async (
+  elements: RenderFunc[]
+): Promise<string | Stream> => {
+  const dotInput = await graph(false)("diagrams")(elements)(
+    {
+      ...graphAttr,
+      ...defaultGraphAttributes,
+      ...{ ...(direction ? { rankdir: direction } : {}), label },
+    },
+    {
+      ...nodeAttr,
+      ...defaultNodeAttributes,
+    },
+    {
+      ...edgeAttr,
+      ...defaultEdgeAttributes,
+    }
+  )();
+  return renderer({ outputFile: filename, format: outformat })(dotInput);
 };

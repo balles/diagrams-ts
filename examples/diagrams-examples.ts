@@ -1,10 +1,8 @@
 import * as diagrams from "../src/diagrams";
 import { RenderFunc } from "../src/graph";
-import { renderDot } from "../src/graph/render-dot";
 
 const {
   providers: { aws },
-  initDiagram,
   ext,
   diagram,
   asCluster,
@@ -79,12 +77,12 @@ const renderExample = async (
   { title, direction, diagram }: Example,
   index: number
 ): Promise<void> => {
-  const dotGraph = await initDiagram(title, direction)(diagram);
-  await renderDot({
-    outputFile: `./output/example.${index + 1}.png`,
-    input: dotGraph,
-    format: "png",
-  });
+  await diagrams.createDiagram({
+    label: title,
+    direction,
+    outformat: "png",
+    filename: `./output/example.${index + 1}.png`,
+  })(diagram());
 };
 
 const main = async () => {

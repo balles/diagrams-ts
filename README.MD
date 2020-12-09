@@ -42,33 +42,34 @@ main.ts:
 
 ```ts
 import * as diagrams from "../src/diagrams";
-import { renderDot } from "../src/render-dot";
 
 const {
-  providers: { aws },
-  initDiagram,
+  providers: {
+    aws: {
+      compute: { Lambda },
+      integration: { SQS },
+      storage: { S3 },
+    },
+  },
+  createDiagram,
   diagram,
 } = diagrams;
 
 const awsFlow = () => {
-  const producer = aws.compute.Lambda("Producer");
-  const queue = aws.integration.SQS("Queue");
-  const consumer = aws.compute.Lambda("Consumer");
-  const bucket = aws.storage.S3("My Bucket");
+  const producer = Lambda("Producer");
+  const queue = SQS("Queue");
+  const consumer = Lambda("Consumer");
+  const bucket = S3("My Bucket");
 
   return diagram`${producer}>>${queue}>>${consumer}>>${bucket}`;
 };
 
 (async () => {
   try {
-    const dotGraph = await initDiagram("AWS Flow")(awsFlow);
-
-    const outPut = await renderDot({
-      outputFile: "./generated-assets/aws-flow.png",
-      input: dotGraph,
-      format: "png",
-    });
-    console.log(outPut);
+    await createDiagram({
+      label: "AWS Flow",
+      filename: "./generated-assets/aws-flow.png",
+    })(awsFlow());
   } catch (error) {
     console.log(error);
   }
