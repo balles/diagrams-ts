@@ -1,13 +1,12 @@
 import * as diagrams from "../src/diagrams";
-import { renderDot } from "../src/graph/render-dot";
 
 const {
   providers: { aws, onprem },
-  initDiagram,
   ext,
   dg,
   styled,
   asCluster,
+  createDiagram,
 } = diagrams;
 
 const diagram = () => {
@@ -34,17 +33,12 @@ const diagram = () => {
   return [dbCluster, ...someDiagram];
 };
 
-const niceDiagram = initDiagram("Example diagram");
-
 (async () => {
   try {
-    const dotGraph = await niceDiagram(diagram);
-
-    await renderDot({
-      outputFile: "./output/test.png",
-      input: dotGraph,
-      format: "png",
-    });
+    await createDiagram({
+      label: "Example diagram",
+      filename: "./output/example.png",
+    })(diagram());
   } catch (error) {
     console.log(error);
   }

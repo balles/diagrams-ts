@@ -3,6 +3,16 @@ import { spawn } from "child_process";
 // TODO: add Types for format
 // TODO: tests
 
+export const CliRenderer = ({
+  format,
+  outputFile,
+}: {
+  format: string;
+  outputFile: string;
+}) => async (input: string): Promise<string> => {
+  return renderDot({ input, format, outputFile });
+};
+
 export const renderDot = async ({
   format,
   outputFile,
