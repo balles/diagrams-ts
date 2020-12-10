@@ -11,6 +11,7 @@ import * as database from "./database";
 import * as dns from "./dns";
 import * as etl from "./etl";
 import * as gitops from "./gitops";
+import * as groupware from "./groupware";
 import * as iac from "./iac";
 import * as identity from "./identity";
 import * as inmemory from "./inmemory";
@@ -41,6 +42,7 @@ export {
   dns,
   etl,
   gitops,
+  groupware,
   iac,
   identity,
   inmemory,

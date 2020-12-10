@@ -54,6 +54,9 @@ export const Ruby = createProvider(
 export const Rust = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/programming/language/rust.png"
 );
+export const Scala = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/programming/language/scala.png"
+);
 export const Swift = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/programming/language/swift.png"
 );

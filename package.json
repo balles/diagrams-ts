@@ -7,7 +7,7 @@
   "author": "balles",
   "license": "MIT",
   "private": false,
-  "diagrams-python-sha": "4cb6e555333075e05da2e6f2feea67db4dc29fc6",
+  "diagrams-python-sha": "d737c405c15b0df0ef8079601dba146ec30a83e8",
   "scripts": {
     "build": "yarn tsc",
     "lint": "yarn eslint . --ext .ts",
