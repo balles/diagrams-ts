@@ -1,5 +1,8 @@
 import { createProvider } from "../../create-provider";
 
+export const Ambassador = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/network/ambassador.png"
+);
 export const Apache = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/network/apache.png"
 );
