@@ -2,6 +2,7 @@ import * as alerting from "./alerting";
 import * as analytics from "./analytics";
 import * as cdn from "./cdn";
 import * as chat from "./chat";
+import * as filesharing from "./filesharing";
 import * as identity from "./identity";
 import * as logging from "./logging";
 import * as media from "./media";
@@ -13,6 +14,7 @@ export {
   analytics,
   cdn,
   chat,
+  filesharing,
   identity,
   logging,
   media,
