@@ -21,6 +21,9 @@ export const Flutter = createProvider(
 export const Laravel = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/laravel.png"
 );
+export const Micronaut = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/micronaut.png"
+);
 export const Rails = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/rails.png"
 );

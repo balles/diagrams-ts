@@ -9,6 +9,9 @@ export const Datadog = createProvider(
 export const Grafana = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/monitoring/grafana.png"
 );
+export const Newrelic = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/monitoring/newrelic.png"
+);
 export const PrometheusOperator = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/monitoring/prometheus-operator.png"
 );
