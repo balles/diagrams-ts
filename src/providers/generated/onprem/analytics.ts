@@ -24,6 +24,9 @@ export const Metabase = createProvider(
 export const Norikra = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/analytics/norikra.png"
 );
+export const Powerbi = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/analytics/powerbi.png"
+);
 export const Presto = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/analytics/presto.png"
 );

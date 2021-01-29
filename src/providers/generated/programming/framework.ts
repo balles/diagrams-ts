@@ -12,6 +12,9 @@ export const Django = createProvider(
 export const Ember = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/ember.png"
 );
+export const Fastapi = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/fastapi.png"
+);
 export const Flask = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/flask.png"
 );

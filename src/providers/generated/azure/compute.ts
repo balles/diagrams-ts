@@ -54,6 +54,9 @@ export const VMImages = createProvider(
 export const VMLinux = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/vm-linux.png"
 );
+export const VMScaleSet = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/vm-scale-set.png"
+);
 export const VMWindows = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/vm-windows.png"
 );
