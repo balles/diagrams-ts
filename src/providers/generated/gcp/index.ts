@@ -7,6 +7,7 @@ import * as iot from "./iot";
 import * as migration from "./migration";
 import * as ml from "./ml";
 import * as network from "./network";
+import * as operations from "./operations";
 import * as security from "./security";
 import * as storage from "./storage";
 
@@ -20,6 +21,7 @@ export {
   migration,
   ml,
   network,
+  operations,
   security,
   storage,
 };
