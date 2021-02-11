@@ -3,6 +3,9 @@ import { createProvider } from "../../create-provider";
 export const CloudDevelopmentKit = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/devtools/cloud-development-kit.png"
 );
+export const Cloud9Resource = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/devtools/cloud9-resource.png"
+);
 export const Cloud9 = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/devtools/cloud9.png"
 );

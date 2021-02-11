@@ -9,6 +9,9 @@ export const CloudendureMigration = createProvider(
 export const DatabaseMigrationService = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/migration/database-migration-service.png"
 );
+export const DatasyncAgent = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/migration/datasync-agent.png"
+);
 export const Datasync = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/migration/datasync.png"
 );

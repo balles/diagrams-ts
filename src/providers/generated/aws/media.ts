@@ -33,3 +33,9 @@ export const ElementalMediatailor = createProvider(
 export const ElementalServer = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-server.png"
 );
+export const KinesisVideoStreams = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/kinesis-video-streams.png"
+);
+export const MediaServices = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/media-services.png"
+);
