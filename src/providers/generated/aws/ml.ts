@@ -3,6 +3,9 @@ import { createProvider } from "../../create-provider";
 export const ApacheMxnetOnAWS = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/apache-mxnet-on-aws.png"
 );
+export const AugmentedAi = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/augmented-ai.png"
+);
 export const Comprehend = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/comprehend.png"
 );
@@ -11,6 +14,9 @@ export const DeepLearningAmis = createProvider(
 );
 export const DeepLearningContainers = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/deep-learning-containers.png"
+);
+export const Deepcomposer = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/deepcomposer.png"
 );
 export const Deeplens = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/deeplens.png"
@@ -24,6 +30,12 @@ export const ElasticInference = createProvider(
 export const Forecast = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/forecast.png"
 );
+export const FraudDetector = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/fraud-detector.png"
+);
+export const Kendra = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/kendra.png"
+);
 export const Lex = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/lex.png"
 );
@@ -35,6 +47,12 @@ export const Personalize = createProvider(
 );
 export const Polly = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/polly.png"
+);
+export const RekognitionImage = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/rekognition-image.png"
+);
+export const RekognitionVideo = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/rekognition-video.png"
 );
 export const Rekognition = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/ml/rekognition.png"

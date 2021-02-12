@@ -15,6 +15,9 @@ export const Appsync = createProvider(
 export const DeviceFarm = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/mobile/device-farm.png"
 );
+export const Mobile = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/mobile/mobile.png"
+);
 export const Pinpoint = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/mobile/pinpoint.png"
 );

@@ -3,6 +3,9 @@ import { createProvider } from "../../create-provider";
 export const Appstream20 = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/enduser/appstream-2-0.png"
 );
+export const DesktopAndAppStreaming = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/enduser/desktop-and-app-streaming.png"
+);
 export const Workdocs = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/enduser/workdocs.png"
 );

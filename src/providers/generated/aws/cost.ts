@@ -9,6 +9,9 @@ export const CostAndUsageReport = createProvider(
 export const CostExplorer = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/cost/cost-explorer.png"
 );
+export const CostManagement = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/cost/cost-management.png"
+);
 export const ReservedInstanceReporting = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/cost/reserved-instance-reporting.png"
 );

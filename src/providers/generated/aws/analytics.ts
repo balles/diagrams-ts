@@ -12,6 +12,9 @@ export const CloudsearchSearchDocuments = createProvider(
 export const Cloudsearch = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/analytics/cloudsearch.png"
 );
+export const DataLakeResource = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/analytics/data-lake-resource.png"
+);
 export const DataPipeline = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/analytics/data-pipeline.png"
 );
@@ -20,6 +23,18 @@ export const ElasticsearchService = createProvider(
 );
 export const EMRCluster = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/analytics/emr-cluster.png"
+);
+export const EMREngineMaprM3 = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/analytics/emr-engine-mapr-m3.png"
+);
+export const EMREngineMaprM5 = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/analytics/emr-engine-mapr-m5.png"
+);
+export const EMREngineMaprM7 = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/analytics/emr-engine-mapr-m7.png"
+);
+export const EMREngine = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/analytics/emr-engine.png"
 );
 export const EMRHdfsCluster = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/analytics/emr-hdfs-cluster.png"
