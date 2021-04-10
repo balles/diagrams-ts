@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MachineLearningStudioWorkspaces = exports.MachineLearningStudioWebServices = exports.MachineLearningStudioWebServicePlans = exports.MachineLearningServiceWorkspaces = exports.GenomicsAccounts = exports.CognitiveServices = exports.BotServices = exports.BatchAI = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.BatchAI = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/ml/batch-ai.png");
+exports.BotServices = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/ml/bot-services.png");
+exports.CognitiveServices = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/ml/cognitive-services.png");
+exports.GenomicsAccounts = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/ml/genomics-accounts.png");
+exports.MachineLearningServiceWorkspaces = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/ml/machine-learning-service-workspaces.png");
+exports.MachineLearningStudioWebServicePlans = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/ml/machine-learning-studio-web-service-plans.png");
+exports.MachineLearningStudioWebServices = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/ml/machine-learning-studio-web-services.png");
+exports.MachineLearningStudioWorkspaces = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/ml/machine-learning-studio-workspaces.png");

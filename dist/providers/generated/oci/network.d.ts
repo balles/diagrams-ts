@@ -1,0 +1,16 @@
+export declare const DrgWhite: (label: string) => import("../../../graph").Node;
+export declare const Drg: (label: string) => import("../../../graph").Node;
+export declare const FirewallWhite: (label: string) => import("../../../graph").Node;
+export declare const Firewall: (label: string) => import("../../../graph").Node;
+export declare const InternetGatewayWhite: (label: string) => import("../../../graph").Node;
+export declare const InternetGateway: (label: string) => import("../../../graph").Node;
+export declare const LoadBalancerWhite: (label: string) => import("../../../graph").Node;
+export declare const LoadBalancer: (label: string) => import("../../../graph").Node;
+export declare const RouteTableWhite: (label: string) => import("../../../graph").Node;
+export declare const RouteTable: (label: string) => import("../../../graph").Node;
+export declare const SecurityListsWhite: (label: string) => import("../../../graph").Node;
+export declare const SecurityLists: (label: string) => import("../../../graph").Node;
+export declare const ServiceGatewayWhite: (label: string) => import("../../../graph").Node;
+export declare const ServiceGateway: (label: string) => import("../../../graph").Node;
+export declare const VcnWhite: (label: string) => import("../../../graph").Node;
+export declare const Vcn: (label: string) => import("../../../graph").Node;

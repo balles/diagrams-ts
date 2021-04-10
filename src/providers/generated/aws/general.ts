@@ -72,5 +72,3 @@ export const User = createProvider(
 export const Users = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/general/users.png"
 );
-
-export const OfficeBuilding = GenericOfficeBuilding;

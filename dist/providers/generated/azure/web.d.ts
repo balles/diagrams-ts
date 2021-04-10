@@ -1,0 +1,10 @@
+export declare const APIConnections: (label: string) => import("../../../graph").Node;
+export declare const AppServiceCertificates: (label: string) => import("../../../graph").Node;
+export declare const AppServiceDomains: (label: string) => import("../../../graph").Node;
+export declare const AppServiceEnvironments: (label: string) => import("../../../graph").Node;
+export declare const AppServicePlans: (label: string) => import("../../../graph").Node;
+export declare const AppServices: (label: string) => import("../../../graph").Node;
+export declare const MediaServices: (label: string) => import("../../../graph").Node;
+export declare const NotificationHubNamespaces: (label: string) => import("../../../graph").Node;
+export declare const Search: (label: string) => import("../../../graph").Node;
+export declare const Signalr: (label: string) => import("../../../graph").Node;

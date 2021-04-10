@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaServices = exports.KinesisVideoStreams = exports.ElementalServer = exports.ElementalMediatailor = exports.ElementalMediastore = exports.ElementalMediapackage = exports.ElementalMedialive = exports.ElementalMediaconvert = exports.ElementalMediaconnect = exports.ElementalLive = exports.ElementalDelta = exports.ElementalConductor = exports.ElasticTranscoder = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.ElasticTranscoder = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elastic-transcoder.png");
+exports.ElementalConductor = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-conductor.png");
+exports.ElementalDelta = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-delta.png");
+exports.ElementalLive = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-live.png");
+exports.ElementalMediaconnect = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-mediaconnect.png");
+exports.ElementalMediaconvert = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-mediaconvert.png");
+exports.ElementalMedialive = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-medialive.png");
+exports.ElementalMediapackage = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-mediapackage.png");
+exports.ElementalMediastore = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-mediastore.png");
+exports.ElementalMediatailor = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-mediatailor.png");
+exports.ElementalServer = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/elemental-server.png");
+exports.KinesisVideoStreams = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/kinesis-video-streams.png");
+exports.MediaServices = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/media/media-services.png");

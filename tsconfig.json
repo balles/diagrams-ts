@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "lib": ["ES2020"],
+    "lib": ["es2020"],
     "module": "CommonJS",
-    "target": "ES2020",
+    "target": "es2015",
     "strict": true,
     "outDir": "dist/",
     "esModuleInterop": true,

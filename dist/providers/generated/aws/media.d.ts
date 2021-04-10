@@ -1,0 +1,13 @@
+export declare const ElasticTranscoder: (label: string) => import("../../../graph").Node;
+export declare const ElementalConductor: (label: string) => import("../../../graph").Node;
+export declare const ElementalDelta: (label: string) => import("../../../graph").Node;
+export declare const ElementalLive: (label: string) => import("../../../graph").Node;
+export declare const ElementalMediaconnect: (label: string) => import("../../../graph").Node;
+export declare const ElementalMediaconvert: (label: string) => import("../../../graph").Node;
+export declare const ElementalMedialive: (label: string) => import("../../../graph").Node;
+export declare const ElementalMediapackage: (label: string) => import("../../../graph").Node;
+export declare const ElementalMediastore: (label: string) => import("../../../graph").Node;
+export declare const ElementalMediatailor: (label: string) => import("../../../graph").Node;
+export declare const ElementalServer: (label: string) => import("../../../graph").Node;
+export declare const KinesisVideoStreams: (label: string) => import("../../../graph").Node;
+export declare const MediaServices: (label: string) => import("../../../graph").Node;

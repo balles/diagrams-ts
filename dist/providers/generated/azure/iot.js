@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Windows10IotCoreServices = exports.TimeSeriesInsightsEventsSources = exports.TimeSeriesInsightsEnvironments = exports.Sphere = exports.Maps = exports.IotHub = exports.IotHubSecurity = exports.IotCentralApplications = exports.DigitalTwins = exports.DeviceProvisioningServices = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.DeviceProvisioningServices = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/iot/device-provisioning-services.png");
+exports.DigitalTwins = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/iot/digital-twins.png");
+exports.IotCentralApplications = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/iot/iot-central-applications.png");
+exports.IotHubSecurity = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/iot/iot-hub-security.png");
+exports.IotHub = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/iot/iot-hub.png");
+exports.Maps = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/iot/maps.png");
+exports.Sphere = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/iot/sphere.png");
+exports.TimeSeriesInsightsEnvironments = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/iot/time-series-insights-environments.png");
+exports.TimeSeriesInsightsEventsSources = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/iot/time-series-insights-events-sources.png");
+exports.Windows10IotCoreServices = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/iot/windows-10-iot-core-services.png");

@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamAnalyticsJobs = exports.LogAnalyticsWorkspaces = exports.Hdinsightclusters = exports.EventHubs = exports.EventHubClusters = exports.Databricks = exports.DataLakeStoreGen1 = exports.DataLakeAnalytics = exports.DataFactories = exports.DataExplorerClusters = exports.AnalysisServices = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.AnalysisServices = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/analysis-services.png");
+exports.DataExplorerClusters = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/data-explorer-clusters.png");
+exports.DataFactories = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/data-factories.png");
+exports.DataLakeAnalytics = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/data-lake-analytics.png");
+exports.DataLakeStoreGen1 = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/data-lake-store-gen1.png");
+exports.Databricks = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/databricks.png");
+exports.EventHubClusters = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/event-hub-clusters.png");
+exports.EventHubs = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/event-hubs.png");
+exports.Hdinsightclusters = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/hdinsightclusters.png");
+exports.LogAnalyticsWorkspaces = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/log-analytics-workspaces.png");
+exports.StreamAnalyticsJobs = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/stream-analytics-jobs.png");

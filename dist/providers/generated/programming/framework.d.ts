@@ -1,0 +1,13 @@
+export declare const Angular: (label: string) => import("../../../graph").Node;
+export declare const Backbone: (label: string) => import("../../../graph").Node;
+export declare const Django: (label: string) => import("../../../graph").Node;
+export declare const Ember: (label: string) => import("../../../graph").Node;
+export declare const Fastapi: (label: string) => import("../../../graph").Node;
+export declare const Flask: (label: string) => import("../../../graph").Node;
+export declare const Flutter: (label: string) => import("../../../graph").Node;
+export declare const Laravel: (label: string) => import("../../../graph").Node;
+export declare const Micronaut: (label: string) => import("../../../graph").Node;
+export declare const Rails: (label: string) => import("../../../graph").Node;
+export declare const React: (label: string) => import("../../../graph").Node;
+export declare const Spring: (label: string) => import("../../../graph").Node;
+export declare const Vue: (label: string) => import("../../../graph").Node;

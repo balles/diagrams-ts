@@ -1,0 +1,17 @@
+export declare const ApplicationDiscoveryService: (label: string) => import("../../../graph").Node;
+export declare const CloudendureMigration: (label: string) => import("../../../graph").Node;
+export declare const DatabaseMigrationService: (label: string) => import("../../../graph").Node;
+export declare const DatasyncAgent: (label: string) => import("../../../graph").Node;
+export declare const Datasync: (label: string) => import("../../../graph").Node;
+export declare const MigrationAndTransfer: (label: string) => import("../../../graph").Node;
+export declare const MigrationHub: (label: string) => import("../../../graph").Node;
+export declare const ServerMigrationService: (label: string) => import("../../../graph").Node;
+export declare const SnowballEdge: (label: string) => import("../../../graph").Node;
+export declare const Snowball: (label: string) => import("../../../graph").Node;
+export declare const Snowmobile: (label: string) => import("../../../graph").Node;
+export declare const TransferForSftp: (label: string) => import("../../../graph").Node;
+export declare const ADS: (label: string) => import("../../../graph").Node;
+export declare const CEM: (label: string) => import("../../../graph").Node;
+export declare const DMS: (label: string) => import("../../../graph").Node;
+export declare const MAT: (label: string) => import("../../../graph").Node;
+export declare const SMS: (label: string) => import("../../../graph").Node;

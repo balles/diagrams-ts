@@ -1,0 +1,13 @@
+export declare const AccessReview: (label: string) => import("../../../graph").Node;
+export declare const ActiveDirectoryConnectHealth: (label: string) => import("../../../graph").Node;
+export declare const ActiveDirectory: (label: string) => import("../../../graph").Node;
+export declare const ADB2C: (label: string) => import("../../../graph").Node;
+export declare const ADDomainServices: (label: string) => import("../../../graph").Node;
+export declare const ADIdentityProtection: (label: string) => import("../../../graph").Node;
+export declare const ADPrivilegedIdentityManagement: (label: string) => import("../../../graph").Node;
+export declare const AppRegistrations: (label: string) => import("../../../graph").Node;
+export declare const ConditionalAccess: (label: string) => import("../../../graph").Node;
+export declare const EnterpriseApplications: (label: string) => import("../../../graph").Node;
+export declare const IdentityGovernance: (label: string) => import("../../../graph").Node;
+export declare const InformationProtection: (label: string) => import("../../../graph").Node;
+export declare const ManagedIdentities: (label: string) => import("../../../graph").Node;

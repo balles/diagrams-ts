@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatefulSet = exports.ReplicaSet = exports.DaemonSet = exports.Deployment = exports.STS = exports.RS = exports.Pod = exports.Job = exports.DS = exports.Deploy = exports.Cronjob = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.Cronjob = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/k8s/compute/cronjob.png");
+exports.Deploy = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/k8s/compute/deploy.png");
+exports.DS = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/k8s/compute/ds.png");
+exports.Job = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/k8s/compute/job.png");
+exports.Pod = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/k8s/compute/pod.png");
+exports.RS = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/k8s/compute/rs.png");
+exports.STS = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/k8s/compute/sts.png");
+exports.Deployment = exports.Deploy;
+exports.DaemonSet = exports.DS;
+exports.ReplicaSet = exports.RS;
+exports.StatefulSet = exports.STS;

@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tagging = exports.TaggingWhite = exports.Policies = exports.PoliciesWhite = exports.OCID = exports.OCIDWhite = exports.Logging = exports.LoggingWhite = exports.Groups = exports.GroupsWhite = exports.Compartments = exports.CompartmentsWhite = exports.Audit = exports.AuditWhite = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.AuditWhite = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/audit-white.png");
+exports.Audit = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/audit.png");
+exports.CompartmentsWhite = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/compartments-white.png");
+exports.Compartments = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/compartments.png");
+exports.GroupsWhite = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/groups-white.png");
+exports.Groups = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/groups.png");
+exports.LoggingWhite = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/logging-white.png");
+exports.Logging = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/logging.png");
+exports.OCIDWhite = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/ocid-white.png");
+exports.OCID = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/ocid.png");
+exports.PoliciesWhite = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/policies-white.png");
+exports.Policies = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/policies.png");
+exports.TaggingWhite = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/tagging-white.png");
+exports.Tagging = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/oci/governance/tagging.png");
