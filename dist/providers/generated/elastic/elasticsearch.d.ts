@@ -1,0 +1,11 @@
+export declare const Alerting: (label: string) => import("../../../graph").Node;
+export declare const Beats: (label: string) => import("../../../graph").Node;
+export declare const Elasticsearch: (label: string) => import("../../../graph").Node;
+export declare const Kibana: (label: string) => import("../../../graph").Node;
+export declare const Logstash: (label: string) => import("../../../graph").Node;
+export declare const MachineLearning: (label: string) => import("../../../graph").Node;
+export declare const Maps: (label: string) => import("../../../graph").Node;
+export declare const Monitoring: (label: string) => import("../../../graph").Node;
+export declare const SecuritySettings: (label: string) => import("../../../graph").Node;
+export declare const Sql: (label: string) => import("../../../graph").Node;
+export declare const LogStash: (label: string) => import("../../../graph").Node;

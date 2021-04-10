@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Robotics = exports.Robomaker = exports.RobomakerSimulator = exports.RobomakerFleetManagement = exports.RobomakerDevelopmentEnvironment = exports.RobomakerCloudExtensionRos = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.RobomakerCloudExtensionRos = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/robotics/robomaker-cloud-extension-ros.png");
+exports.RobomakerDevelopmentEnvironment = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/robotics/robomaker-development-environment.png");
+exports.RobomakerFleetManagement = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/robotics/robomaker-fleet-management.png");
+exports.RobomakerSimulator = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/robotics/robomaker-simulator.png");
+exports.Robomaker = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/robotics/robomaker.png");
+exports.Robotics = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/aws/robotics/robotics.png");

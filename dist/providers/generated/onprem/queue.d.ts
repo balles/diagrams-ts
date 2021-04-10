@@ -1,0 +1,9 @@
+export declare const Activemq: (label: string) => import("../../../graph").Node;
+export declare const Celery: (label: string) => import("../../../graph").Node;
+export declare const Kafka: (label: string) => import("../../../graph").Node;
+export declare const Nats: (label: string) => import("../../../graph").Node;
+export declare const Rabbitmq: (label: string) => import("../../../graph").Node;
+export declare const Zeromq: (label: string) => import("../../../graph").Node;
+export declare const ActiveMQ: (label: string) => import("../../../graph").Node;
+export declare const RabbitMQ: (label: string) => import("../../../graph").Node;
+export declare const ZeroMQ: (label: string) => import("../../../graph").Node;

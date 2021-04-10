@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SiteToSiteVpng = exports.Net = exports.NatService = exports.LoadBalancer = exports.InternetService = exports.ClientVpn = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.ClientVpn = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/outscale/network/client-vpn.png");
+exports.InternetService = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/outscale/network/internet-service.png");
+exports.LoadBalancer = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/outscale/network/load-balancer.png");
+exports.NatService = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/outscale/network/nat-service.png");
+exports.Net = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/outscale/network/net.png");
+exports.SiteToSiteVpng = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/outscale/network/site-to-site-vpng.png");

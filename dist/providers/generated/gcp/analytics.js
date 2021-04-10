@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PubSub = exports.BigQuery = exports.Pubsub = exports.Genomics = exports.Dataproc = exports.Dataprep = exports.Datalab = exports.Dataflow = exports.DataFusion = exports.DataCatalog = exports.Composer = exports.Bigquery = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.Bigquery = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/gcp/analytics/bigquery.png");
+exports.Composer = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/gcp/analytics/composer.png");
+exports.DataCatalog = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/gcp/analytics/data-catalog.png");
+exports.DataFusion = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/gcp/analytics/data-fusion.png");
+exports.Dataflow = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/gcp/analytics/dataflow.png");
+exports.Datalab = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/gcp/analytics/datalab.png");
+exports.Dataprep = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/gcp/analytics/dataprep.png");
+exports.Dataproc = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/gcp/analytics/dataproc.png");
+exports.Genomics = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/gcp/analytics/genomics.png");
+exports.Pubsub = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/gcp/analytics/pubsub.png");
+exports.BigQuery = exports.Bigquery;
+exports.PubSub = exports.Pubsub;

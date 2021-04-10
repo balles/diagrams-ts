@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestPlans = exports.Repos = exports.Pipelines = exports.DevtestLabs = exports.Devops = exports.Boards = exports.Artifacts = exports.ApplicationInsights = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.ApplicationInsights = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/application-insights.png");
+exports.Artifacts = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/artifacts.png");
+exports.Boards = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/boards.png");
+exports.Devops = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/devops.png");
+exports.DevtestLabs = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/devtest-labs.png");
+exports.Pipelines = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/pipelines.png");
+exports.Repos = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/repos.png");
+exports.TestPlans = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/test-plans.png");

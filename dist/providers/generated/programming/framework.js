@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Vue = exports.Spring = exports.React = exports.Rails = exports.Micronaut = exports.Laravel = exports.Flutter = exports.Flask = exports.Fastapi = exports.Ember = exports.Django = exports.Backbone = exports.Angular = void 0;
+const create_provider_1 = require("../../create-provider");
+exports.Angular = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/angular.png");
+exports.Backbone = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/backbone.png");
+exports.Django = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/django.png");
+exports.Ember = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/ember.png");
+exports.Fastapi = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/fastapi.png");
+exports.Flask = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/flask.png");
+exports.Flutter = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/flutter.png");
+exports.Laravel = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/laravel.png");
+exports.Micronaut = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/micronaut.png");
+exports.Rails = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/rails.png");
+exports.React = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/react.png");
+exports.Spring = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/spring.png");
+exports.Vue = create_provider_1.createProvider("https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/vue.png");

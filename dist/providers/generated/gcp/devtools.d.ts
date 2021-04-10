@@ -1,0 +1,16 @@
+export declare const Build: (label: string) => import("../../../graph").Node;
+export declare const CodeForIntellij: (label: string) => import("../../../graph").Node;
+export declare const Code: (label: string) => import("../../../graph").Node;
+export declare const ContainerRegistry: (label: string) => import("../../../graph").Node;
+export declare const GradleAppEnginePlugin: (label: string) => import("../../../graph").Node;
+export declare const IdePlugins: (label: string) => import("../../../graph").Node;
+export declare const MavenAppEnginePlugin: (label: string) => import("../../../graph").Node;
+export declare const Scheduler: (label: string) => import("../../../graph").Node;
+export declare const SDK: (label: string) => import("../../../graph").Node;
+export declare const SourceRepositories: (label: string) => import("../../../graph").Node;
+export declare const Tasks: (label: string) => import("../../../graph").Node;
+export declare const TestLab: (label: string) => import("../../../graph").Node;
+export declare const ToolsForEclipse: (label: string) => import("../../../graph").Node;
+export declare const ToolsForPowershell: (label: string) => import("../../../graph").Node;
+export declare const ToolsForVisualStudio: (label: string) => import("../../../graph").Node;
+export declare const GCR: (label: string) => import("../../../graph").Node;

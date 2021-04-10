@@ -1,0 +1,14 @@
+export declare const CloudStorageGateway: (label: string) => import("../../../graph").Node;
+export declare const FileStorageHdfs: (label: string) => import("../../../graph").Node;
+export declare const FileStorageNas: (label: string) => import("../../../graph").Node;
+export declare const HybridBackupRecovery: (label: string) => import("../../../graph").Node;
+export declare const HybridCloudDisasterRecovery: (label: string) => import("../../../graph").Node;
+export declare const Imm: (label: string) => import("../../../graph").Node;
+export declare const ObjectStorageService: (label: string) => import("../../../graph").Node;
+export declare const ObjectTableStore: (label: string) => import("../../../graph").Node;
+export declare const HDFS: (label: string) => import("../../../graph").Node;
+export declare const NAS: (label: string) => import("../../../graph").Node;
+export declare const HBR: (label: string) => import("../../../graph").Node;
+export declare const HDR: (label: string) => import("../../../graph").Node;
+export declare const OSS: (label: string) => import("../../../graph").Node;
+export declare const OTS: (label: string) => import("../../../graph").Node;
