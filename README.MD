@@ -91,6 +91,4 @@ yarn ts-node ./examples/show-diagram.ts
 
 ## Known Issues
 
-- Merging edges has a bug
-- "Direct rendering" is not yet possible
 - Node Label positioning

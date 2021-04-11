@@ -114,10 +114,11 @@ const mergeEdges = (leftSide: Node[][], rightSide: Node[][]): Node[][] => {
       outArray = [...outArray, leftEdge];
     }
   }
-  return outArray;
+  return [...outArray, ...rightSide];
 };
 
-const createEdgeChains = (
+// exported mainly for tests
+export const createEdgeChains = (
   nodes: edgeTemplateInput[],
   edgeAtts: EdgeAttributes
 ) => {
@@ -141,12 +142,14 @@ const createEdgeChains = (
     return mergeEdges(acc, value);
   }, singleEdges[0]);
   // Create render functions
-  return edges(
-    mergedEdges.map((mergedEdge) => ({
-      nodes: mergedEdge,
-      attributes: edgeAtts,
-    })) as EdgeChain[]
-  );
+  return mergedEdges?.length > 0
+    ? edges(
+        mergedEdges.map((mergedEdge) => ({
+          nodes: mergedEdge,
+          attributes: edgeAtts,
+        })) as EdgeChain[]
+      )
+    : [];
 };
 
 const createNodes = (inputNodes: edgeTemplateInput[]): RenderFunc[] => {
