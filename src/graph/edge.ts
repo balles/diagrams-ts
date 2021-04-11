@@ -15,7 +15,7 @@ export type EdgeChain = {
 export const edges = (edgesArray: EdgeChain[]): RenderFunc[] =>
   edgesArray.map((edgeChain) => async () =>
     `${edgeChain.nodes.map((node) => node.id).join("->")} ${
-      edgeChain.attributes
+      edgeChain.attributes && Object.entries(edgeChain.attributes).length > 0
         ? `[ ${Object.entries(edgeChain.attributes)
             .map(([key, value]) => `${key}="${value}"`)
             .join(" ")} ]`
