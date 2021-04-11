@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.edges = void 0;
 const edges = (edgesArray) => edgesArray.map((edgeChain) => () => __awaiter(void 0, void 0, void 0, function* () {
-    return `${edgeChain.nodes.map((node) => node.id).join("->")} ${edgeChain.attributes
+    return `${edgeChain.nodes.map((node) => node.id).join("->")} ${edgeChain.attributes && Object.entries(edgeChain.attributes).length > 0
         ? `[ ${Object.entries(edgeChain.attributes)
             .map(([key, value]) => `${key}="${value}"`)
             .join(" ")} ]`
