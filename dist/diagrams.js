@@ -28,7 +28,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createDiagram = exports.initDiagram = exports.asCluster = exports.styled = exports.dg = exports.diagram = exports.createSubDiagram = exports.ext = exports.providers = void 0;
+exports.createDiagram = exports.initDiagram = exports.asCluster = exports.styled = exports.dg = exports.diagram = exports.createSubDiagram = exports.ext = exports.createEdgeChains = exports.providers = void 0;
 const aws = __importStar(require("./providers/generated/aws/index"));
 const alibabacloud = __importStar(require("./providers/generated/alibabacloud/index"));
 const azure = __importStar(require("./providers/generated/azure/index"));
@@ -121,8 +121,9 @@ const mergeEdges = (leftSide, rightSide) => {
             outArray = [...outArray, leftEdge];
         }
     }
-    return outArray;
+    return [...outArray, ...rightSide];
 };
+// exported mainly for tests
 const createEdgeChains = (nodes, edgeAtts) => {
     const nodeArrays = nodes.map((value) => Array.isArray(value) ? value : [value]);
     const singleEdges = [];
@@ -138,11 +139,14 @@ const createEdgeChains = (nodes, edgeAtts) => {
         return mergeEdges(acc, value);
     }, singleEdges[0]);
     // Create render functions
-    return graph_1.edges(mergedEdges.map((mergedEdge) => ({
-        nodes: mergedEdge,
-        attributes: edgeAtts,
-    })));
+    return (mergedEdges === null || mergedEdges === void 0 ? void 0 : mergedEdges.length) > 0
+        ? graph_1.edges(mergedEdges.map((mergedEdge) => ({
+            nodes: mergedEdge,
+            attributes: edgeAtts,
+        })))
+        : [];
 };
+exports.createEdgeChains = createEdgeChains;
 const createNodes = (inputNodes) => {
     const internalNodes = inputNodes.flat(1).filter((node) => !node.isExternal);
     const nodesToRender = new Set(internalNodes);
@@ -176,7 +180,7 @@ const createSubDiagram = (edgeAttributes) => (operators, ...nodes) => {
         if (operator !== lastOperator) {
             renderFuncs = [
                 ...renderFuncs,
-                ...createEdgeChains(nodes.slice(startIndex, index + 1), Object.assign(Object.assign({}, (edgeAttributes ? edgeAttributes : {})), mapOperatorsToStyle[lastOperator])),
+                ...exports.createEdgeChains(nodes.slice(startIndex, index + 1), Object.assign(Object.assign({}, (edgeAttributes ? edgeAttributes : {})), mapOperatorsToStyle[lastOperator])),
             ];
             lastOperator = operator;
             startIndex = index;
@@ -184,7 +188,7 @@ const createSubDiagram = (edgeAttributes) => (operators, ...nodes) => {
     });
     return [
         ...renderFuncs,
-        ...createEdgeChains(nodes.slice(startIndex, sanitizedOperators.length + 1), Object.assign(Object.assign({}, (edgeAttributes ? edgeAttributes : {})), mapOperatorsToStyle[lastOperator])),
+        ...exports.createEdgeChains(nodes.slice(startIndex, sanitizedOperators.length + 1), Object.assign(Object.assign({}, (edgeAttributes ? edgeAttributes : {})), mapOperatorsToStyle[lastOperator])),
     ];
 };
 exports.createSubDiagram = createSubDiagram;

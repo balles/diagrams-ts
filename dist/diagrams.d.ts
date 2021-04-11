@@ -34,6 +34,7 @@ export declare type DiagramNode = Node & {
     isExternal?: boolean;
 };
 export declare type edgeTemplateInput = DiagramNode | DiagramNode[];
+export declare const createEdgeChains: (nodes: edgeTemplateInput[], edgeAtts: EdgeAttributes) => RenderFunc[];
 export declare const ext: (nodes: edgeTemplateInput) => edgeTemplateInput;
 export declare const createSubDiagram: (edgeAttributes?: EdgeAttributes | undefined) => (operators: TemplateStringsArray, ...nodes: edgeTemplateInput[]) => RenderFunc[];
 export declare const diagram: (operators: TemplateStringsArray, ...nodes: edgeTemplateInput[]) => RenderFunc[];
