@@ -6,3 +6,4 @@ output
 todo.md
 scripts/scraped-attributes.json
 diagrams-python/
+packages/*/dist

@@ -1,4 +1,4 @@
-import * as diagrams from "../src/diagrams";
+import * as diagrams from "diagrams-ts";
 
 const {
   providers: { aws, onprem },

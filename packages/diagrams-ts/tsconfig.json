@@ -10,6 +10,7 @@
     "declaration": true,
     "resolveJsonModule": true
   },
+  "include": ["src/**/*", "packages/graphviz-ts/graph"],
   "exclude": [
     "node_modules",
     "dist",
