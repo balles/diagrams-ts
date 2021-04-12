@@ -13,8 +13,7 @@
     "lint": "yarn eslint . --ext .ts",
     "test": "yarn jest ./src",
     "format": "yarn prettier . --write",
-    "generate-providers": "yarn ts-node scripts/generate-providers master && yarn format",
-    "create-logo": "yarn ts-node scripts/create-logo"
+    "generate-providers": "yarn ts-node scripts/generate-providers master && yarn format"
   },
   "devDependencies": {
     "@types/jest": "26.0.22",
