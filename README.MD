@@ -7,7 +7,7 @@ Creating architecture diagrams directly from code.
 
 ## About
 
-Inspired by the nice visuals and easy to read syntax of the original library, this port tries to provide the same for `type script`.
+Inspired by the nice visuals and easy to read syntax of the original library, this port tries to provide the same for `Typescript`.
 Styles and the `Nodes` are taken from the original library. It also uses `graphviz` for the final graph rendering.
 
 > Disclaimer:
@@ -15,14 +15,14 @@ Styles and the `Nodes` are taken from the original library. It also uses `graphv
 
 ## Installation and Requirements
 
-In order to create `svg`, `png` or `webp` output you'll need to install [graphviz](https://graphviz.org/download/). This package expects `dot` cli of `graphviz` to be available in the `path`.
+In order to create `svg`, `png` or `webp` output you'll need to install [graphviz](https://graphviz.org/download/). This package expects `dot` cli of `graphviz` to be available in your `path`.
 You can check this by running:
 
 ```sh
 dot -v
 ```
 
-This package expects a `node` version >= 14.
+This package is build for ES2015. For developing you'll need a `node` version >= 14.
 
 Install this package by running:
 
