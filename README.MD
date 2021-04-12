@@ -1,6 +1,6 @@
 # diagrams-ts
 
-![logo](generated-assets/logo.png)
+![logo](generated-assets/logo-small.png)
 
 `TypeScript`-Port of the python library [`diagrams` by mingrammer](https://diagrams.mingrammer.com/).
 Creating architecture diagrams directly from code.
