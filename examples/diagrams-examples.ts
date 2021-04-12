@@ -59,9 +59,7 @@ const eventProcessing = () => {
     eventFlowCluster,
     ...diagram`${source} >> ${ext(workers)} >> ${ext(queue)} >> ${ext(
       handlers
-    )}`,
-    ...diagram`${ext(handlers)} >> ${store}`,
-    ...diagram`${ext(handlers)} >> ${dw}`,
+    )} >> ${[store, dw]}`,
   ];
 };
 

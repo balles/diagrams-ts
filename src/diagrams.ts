@@ -274,6 +274,7 @@ export type CreateDiagramArguments<T> = {
   nodeAttr?: NodeAttributes;
   edgeAttr?: EdgeAttributes;
   renderer?: Renderer<T>;
+  dotPath?: string;
 };
 
 export const createDiagram = ({
@@ -284,6 +285,7 @@ export const createDiagram = ({
   graphAttr,
   nodeAttr,
   edgeAttr,
+  dotPath,
   renderer = CliRenderer as Renderer<string>,
 }: CreateDiagramArguments<string | Stream>) => async (
   elements: RenderFunc[]
@@ -303,5 +305,7 @@ export const createDiagram = ({
       ...defaultEdgeAttributes,
     }
   )();
-  return renderer({ outputFile: filename, format: outformat })(dotInput);
+  return renderer({ outputFile: filename, format: outformat, dotPath })(
+    dotInput
+  );
 };
