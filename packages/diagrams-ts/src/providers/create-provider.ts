@@ -1,4 +1,4 @@
-import { Node, getUniqueNodeId } from "graphviz-functional-ts";
+import { Node, getUniqueNodeId } from "@diagrams-ts/graphviz-functional-ts";
 
 export const createProvider = (imagePath: string) => (label: string): Node => ({
   id: getUniqueNodeId(),

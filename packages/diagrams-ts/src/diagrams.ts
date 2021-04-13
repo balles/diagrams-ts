@@ -25,9 +25,9 @@ import {
   Renderer,
   RenderFunc,
   RenderProperties,
-} from "graphviz-functional-ts";
+} from "@diagrams-ts/graphviz-functional-ts";
 import { Stream } from "stream";
-import { CliRenderer } from "graphviz-cli-renderer";
+import { CliRenderer } from "@diagrams-ts/graphviz-cli-renderer";
 
 export const providers = {
   aws,

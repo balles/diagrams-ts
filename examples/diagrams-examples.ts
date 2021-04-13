@@ -1,5 +1,5 @@
 import * as diagrams from "diagrams-ts";
-import { RenderFunc } from "graphviz-functional-ts";
+import { RenderFunc } from "@diagrams-ts/graphviz-functional-ts";
 
 const {
   providers: { aws },

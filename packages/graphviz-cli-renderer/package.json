@@ -1,5 +1,5 @@
 {
-  "name": "graphviz-cli-renderer",
+  "name": "@diagrams-ts/graphviz-cli-renderer",
   "version": "0.0.1",
   "description": "render dot-language string with graphviz ",
   "main": "dist/render-dot.js",
