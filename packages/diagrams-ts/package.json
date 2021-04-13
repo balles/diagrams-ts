@@ -10,7 +10,7 @@
   "diagrams-python-sha": "5489fec1fa3aa5cc54d145860b6b40488106fbfd",
   "scripts": {
     "build": "yarn tsc",
-    "lint": "yarn eslint . --ext .ts",
+    "lint": "yarn prettier . --check && yarn eslint . --ext .ts",
     "test": "yarn jest ./src",
     "format": "yarn prettier . --write",
     "generate-providers": "yarn ts-node scripts/generate-providers master && yarn format"

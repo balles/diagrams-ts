@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "build": "yarn tsc",
-    "lint": "yarn eslint . --ext .ts",
+    "lint": "yarn prettier . --check && yarn eslint . --ext .ts",
     "format": "yarn prettier . --write"
   },
   "devDependencies": {
