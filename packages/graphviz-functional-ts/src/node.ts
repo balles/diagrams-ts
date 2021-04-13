@@ -13,7 +13,7 @@ export type Node = {
   retrieveImage?: boolean;
 };
 
-const imageCacheDir = path.join(__dirname, "../../image-cache");
+const imageCacheDir = path.join(__dirname, "../image-cache");
 
 const encodeBase64 = (input: string): string =>
   Buffer.from(input).toString("base64");
