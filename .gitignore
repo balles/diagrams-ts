@@ -5,3 +5,4 @@ output
 *.code-workspace
 todo.md
 packages/*/dist
+.npmrc
