@@ -121,7 +121,7 @@ const mergeEdges = (leftSide: Node[][], rightSide: Node[][]): Node[][] => {
 export const createEdgeChains = (
   nodes: edgeTemplateInput[],
   edgeAtts: EdgeAttributes
-) => {
+): RenderFunc[] => {
   const nodeArrays = nodes.map((value) =>
     Array.isArray(value) ? value : [value]
   );
