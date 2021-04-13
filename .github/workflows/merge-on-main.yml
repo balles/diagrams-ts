@@ -23,5 +23,8 @@ jobs:
       run: yarn
     - name: Build TS
       run: yarn build
+    - uses: oleksiyrudenko/gha-git-credentials@34343d93d6e53cd85bbe557d83c722a3de1c15ef
+      with:
+        token: '${{ secrets.GITHUB_TOKEN }}'
     - name: Publish packages
       run: yarn publish-packages
