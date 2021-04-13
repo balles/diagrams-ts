@@ -47,6 +47,6 @@ jobs:
           commit-message: "chore(diagrams): auto update resources"
           branch: update-diagrams-${{steps.check-for-change.outputs.diagrams-sha}}
           title: "Automatic update resources"
-          base: master
+          base: main
           reviewers: balles
           token: ${{secrets.DIAGRAMS_PR_TOKEN}}
