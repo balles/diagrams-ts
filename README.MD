@@ -41,7 +41,7 @@ Import the library, choose a provider, write your code and generate your first d
 main.ts:
 
 ```ts
-import * as diagrams from "../src/diagrams";
+import * as diagrams from "diagrams-ts";
 
 const {
   providers: {
@@ -85,10 +85,10 @@ For more examples of the syntax you can take look at the examples folder. In ord
 ```sh
 # In the project root:
 
-yarn ts-node ./examples/show-diagram.ts
+yarn ts-node ./examples/diagrams-example.ts
 
 ```
 
 ## Known Issues
 
-- Node Label positioning
+- Node Label positioning is off

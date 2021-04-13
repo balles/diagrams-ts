@@ -17,15 +17,17 @@ jobs:
           echo "::set-output name=changed::true"
           fi
         id: check-for-change
+        working-directory: packages/diagrams-ts
       - name: setup node.js
         uses: actions/setup-node@v1
         with:
           node-version: "14.x"
       - name: Update generated providers
         if: steps.check-for-change.outputs.changed
+        working-directory: packages/diagrams-ts
         run: |
           echo "Changed. Create PR for ${{steps.check-for-change.outputs.diagrams-sha}}"
-          yarn
+          # yarn
           git clone https://github.com/mingrammer/diagrams.git diagrams-python
           # We won't checkout here, the cloned repo should be the same state
           # cd diagrams-python
