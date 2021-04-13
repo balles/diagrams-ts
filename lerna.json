@@ -9,7 +9,8 @@
     "version": {
       "allowBranch": "main",
       "conventionalCommits": true,
-      "message": "chore(lerna): publish packages [skip ci]"
+      "message": "chore(lerna): publish packages [skip ci]",
+      "yes": true
     }
   }
 }
