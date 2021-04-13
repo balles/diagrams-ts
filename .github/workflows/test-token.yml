@@ -1,0 +1,19 @@
+name: What's up with the token
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  publish-package:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Add npm credentials
+      run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
+      env:
+          NPM_TOKEN: ${{ secrets.NPM_DIAGRAMS_BOT_TOKEN }}
+    - name: Who am I?
+      run: npm whoami
