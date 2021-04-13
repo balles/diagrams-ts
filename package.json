@@ -10,7 +10,7 @@
     "lint": "lerna run lint",
     "test": "lerna run test",
     "format": "lerna run format",
-    "publish-packages": "lerna publish"
+    "publish-packages": "lerna publish --no-verify-access"
   },
   "workspaces": [
     "packages/*",
