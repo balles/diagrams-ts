@@ -1,0 +1,27 @@
+name: Publish new package versions
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  publish-package:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - name: Add npm credentials
+      run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
+      env:
+          NPM_TOKEN: ${{ secrets.NPM_DIAGRAMS_BOT_TOKEN }}
+    - name: Install dependencies
+      run: yarn
+    - name: Build TS
+      run: yarn build
+    - name: Publish packages
+      run: yarn publish-packages
