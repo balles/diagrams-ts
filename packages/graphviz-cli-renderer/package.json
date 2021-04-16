@@ -7,6 +7,11 @@
   "author": "balles",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balles/diagrams-ts.git",
+    "directory": "packages/graphviz-cli-renderer"
+  },
   "scripts": {
     "build": "yarn tsc",
     "lint": "yarn prettier . --check && yarn eslint . --ext .ts",
