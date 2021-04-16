@@ -6,3 +6,4 @@ output
 todo.md
 packages/*/dist
 .npmrc
+.secrets
