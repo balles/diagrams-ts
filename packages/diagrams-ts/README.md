@@ -1,6 +1,6 @@
 # diagrams-ts
 
-![logo](generated-assets/logo-small.png)
+![logo](../../generated-assets/logo-small.png)
 
 `TypeScript`-Port of the python library [`diagrams` by mingrammer](https://diagrams.mingrammer.com/).
 Creating architecture diagrams directly from code.
@@ -78,7 +78,7 @@ const awsFlow = () => {
 
 If you'll run it will create the "aws-flow.png" in the output folder:
 
-![AWS Flow diagram](generated-assets/aws-flow.png)
+![AWS Flow diagram](../../generated-assets/aws-flow.png)
 
 For more examples of the syntax you can take look at the examples folder. In order to run them, you can use `ts-node` e.g.:
 
