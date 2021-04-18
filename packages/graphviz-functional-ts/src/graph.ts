@@ -37,7 +37,8 @@ export const graph = (isSubgraph: boolean) => (id: string) => (
         await Promise.all(
           elements.map((renderFunction) => renderFunction(props))
         )
-      ).join("")}}`;
+      ).join("")}
+    }`;
 };
 
 export const subgraph = graph(true);
