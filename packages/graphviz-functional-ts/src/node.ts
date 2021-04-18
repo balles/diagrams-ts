@@ -84,11 +84,11 @@ export const retrieveImage = async (
 };
 
 export const nodes = (...nodes: Node[]): RenderFunc[] => {
-  return nodes.map((nodeInstance) => async () =>
+  return nodes.map((nodeInstance) => async (props) =>
     `"${nodeInstance.id}" ${
       nodeInstance.attributes && Object.keys(nodeInstance.attributes).length > 0
         ? `[ ${Object.entries(
-            nodeInstance.retrieveImage
+            nodeInstance.retrieveImage && props?.retrieveImage
               ? await retrieveImage(nodeInstance.attributes)
               : nodeInstance.attributes
           )

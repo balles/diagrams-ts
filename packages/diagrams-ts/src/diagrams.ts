@@ -275,6 +275,7 @@ export type CreateDiagramArguments<T> = {
   edgeAttr?: EdgeAttributes;
   renderer?: Renderer<T>;
   dotPath?: string;
+  retrieveImage?: boolean;
 };
 
 export const createDiagram = ({
@@ -287,6 +288,7 @@ export const createDiagram = ({
   edgeAttr,
   dotPath,
   renderer = CliRenderer as Renderer<string>,
+  retrieveImage = true,
 }: CreateDiagramArguments<string | Stream>) => async (
   elements: RenderFunc[]
 ): Promise<string | Stream> => {
@@ -304,8 +306,10 @@ export const createDiagram = ({
       ...edgeAttr,
       ...defaultEdgeAttributes,
     }
-  )();
-  return renderer({ outputFile: filename, format: outformat, dotPath })(
-    dotInput
-  );
+  )({ retrieveImage });
+  return renderer({
+    outputFile: filename,
+    format: outformat,
+    dotPath,
+  })(dotInput);
 };

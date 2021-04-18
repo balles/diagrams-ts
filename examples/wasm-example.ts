@@ -2,6 +2,10 @@ import * as diagrams from "diagrams-ts";
 import { WasmRenderer } from "@diagrams-ts/graphviz-wasm-renderer";
 import { Renderer } from "@diagrams-ts/graphviz-functional-ts";
 
+// Uses a graphviz version that is compiled to webassembly, which means
+// it does not need an installation of graphviz. This renderer can't create
+// binary image formats (jpeg,png...), only text representations.
+
 const {
   providers: {
     aws: {
@@ -30,6 +34,7 @@ const awsFlow = () => {
       filename: "./generated-assets/aws-flow.svg",
       outformat: "svg",
       renderer: WasmRenderer as Renderer<string>,
+      retrieveImage: false,
     })(awsFlow());
   } catch (error) {
     console.log(error);
