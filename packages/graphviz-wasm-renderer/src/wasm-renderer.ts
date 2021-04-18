@@ -39,7 +39,7 @@ export type WasmRendererArgs = {
 const imageUrlRegex = /(?<=image=")(.*?)(?=")/g;
 
 const getWebImagesFromDot = (dotInput: string): string[] => {
-  return dotInput.match(imageUrlRegex) as string[];
+  return (dotInput.match(imageUrlRegex) || []) as string[];
 };
 
 const extractImages = (
