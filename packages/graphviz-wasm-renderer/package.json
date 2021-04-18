@@ -1,7 +1,7 @@
 {
   "name": "@diagrams-ts/graphviz-wasm-renderer",
   "version": "0.0.1",
-  "description": " render dot-language string to svg with wasm graphviz port ",
+  "description": " render dot-language string to svg with a graphviz compiled to webassembly",
   "main": "dist/wasm-renderer.js",
   "types": "dist/wasm-renderer.d.ts",
   "author": "balles",

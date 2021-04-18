@@ -1,39 +1,34 @@
-# GraphViz-CLI-Renderer
+# GraphViz-WASM-Renderer
 
-Thin nodejs wrapper for the `dot`command line interface installed with the graphviz package. Renders a string containing valid `dot` syntax to an image output.
+Use a graphviz version compiled to web assembly, to render a string containing valid `dot` syntax to an image output. Can only render to `svg` and other text based image output (not `png`,`webp`,...)
 
 ## Installation and Requirements
-
-In order to create `svg`, `png` or `webp` output you'll need to install [graphviz](https://graphviz.org/download/). This package expects `dot` cli of `graphviz` to be available in your `path`.
-You can check this by running:
-
-```sh
-dot -v
-```
 
 Install this package by running:
 
 ```sh
-npm install @diagrams-ts/graphviz-cli-renderer
+npm install @diagrams-ts/graphviz-wasm-renderer
 
 # or when using yarn
 
-yarn add @diagrams-ts/graphviz-cli-renderer
+yarn add @diagrams-ts/graphviz-wasm-renderer
 ```
+
+If you are packaging with Webpack or a similar packager make sure that the WASM files from the
 
 ## Usage
 
 ```ts
-import { CliRenderer } from "@diagrams-ts/graphviz-cli-renderer";
+import { WasmRenderer } from "@diagrams-ts/graphviz-wasm-renderer";
 
-const render = CliRenderer({ outputFile: "./example.png", format: "png" });
+const render = WasmRenderer({ outputFile: "./example.svg", format: "svg" });
 
 (async () => {
   try {
     await render(
       `digraph G {
         a1 -> b2;
-        a1 -> b3
+        a1 -> b3;
     }`
     );
   } catch (error) {
