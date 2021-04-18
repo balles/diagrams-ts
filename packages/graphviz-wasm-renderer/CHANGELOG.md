@@ -9,35 +9,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * **renderer:** add wasm renderer ([#30](https://github.com/balles/diagrams-ts/issues/30)) ([4eb9472](https://github.com/balles/diagrams-ts/commit/4eb9472b5c6b206ee6ddc455f0748fc4fb375f82))
-
-
-
-
-
-## 0.0.5 (2021-04-17)
-
-**Note:** Version bump only for package @diagrams-ts/graphviz-functional-ts
-
-
-
-
-
-## 0.0.4 (2021-04-16)
-
-**Note:** Version bump only for package @diagrams-ts/graphviz-functional-ts
-
-
-
-
-
-## 0.0.3 (2021-04-13)
-
-**Note:** Version bump only for package @diagrams-ts/graphviz-functional-ts
-
-
-
-
-
-## 0.0.2 (2021-04-13)
-
-**Note:** Version bump only for package @diagrams-ts/graphviz-functional-ts
