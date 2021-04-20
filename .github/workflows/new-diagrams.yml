@@ -17,14 +17,14 @@ jobs:
           echo "::set-output name=changed::true"
           fi
         id: check-for-change
-        working-directory: packages/diagrams-ts
+        working-directory: packages/core
       - name: setup node.js
         uses: actions/setup-node@v1
         with:
           node-version: "14.x"
       - name: Update generated providers
         if: steps.check-for-change.outputs.changed
-        working-directory: packages/diagrams-ts
+        working-directory: packages/core
         run: |
           echo "Changed. Create PR for ${{steps.check-for-change.outputs.diagrams-sha}}"
           # yarn
