@@ -296,9 +296,7 @@ export const createDiagram = ({
 }: CreateDiagramArguments<string | Stream>) => async (
   elements: RenderFunc[]
 ): Promise<string | Stream> => {
-  const _nodePlugins = retrieveImage
-    ? nodePlugins
-    : nodePlugins.filter((plugin) => plugin === LocalImageCachePlugin);
+  const _nodePlugins = retrieveImage ? nodePlugins : [];
   const dotInput = await graph(false)("diagrams")(elements)(
     {
       ...graphAttr,
@@ -313,7 +311,7 @@ export const createDiagram = ({
       ...edgeAttr,
       ...defaultEdgeAttributes,
     }
-  )({ _nodePlugins });
+  )({ nodePlugins: _nodePlugins });
   return renderer({
     outputFile: filename,
     format: outformat,
