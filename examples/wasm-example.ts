@@ -33,8 +33,8 @@ const awsFlow = () => {
       label: "AWS Flow",
       filename: "./generated-assets/aws-flow.svg",
       outformat: "svg",
+      nodePlugins: [],
       renderer: WasmRenderer as Renderer<string>,
-      retrieveImage: false,
     })(awsFlow());
   } catch (error) {
     console.log(error);

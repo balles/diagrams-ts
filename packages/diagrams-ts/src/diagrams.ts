@@ -278,6 +278,7 @@ export type CreateDiagramArguments<T> = {
   renderer?: Renderer<T>;
   dotPath?: string;
   nodePlugins?: NodeAttributesPlugin[];
+  retrieveImage?: boolean; // deprecated - will be removed with next breaking release - DO NOT USE together with nodePlugins
 };
 
 export const createDiagram = ({
@@ -291,9 +292,13 @@ export const createDiagram = ({
   dotPath,
   renderer = CliRenderer as Renderer<string>,
   nodePlugins = [LocalImageCachePlugin],
+  retrieveImage = true, // deprecated - will be removed with next breaking release - Use nodePlugins instead
 }: CreateDiagramArguments<string | Stream>) => async (
   elements: RenderFunc[]
 ): Promise<string | Stream> => {
+  const _nodePlugins = retrieveImage
+    ? nodePlugins
+    : nodePlugins.filter((plugin) => plugin === LocalImageCachePlugin);
   const dotInput = await graph(false)("diagrams")(elements)(
     {
       ...graphAttr,
@@ -308,7 +313,7 @@ export const createDiagram = ({
       ...edgeAttr,
       ...defaultEdgeAttributes,
     }
-  )({ nodePlugins });
+  )({ _nodePlugins });
   return renderer({
     outputFile: filename,
     format: outformat,
