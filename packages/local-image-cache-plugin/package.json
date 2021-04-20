@@ -1,16 +1,16 @@
 {
-  "name": "@diagrams-ts/graphviz-functional-ts",
+  "name": "@diagrams-ts/local-image-cache-plugin",
   "version": "0.1.0",
-  "description": "create dot-language output from typescript functions",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "description": "cache downloaded images locally",
+  "main": "dist/local-image-cache.js",
+  "types": "dist/local-image-cache.d.ts",
   "author": "balles",
   "license": "MIT",
   "private": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/balles/diagrams-ts.git",
-    "directory": "packages/graphviz-functional-ts"
+    "directory": "packages/local-image-cache-plugin"
   },
   "scripts": {
     "build": "yarn tsc",
@@ -18,19 +18,19 @@
     "format": "yarn prettier . --write"
   },
   "devDependencies": {
-    "@types/jsdom": "16.2.5",
     "@types/node": "14.14.6",
-    "@types/node-fetch": "2.5.7",
+    "@types/node-fetch": "2.5.10",
     "@typescript-eslint/eslint-plugin": "4.6.0",
     "@typescript-eslint/parser": "4.6.0",
     "eslint": "7.12.1",
-    "jsdom": "16.4.0",
     "lerna": "^3.22.0",
     "prettier": "2.1.2",
-    "ts-node": "9.0.0",
     "typescript": "4.1.2"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "node-fetch": "2.6.1"
   }
 }
