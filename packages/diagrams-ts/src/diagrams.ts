@@ -21,6 +21,7 @@ import {
   GraphAttributes,
   Node,
   NodeAttributes,
+  NodeAttributesPlugin,
   nodes,
   Renderer,
   RenderFunc,
@@ -28,6 +29,7 @@ import {
 } from "@diagrams-ts/graphviz-functional-ts";
 import { Stream } from "stream";
 import { CliRenderer } from "@diagrams-ts/graphviz-cli-renderer";
+import { LocalImageCachePlugin } from "@diagrams-ts/local-image-cache-plugin";
 
 export const providers = {
   aws,
@@ -275,7 +277,8 @@ export type CreateDiagramArguments<T> = {
   edgeAttr?: EdgeAttributes;
   renderer?: Renderer<T>;
   dotPath?: string;
-  retrieveImage?: boolean;
+  nodePlugins?: NodeAttributesPlugin[];
+  retrieveImage?: boolean; // deprecated - will be removed with next breaking release - DO NOT USE together with nodePlugins
 };
 
 export const createDiagram = ({
@@ -288,10 +291,12 @@ export const createDiagram = ({
   edgeAttr,
   dotPath,
   renderer = CliRenderer as Renderer<string>,
-  retrieveImage = true,
+  nodePlugins = [LocalImageCachePlugin],
+  retrieveImage = true, // deprecated - will be removed with next breaking release - Use nodePlugins instead
 }: CreateDiagramArguments<string | Stream>) => async (
   elements: RenderFunc[]
 ): Promise<string | Stream> => {
+  const _nodePlugins = retrieveImage ? nodePlugins : [];
   const dotInput = await graph(false)("diagrams")(elements)(
     {
       ...graphAttr,
@@ -306,7 +311,7 @@ export const createDiagram = ({
       ...edgeAttr,
       ...defaultEdgeAttributes,
     }
-  )({ retrieveImage });
+  )({ nodePlugins: _nodePlugins });
   return renderer({
     outputFile: filename,
     format: outformat,

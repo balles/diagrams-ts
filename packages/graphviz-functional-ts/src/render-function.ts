@@ -1,4 +1,8 @@
-export type RenderProperties = Record<string, unknown>;
+import { NodeAttributesPlugin } from "./node";
+
+export type RenderProperties = Record<string, unknown> & {
+  nodePlugins?: NodeAttributesPlugin[];
+};
 export type RenderFunc = (props?: RenderProperties) => Promise<string>;
 
 // Can return a string as output path
