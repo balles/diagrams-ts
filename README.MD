@@ -1,6 +1,6 @@
 # diagrams-ts
 
-![logo](generated-assets/logo-small.png)
+![logo](https://github.com/balles/diagrams-ts/raw/main/generated-assets/logo-small.png)
 
 Monorepository for `TypeScript`-Port of the python library [`diagrams` by mingrammer](https://diagrams.mingrammer.com/).
 Creating architecture diagrams directly from code.
