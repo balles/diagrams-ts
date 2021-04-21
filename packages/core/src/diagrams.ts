@@ -28,6 +28,8 @@ import {
   RenderProperties,
 } from "@diagrams-ts/graphviz-functional-ts";
 
+export { createProvider } from "./providers/create-provider";
+
 export const providers = {
   aws,
   alibabacloud,
