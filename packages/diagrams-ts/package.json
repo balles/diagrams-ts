@@ -15,14 +15,12 @@
   "scripts": {
     "build": "yarn tsc",
     "lint": "yarn prettier . --check && yarn eslint . --ext .ts",
-    "test": "echo 'no test specified'",
+    "test": "yarn jest",
     "format": "yarn prettier . --write"
   },
   "devDependencies": {
     "@types/jest": "26.0.22",
     "@types/node": "14.14.6",
-    "@types/node-fetch": "2.5.7",
-    "@types/rimraf": "3.0.0",
     "@typescript-eslint/eslint-plugin": "4.6.0",
     "@typescript-eslint/parser": "4.6.0",
     "eslint": "7.12.1",
