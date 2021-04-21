@@ -54,13 +54,4 @@ export const createDiagram = ({
   })(elements);
 };
 
-export {
-  providers,
-  diagram,
-  asCluster,
-  ext,
-  styled,
-  dg,
-  DiagramNode,
-  edgeTemplateInput,
-} from "@diagrams-ts/core";
+export * from "@diagrams-ts/core";
