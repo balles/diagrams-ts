@@ -1,62 +1,63 @@
-import { createEdgeChains, edgeTemplateInput } from "./diagrams";
+import { createDiagram, CreateDiagramArguments } from "diagrams-ts";
 
-it("should ignore a single node", async () => {
-  const input: edgeTemplateInput[] = [{ id: "a" }];
-  const result = await Promise.all(
-    createEdgeChains(input, {}).map(async (renderFunc) => renderFunc())
+import { createDiagramCore } from "@diagrams-ts/core";
+import { Renderer, RenderFunc } from "@diagrams-ts/graphviz-functional-ts";
+
+jest.mock("@diagrams-ts/core", () => ({
+  createDiagramCore: jest.fn(),
+}));
+
+const mockRenderer = jest.fn() as Renderer<string>;
+
+const mockElements = [jest.fn()] as RenderFunc[];
+
+beforeEach(() => {
+  (createDiagramCore as jest.Mock).mockClear();
+  (mockRenderer as jest.Mock).mockClear();
+});
+it("should pass the parameters to the core function", async () => {
+  (createDiagramCore as jest.Mock).mockReturnValue(async () => "my graph");
+
+  const createArguments: CreateDiagramArguments<string> = {
+    label: "myLabel",
+    direction: "TB",
+    outformat: "png",
+    filename: "my-file.png",
+    graphAttr: { bgcolor: "#DDDDDD" },
+    nodeAttr: { color: "#CCCCCC" },
+    edgeAttr: { color: "#BBBBBB" },
+    renderer: mockRenderer,
+    dotPath: "dot-special-path",
+    nodePlugins: [],
+  };
+
+  expect(await createDiagram(createArguments)(mockElements)).toEqual(
+    "my graph"
   );
-  expect(result).toEqual([]);
+  expect(createDiagramCore as jest.Mock).toHaveBeenCalledWith({
+    label: "myLabel",
+    direction: "TB",
+    outformat: "png",
+    filename: "my-file.png",
+    graphAttr: { bgcolor: "#DDDDDD" },
+    nodeAttr: { color: "#CCCCCC" },
+    edgeAttr: { color: "#BBBBBB" },
+    renderer: mockRenderer,
+    dotPath: "dot-special-path",
+    nodePlugins: [],
+  });
 });
+it("should remove the plugins for retrieveImage", async () => {
+  (createDiagramCore as jest.Mock).mockReturnValue(async () => "my graph");
 
-it("should render a single edge", async () => {
-  const input: edgeTemplateInput[] = [{ id: "a" }, { id: "b" }];
-  const result = await Promise.all(
-    createEdgeChains(input, {}).map(async (renderFunc) => renderFunc())
-  );
-  expect(result[0]).toEqual("a->b ;");
-});
+  const createArguments: CreateDiagramArguments<string> = {
+    label: "my-label",
+    retrieveImage: false,
+  };
 
-it("should render a decreasing edge count correct", async () => {
-  const input: edgeTemplateInput[] = [
-    [{ id: "a" }, { id: "b" }, { id: "c" }],
-    [{ id: "d" }, { id: "e" }],
-    { id: "f" },
-  ];
-  const result = (
-    await Promise.all(
-      createEdgeChains(input, {}).map(async (renderFunc) => renderFunc())
-    )
-  ).join(" ");
-  expect(result).toEqual(`a->d->f ; a->e->f ; b->d ; b->e ; c->d ; c->e ;`);
-});
+  await createDiagram(createArguments)(mockElements);
 
-it("should render an increasing edge count correct", async () => {
-  const input: edgeTemplateInput[] = [
-    { id: "a" },
-    [{ id: "b" }, { id: "c" }],
-    [{ id: "d" }, { id: "e" }, { id: "f" }],
-  ];
-  const result = (
-    await Promise.all(
-      createEdgeChains(input, {}).map(async (renderFunc) => renderFunc())
-    )
-  ).join(" ");
-  expect(result).toEqual(`a->b->d ; a->c->d ; b->e ; b->f ; c->e ; c->f ;`);
-});
-
-it("should render an intermediating edge count correct", async () => {
-  const input: edgeTemplateInput[] = [
-    { id: "a" },
-    [{ id: "b" }, { id: "c" }],
-    [{ id: "d" }, { id: "e" }, { id: "f" }],
-    [{ id: "g" }, { id: "h" }],
-  ];
-  const result = (
-    await Promise.all(
-      createEdgeChains(input, {}).map(async (renderFunc) => renderFunc())
-    )
-  ).join(" ");
-  expect(result).toEqual(
-    `a->b->d->g ; a->c->d->h ; b->e->g ; b->f->g ; c->e->h ; c->f->h ;`
-  );
+  expect((createDiagramCore as jest.Mock).mock.calls[0][0]).toMatchObject({
+    nodePlugins: [],
+  });
 });

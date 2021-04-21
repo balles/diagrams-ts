@@ -1,4 +1,4 @@
-import * as diagrams from "diagrams-ts";
+import * as diagrams from "@diagrams-ts/core";
 import { WasmRenderer } from "@diagrams-ts/graphviz-wasm-renderer";
 import { Renderer } from "@diagrams-ts/graphviz-functional-ts";
 
@@ -14,7 +14,7 @@ const {
       storage: { S3 },
     },
   },
-  createDiagram,
+  createDiagramCore,
   diagram,
 } = diagrams;
 
@@ -29,7 +29,7 @@ const awsFlow = () => {
 
 (async () => {
   try {
-    await createDiagram({
+    await createDiagramCore({
       label: "AWS Flow",
       filename: "./generated-assets/aws-flow.svg",
       outformat: "svg",

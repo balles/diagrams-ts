@@ -1,6 +1,4 @@
-import { graph } from "@diagrams-ts/graphviz-functional-ts";
-import { graphviz, graphvizSync } from "@hpcc-js/wasm";
-import { IotThingsGraph } from "diagrams-ts/dist/providers/generated/aws/iot";
+import { graphviz } from "@hpcc-js/wasm";
 import { promises } from "fs";
 import { WasmRenderer } from "./wasm-renderer";
 
