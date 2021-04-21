@@ -1,6 +1,6 @@
 {
   "name": "@diagrams-ts/local-image-cache-plugin",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "cache downloaded images locally",
   "main": "dist/local-image-cache.js",
   "types": "dist/local-image-cache.d.ts",

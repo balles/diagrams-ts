@@ -9,22 +9,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * **core:** move core function in separate package ([#33](https://github.com/balles/diagrams-ts/issues/33)) ([e02019a](https://github.com/balles/diagrams-ts/commit/e02019aa2e00d95582313e50fdd7e49138a7e6f3))
-
-
-
-
-
-# [0.2.0](https://github.com/balles/diagrams-ts/compare/v0.1.0...v0.2.0) (2021-04-20)
-
-**Note:** Version bump only for package @diagrams-ts/graphviz-wasm-renderer
-
-
-
-
-
-# [0.1.0](https://github.com/balles/diagrams-ts/compare/v0.0.5...v0.1.0) (2021-04-18)
-
-
-### Features
-
-* **renderer:** add wasm renderer ([#30](https://github.com/balles/diagrams-ts/issues/30)) ([4eb9472](https://github.com/balles/diagrams-ts/commit/4eb9472b5c6b206ee6ddc455f0748fc4fb375f82))
