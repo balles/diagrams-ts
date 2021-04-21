@@ -7,3 +7,4 @@ todo.md
 packages/*/dist
 .npmrc
 .secrets
+lerna-debug.log
