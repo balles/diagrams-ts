@@ -14,31 +14,38 @@ export const graph = (isSubgraph: boolean) => (id: string) => (
   edgeAtts: EdgeAttributes | null = null
 ): RenderFunc => {
   return async (props) =>
-    `${isSubgraph ? "subgraph" : "digraph"} "${id}" {${
-      graphAtts
-        ? Object.entries(graphAtts)
-            .map(([key, value]) => `${key} = "${value}";`)
-            .join(" ")
-        : ""
-    } ${
+    `${isSubgraph ? "subgraph" : "digraph"} "${id}" {
+            ${
+              graphAtts
+                ? Object.entries(graphAtts)
+                    .map(
+                      ([key, value]) => `${key} = "${value}";
+            `
+                    )
+                    .join(" ")
+                : ""
+            } ${
       nodeAtts
         ? `node [ ${Object.entries(nodeAtts)
             .map(([key, value]) => `${key} = "${value}" `)
-            .join(" ")} ];`
+            .join(" ")} ];
+            `
         : ""
     } ${
       edgeAtts
         ? `edge [ ${Object.entries(edgeAtts)
             .map(([key, value]) => `${key} = "${value}" `)
-            .join(" ")} ];`
+            .join(" ")} ];
+            `
         : ""
     }
-      ${(
-        await Promise.all(
-          elements.map((renderFunction) => renderFunction(props))
-        )
-      ).join("")}
-    }`;
+            ${(
+              await Promise.all(
+                elements.map((renderFunction) => renderFunction(props))
+              )
+            ).join("")}
+}
+    `;
 };
 
 export const subgraph = graph(true);

@@ -223,6 +223,10 @@ export const diagram = createSubDiagram();
 export const dg = diagram;
 export const styled = createSubDiagram;
 
+export const passThroughRenderer = ({}) => async (
+  dotInput: string
+): Promise<string> => dotInput;
+
 export const asCluster = (
   graphAtts: GraphAttributes = {},
   nodeAtts?: NodeAttributes,
