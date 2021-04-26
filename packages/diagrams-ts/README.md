@@ -88,7 +88,3 @@ For more examples of the syntax you can take look at the examples folder. In ord
 yarn ts-node ./examples/diagrams-example.ts
 
 ```
-
-## Known Issues
-
-- Node Label positioning is off
