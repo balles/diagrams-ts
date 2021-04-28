@@ -18,7 +18,7 @@
     "format": "yarn prettier . --write"
   },
   "devDependencies": {
-    "@types/jsdom": "16.2.5",
+    "@types/jsdom": "16.2.10",
     "@types/node": "15.0.1",
     "@types/node-fetch": "2.5.10",
     "@typescript-eslint/eslint-plugin": "4.22.0",
