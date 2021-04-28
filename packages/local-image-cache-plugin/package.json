@@ -12,6 +12,9 @@
     "url": "https://github.com/balles/diagrams-ts.git",
     "directory": "packages/local-image-cache-plugin"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
     "build": "yarn tsc",
     "lint": "yarn prettier . --check && yarn eslint . --ext .ts",
