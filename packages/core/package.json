@@ -7,6 +7,9 @@
   "author": "balles",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": ">=12"
+  },
   "diagrams-python-sha": "5489fec1fa3aa5cc54d145860b6b40488106fbfd",
   "repository": {
     "type": "git",
