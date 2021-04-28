@@ -33,6 +33,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@hpcc-js/wasm": "1.4.1"
+    "@hpcc-js/wasm": "1.5.1"
   }
 }
