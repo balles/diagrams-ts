@@ -1,6 +1,6 @@
 {
   "name": "@diagrams-ts/graphviz-functional-ts",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "create dot-language output from typescript functions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
