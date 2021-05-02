@@ -31,10 +31,17 @@ export interface WasmExt {
   nop?: number;
 }
 
-export type WasmRendererArgs = {
-  format: WasmFormat;
-  outputFile: string;
-};
+export type WasmRendererArgs =
+  | {
+      format: WasmFormat;
+      outputFile: string;
+      mode?: "file";
+    }
+  | {
+      format: WasmFormat;
+      outputFile?: string;
+      mode: "string";
+    };
 
 const imageUrlRegex = /(?<=image=")(.*?)(?=")/g;
 
@@ -59,6 +66,15 @@ export const WasmRenderer = (initialArgs: WasmRendererArgs) => async (
 ): Promise<string> => {
   const ext = { images: extractImages(input) };
   const rendered = await graphviz.dot(input, initialArgs.format, ext);
+  // Defaults to file when no mode is given on purpose
+  if (initialArgs.mode === "string") {
+    return rendered;
+  }
   await promises.writeFile(initialArgs.outputFile, rendered);
   return initialArgs.outputFile;
 };
+
+export const WasmToStringRenderer = (initialArgs: {
+  format: WasmFormat;
+}): ((input: string) => Promise<string>) =>
+  WasmRenderer({ ...initialArgs, mode: "string" });
