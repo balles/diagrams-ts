@@ -26,6 +26,7 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 const postcssNormalize = require('postcss-normalize');
 
@@ -598,6 +599,13 @@ module.exports = function (webpackEnv) {
       // This gives some necessary context to module not found errors, such as
       // the requesting resource.
       new ModuleNotFoundPlugin(paths.appPath),
+      // Copies the Webassembly file from the @hpcc-js/wasm  module to the build folder
+      new CopyPlugin({
+        patterns: [
+          { from: path.resolve(__dirname,"../../../node_modules/@hpcc-js/wasm/dist/graphvizlib.wasm"), 
+            to: "static/js/graphvizlib.wasm" }
+        ],
+      }),
       // Makes some environment variables available to the JS code, for example:
       // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
       // It is absolutely essential that NODE_ENV is set to production

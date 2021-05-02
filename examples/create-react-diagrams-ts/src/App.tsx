@@ -1,23 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { createDiagramCore } from "@diagrams-ts/core";
+import { Renderer } from "@diagrams-ts/graphviz-functional-ts";
+import { WasmToStringRenderer } from "@diagrams-ts/graphviz-wasm-renderer";
+import { exampleDeployment } from "./example-deployment";
+import "./App.css";
+
+const renderSVG = (): Promise<string> =>
+  createDiagramCore({
+    label: "Deployment",
+    direction: "TB",
+    outformat: "svg",
+    filename: "deployment.svg",
+    renderer: WasmToStringRenderer as Renderer<string>,
+  })(exampleDeployment());
 
 function App() {
+  const [dotString, setDotString] = useState("Not rendered yet");
+
+  useEffect(() => {
+    const renderDot = async () => {
+      setDotString(await renderSVG());
+    };
+    renderDot();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div dangerouslySetInnerHTML={{ __html: dotString }} />
       </header>
     </div>
   );
