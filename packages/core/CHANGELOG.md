@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.7](https://github.com/balles/diagrams-ts/compare/v0.3.6...v0.3.7) (2021-05-02)
+
+**Note:** Version bump only for package @diagrams-ts/core
+
+
+
+
+
 ## [0.3.5](https://github.com/balles/diagrams-ts/compare/v0.3.4...v0.3.5) (2021-04-29)
 
 **Note:** Version bump only for package @diagrams-ts/core
