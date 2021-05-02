@@ -1,6 +1,6 @@
 import { graphviz } from "@hpcc-js/wasm";
 import { promises } from "fs";
-import { WasmRenderer } from "./wasm-renderer";
+import { WasmRenderer, WasmToStringRenderer } from "./wasm-renderer";
 
 jest.mock("fs", () => ({
   promises: {
@@ -38,4 +38,12 @@ it("should extract external images ", async () => {
       { path: "https://nice.images/b", height: "300px", width: "300px" },
     ],
   });
+});
+it("should render svg to string", async () => {
+  const dotInput = `digraph G {a->b;}`;
+  expect(await WasmToStringRenderer({ format: "svg" })(dotInput)).toBe(
+    "renderedOutput"
+  );
+  expect(graphviz.dot).toBeCalledWith(dotInput, "svg", { images: [] });
+  expect(promises.writeFile).not.toBeCalled();
 });
