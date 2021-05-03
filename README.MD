@@ -10,6 +10,18 @@ Creating architecture diagrams directly from code.
 Inspired by the nice visuals and easy to read syntax of the original library, this port tries to provide the same for `Typescript`.
 Styles and the `Nodes` are taken from the original library. It also uses `graphviz` for the final graph rendering.
 
+## Getting started
+
+If you want to play around with the API, without any setup and no need to install graphviz on your machine, you can start a local web app by running:
+
+```
+
+yarn start-example
+
+```
+
+You can change the graph by editing the function exported by this [file](examples/create-react-diagrams-ts/src/example-deployment.ts)
+
 ## Structure
 
 The main package containing the complete nodejs package can be found in the `packages/diagrams-ts`directory.

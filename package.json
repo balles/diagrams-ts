@@ -10,7 +10,8 @@
     "lint": "lerna run lint",
     "test": "lerna run test",
     "format": "lerna run format",
-    "publish-packages": "lerna publish --no-verify-access"
+    "publish-packages": "lerna publish --no-verify-access",
+    "start-example": "cd ./examples/create-react-diagrams-ts && yarn start"
   },
   "workspaces": [
     "packages/*",
