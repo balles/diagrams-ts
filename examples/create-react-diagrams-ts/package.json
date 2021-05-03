@@ -1,12 +1,12 @@
 {
   "name": "create-react-diagrams-ts",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
-    "@diagrams-ts/core": "*",
+    "@diagrams-ts/core": "^0.3.9",
     "@diagrams-ts/graphviz-cli-renderer": "*",
-    "@diagrams-ts/graphviz-functional-ts": "*",
+    "@diagrams-ts/graphviz-functional-ts": "^0.3.9",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
