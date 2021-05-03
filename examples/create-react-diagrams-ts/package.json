@@ -1,9 +1,12 @@
 {
   "name": "create-react-diagrams-ts",
-  "version": "0.0.0",
+  "version": "0.3.8",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
+    "@diagrams-ts/core": "*",
+    "@diagrams-ts/graphviz-cli-renderer": "*",
+    "@diagrams-ts/graphviz-functional-ts": "*",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -24,9 +27,6 @@
     "camelcase": "^6.1.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "css-loader": "4.3.0",
-    "@diagrams-ts/core": "*",
-    "@diagrams-ts/graphviz-cli-renderer": "*",
-    "@diagrams-ts/graphviz-functional-ts": "*",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^7.11.0",
