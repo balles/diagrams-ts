@@ -7,3 +7,13 @@ updates:
   open-pull-requests-limit: 10
   reviewers:
   - balles
+
+- package-ecosystem: npm
+  directory: "examples/create-react-diagrams-ts"
+  schedule:
+    interval: monthly
+  ignore:
+      - dependency-name: "*"
+  open-pull-requests-limit: 1
+  reviewers:
+  - balles
