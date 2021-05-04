@@ -1,8 +1,5 @@
 import { createProvider } from "../../create-provider";
 
-export const InternetGateway = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/general/Internet-gateway.png"
-);
 export const Client = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/general/client.png"
 );
@@ -35,6 +32,9 @@ export const InternetAlt1 = createProvider(
 );
 export const InternetAlt2 = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/general/internet-alt2.png"
+);
+export const InternetGateway = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/aws/general/internet-gateway.png"
 );
 export const Marketplace = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/aws/general/marketplace.png"

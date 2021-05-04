@@ -10,7 +10,7 @@ export const BlobStorage = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/storage/blob-storage.png"
 );
 export const DataBoxEdgeDataBoxGateway = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/storage/data-box-edge---data-box-gateway.png"
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/storage/data-box-edge-data-box-gateway.png"
 );
 export const DataBox = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/storage/data-box.png"
