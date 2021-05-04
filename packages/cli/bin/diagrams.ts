@@ -19,4 +19,4 @@ diagramsCli
 diagramsCli
   .parseAsync(process.argv)
   .catch(console.error)
-  .finally(() => console.log("Done."));
+  .then(() => console.log("Done."));
