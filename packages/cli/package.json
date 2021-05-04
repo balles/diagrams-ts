@@ -1,0 +1,33 @@
+{
+  "name": "@diagrams-ts/cli",
+  "version": "0.3.8",
+  "description": "CLI for diagrams-ts",
+  "keywords": [
+    "diagrams",
+    "graphviz",
+    "architecture",
+    "cloud",
+    "documentation"
+  ],
+  "author": "balles",
+  "homepage": "https://github.com/balles/diagrams-ts#readme",
+  "license": "MIT",
+  "main": "bin/diagrams.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balles/diagrams-ts.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/balles/diagrams-ts/issues"
+  },
+  "bin": {
+    "diagrams-ts": "./bin/diagrams.ts"
+  },
+  "dependencies": {
+    "commander": "7.2.0"
+  }
+}
