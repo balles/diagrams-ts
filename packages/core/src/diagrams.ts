@@ -223,7 +223,7 @@ export const diagram = createSubDiagram();
 export const dg = diagram;
 export const styled = createSubDiagram;
 
-export const passThroughRenderer = ({}) => async (
+export const passThroughRenderer = ({}: Record<string, unknown>) => async (
   dotInput: string
 ): Promise<string> => dotInput;
 
