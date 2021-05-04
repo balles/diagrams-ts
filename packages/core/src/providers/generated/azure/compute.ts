@@ -1,5 +1,11 @@
 import { createProvider } from "../../create-provider";
 
+export const AppServices = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/app-services.png"
+);
+export const AutomanagedVM = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/automanaged-vm.png"
+);
 export const AvailabilitySets = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/availability-sets.png"
 );
@@ -24,6 +30,9 @@ export const ContainerInstances = createProvider(
 export const ContainerRegistries = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/container-registries.png"
 );
+export const DiskEncryptionSets = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/disk-encryption-sets.png"
+);
 export const DiskSnapshots = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/disk-snapshots.png"
 );
@@ -33,17 +42,32 @@ export const Disks = createProvider(
 export const FunctionApps = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/function-apps.png"
 );
+export const ImageDefinitions = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/image-definitions.png"
+);
+export const ImageVersions = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/image-versions.png"
+);
 export const KubernetesServices = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/kubernetes-services.png"
 );
 export const MeshApplications = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/mesh-applications.png"
 );
+export const OsImages = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/os-images.png"
+);
 export const SAPHANAOnAzure = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/sap-hana-on-azure.png"
 );
 export const ServiceFabricClusters = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/service-fabric-clusters.png"
+);
+export const SharedImageGalleries = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/shared-image-galleries.png"
+);
+export const SpringCloud = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/spring-cloud.png"
 );
 export const VMClassic = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/vm-classic.png"
@@ -62,6 +86,9 @@ export const VMWindows = createProvider(
 );
 export const VM = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/vm.png"
+);
+export const Workspaces = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/compute/workspaces.png"
 );
 
 export const ACR = ContainerRegistries;

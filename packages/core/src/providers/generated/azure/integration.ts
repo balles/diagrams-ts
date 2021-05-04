@@ -33,6 +33,9 @@ export const LogicAppsCustomConnector = createProvider(
 export const LogicApps = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/integration/logic-apps.png"
 );
+export const PartnerTopic = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/integration/partner-topic.png"
+);
 export const SendgridAccounts = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/integration/sendgrid-accounts.png"
 );
@@ -50,4 +53,7 @@ export const SoftwareAsAService = createProvider(
 );
 export const StorsimpleDeviceManagers = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/integration/storsimple-device-managers.png"
+);
+export const SystemTopic = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/integration/system-topic.png"
 );

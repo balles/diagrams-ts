@@ -1,7 +1,7 @@
 import { createProvider } from "../../create-provider";
 
 export const AppServiceMobile = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/mobile/app-service---mobile.png"
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/mobile/app-service-mobile.png"
 );
 export const MobileEngagement = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/mobile/mobile-engagement.png"

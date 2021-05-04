@@ -30,6 +30,9 @@ export const ConditionalAccess = createProvider(
 export const EnterpriseApplications = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/identity/enterprise-applications.png"
 );
+export const Groups = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/identity/groups.png"
+);
 export const IdentityGovernance = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/identity/identity-governance.png"
 );
@@ -38,4 +41,7 @@ export const InformationProtection = createProvider(
 );
 export const ManagedIdentities = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/identity/managed-identities.png"
+);
+export const Users = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/identity/users.png"
 );

@@ -15,6 +15,9 @@ export const Devops = createProvider(
 export const DevtestLabs = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/devtest-labs.png"
 );
+export const LabServices = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/lab-services.png"
+);
 export const Pipelines = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/devops/pipelines.png"
 );

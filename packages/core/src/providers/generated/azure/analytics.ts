@@ -33,3 +33,6 @@ export const LogAnalyticsWorkspaces = createProvider(
 export const StreamAnalyticsJobs = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/stream-analytics-jobs.png"
 );
+export const SynapseAnalytics = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/analytics/synapse-analytics.png"
+);

@@ -9,6 +9,12 @@ export const CacheForRedis = createProvider(
 export const CosmosDb = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/cosmos-db.png"
 );
+export const DataExplorerClusters = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/data-explorer-clusters.png"
+);
+export const DataFactory = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/data-factory.png"
+);
 export const DataLake = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/data-lake.png"
 );
@@ -27,6 +33,9 @@ export const ElasticDatabasePools = createProvider(
 export const ElasticJobAgents = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/elastic-job-agents.png"
 );
+export const InstancePools = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/instance-pools.png"
+);
 export const ManagedDatabases = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/managed-databases.png"
 );
@@ -44,6 +53,18 @@ export const SQLServerStretchDatabases = createProvider(
 );
 export const SQLServers = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/sql-servers.png"
+);
+export const SQLVM = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/sql-vm.png"
+);
+export const SQL = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/sql.png"
+);
+export const SsisLiftAndShiftIr = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/ssis-lift-and-shift-ir.png"
+);
+export const SynapseAnalytics = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/synapse-analytics.png"
 );
 export const VirtualClusters = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/azure/database/virtual-clusters.png"
