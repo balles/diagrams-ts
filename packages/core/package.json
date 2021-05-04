@@ -1,6 +1,6 @@
 {
   "name": "@diagrams-ts/core",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "description": "TypeScript port of diagrams",
   "main": "dist/diagrams.js",
   "types": "dist/diagrams.d.ts",
