@@ -24,11 +24,24 @@
   "bugs": {
     "url": "https://github.com/balles/diagrams-ts/issues"
   },
+  "scripts": {
+    "build": "tsc"
+  },
   "bin": {
-    "diagrams-ts": "./bin/diagrams.ts"
+    "diagrams-ts": "./dist/src/index.js"
   },
   "dependencies": {
+    "@diagrams-ts/core": "0.3.11",
+    "@diagrams-ts/graphviz-cli-renderer": "0.3.10",
+    "@diagrams-ts/graphviz-functional-ts": "0.3.10",
+    "@diagrams-ts/graphviz-wasm-renderer": "0.3.10",
+    "@diagrams-ts/local-image-cache-plugin": "0.3.10",
     "commander": "7.2.0",
-    "rimraf": "3.0.2"
+    "open": "8.0.7",
+    "rimraf": "3.0.2",
+    "ts-node": "9.1.1"
+  },
+  "devDependencies": {
+    "typescript": "4.1.2"
   }
 }
