@@ -1,0 +1,17 @@
+{
+    "name": "diagrams-render",
+    "version": "0.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+      "@diagrams-ts/core": "0.3.11",
+      "@diagrams-ts/graphviz-cli-renderer": "0.3.10",
+      "@diagrams-ts/graphviz-functional-ts": "0.3.10",
+      "@diagrams-ts/graphviz-wasm-renderer": "0.3.10",
+      "@diagrams-ts/local-image-cache-plugin": "0.3.10"
+    },
+    "devDependencies": {
+      "@types/node": "15.0.2",
+      "typescript": "4.1.2"
+    }
+  }

@@ -5,13 +5,15 @@ import { promises } from "fs";
 import path from "path";
 import rimraf from "rimraf";
 
-const { mkdir, copyFile, writeFile } = promises;
+const { mkdir, copyFile, writeFile, symlink } = promises;
 
 const execAsync = promisify(exec);
 const rimrafAsync = promisify(rimraf);
 
 const runTsNodeForFile = async (file: string): Promise<void> => {
-  const { stdout, stderr } = await execAsync(`ts-node ${file}`);
+  const { stdout, stderr } = await execAsync(
+    `ts-node-script ${file} --transpile-only`
+  );
 
   if (stdout?.length > 0) {
     console.error("ts-node:", stdout);
@@ -55,10 +57,9 @@ const getRenderFileContent = ({
 }: GetRenderFileContentArgs): string => {
   // TODO replace missing parameters with other parameters/defaults
   // TODO remove typecast in map
-
   const importFileName = path.basename(inputFile, path.extname(inputFile));
   return `
-  import { createDiagram } from "diagrams-ts";
+  import { createDiagramCore } from "@diagrams-ts/core";
   ${rendererToImportMap[renderer as "CLI" | "WASM" | "NONE"]};
   import diagramToRender from "./${importFileName}";
   import { Renderer } from "@diagrams-ts/graphviz-functional-ts";
@@ -71,7 +72,7 @@ const getRenderFileContent = ({
   
   (async () => {
     try {
-      const result = await createDiagram({
+      const result = await createDiagramCore({
         label: "${label}",
         filename: "${filename}",
         direction: "${direction}",
@@ -102,19 +103,34 @@ const createRenderDirectory = async ({
   const fileWithDiagram = path.join(tempDirectory, path.basename(inputFile));
   const fileToRun = path.join(tempDirectory, "create-diagram.ts");
   await mkdir(process.pid.toString());
-  await copyFile(inputFile, fileWithDiagram);
-  await writeFile(
-    fileToRun,
-    getRenderFileContent({
-      label,
-      inputFile,
-      direction,
-      filename,
-      renderer,
-      outformat,
-      useLocalImages,
-    })
-  );
+  await Promise.all([
+    await copyFile(inputFile, fileWithDiagram),
+    await copyFile(
+      path.join(__dirname, "../../template-files/template.tsconfig.json"),
+      path.join(tempDirectory, "tsconfig.json")
+    ),
+    await copyFile(
+      path.join(__dirname, "../../template-files/template.package.json"),
+      path.join(tempDirectory, "package.json")
+    ),
+    await symlink(
+      `/Users/michael/.config/yarn/global/node_modules`, //TODO REPLACE WITH CHANGEABLE PATH (npm, something else...)
+      path.join(tempDirectory, "node_modules"),
+      "dir"
+    ),
+    await writeFile(
+      fileToRun,
+      getRenderFileContent({
+        label,
+        inputFile,
+        direction,
+        filename,
+        renderer,
+        outformat,
+        useLocalImages,
+      })
+    ),
+  ]);
   return fileToRun;
 };
 
@@ -165,6 +181,7 @@ const renderDiagram = async (
 
 // TODO use "open" as option
 // TODO keep output directory as option
+// TODO make standalone optional and Path to modules chooseable
 
 export const renderCommand = (): commander.Command => {
   const render = new Command("render");
