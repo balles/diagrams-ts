@@ -25,10 +25,10 @@
     "url": "https://github.com/balles/diagrams-ts/issues"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "yarn rimraf dist && tsc"
   },
   "bin": {
-    "diagrams-ts": "./dist/src/index.js"
+    "diagrams-ts": "./dist/index.js"
   },
   "dependencies": {
     "@diagrams-ts/core": "0.3.11",
