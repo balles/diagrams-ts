@@ -10,13 +10,55 @@ import { addCommonOptions } from "./add-common-options";
 
 const rimrafAsync = promisify(rimraf);
 
+const formatToRendererMap = {
+  CLI: ["png", "jpg", "webp"],
+  WASM: ["svg", "dot", "dot_json", "json", "xdot_json"],
+  NONE: ["png", "jpg", "webp", "svg", "dot", "dot_json", "json", "xdot_json"], // will be ignored anyway
+};
+
+const validateInput = (input: {
+  direction: string;
+  renderer: string;
+  outformat: string;
+  useLocalImages: boolean;
+}) => {
+  if (!["LR", "TB", "RL", "BT"].includes(input.direction)) {
+    throw Error(`Invalid input direction: ${input.direction}`);
+  }
+  if (!["CLI", "WASM", "NONE"].includes(input.renderer)) {
+    throw Error(`Invalid input renderer: ${input.renderer}`);
+  }
+  if (
+    !formatToRendererMap[input.renderer as "CLI" | "WASM" | "NONE"].includes(
+      input.outformat
+    )
+  ) {
+    throw Error(
+      `Invalid input format: ${input.outformat}. Renderer ${
+        input.renderer
+      } only accepts ${
+        formatToRendererMap[input.renderer as "CLI" | "WASM" | "NONE"]
+      }`
+    );
+  }
+  if (
+    !input.useLocalImages &&
+    input.renderer === "CLI" &&
+    ["png", "jpg", "webp"].includes(input.outformat)
+  ) {
+    throw Error(
+      "Rendering binary images won't work for images from an URL. You'll need to add the -i flag to fetch the images before creating the output."
+    );
+  }
+};
+
 type RenderDiagramArgs = {
   label: string;
   inputFile: string;
-  direction: string; //TODO "LR" | "TB" | "RL" | "BT";
+  direction: string;
   format: string;
   outputfile?: string;
-  renderer: string; //TODO "CLI" | "WASM" | "NONE";
+  renderer: string;
   localImages: boolean;
   standAlone: boolean;
   keep: boolean;
@@ -37,6 +79,13 @@ const renderDiagram = async (
     show = false,
   }: RenderDiagramArgs
 ) => {
+  validateInput({
+    direction,
+    outformat,
+    renderer,
+    useLocalImages,
+  });
+
   if (!filename) {
     filename = `${path.basename(
       inputFile,
@@ -79,8 +128,6 @@ const renderDiagram = async (
     await open(filename);
   }
 };
-
-// TODO Allow only the right output formats!
 
 export const renderCommand = (): commander.Command => {
   const render = new Command("render");
