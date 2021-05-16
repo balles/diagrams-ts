@@ -4,6 +4,19 @@ import { promisify } from "util";
 import { promises } from "fs";
 import path from "path";
 import rimraf from "rimraf";
+import open from "open";
+
+// If you don't use yarn or you use another location for your global modules
+// you'll need to set this environment variable for stand-alone mode. e.g.:
+//
+// export DIAGRAMS_GLOBAL_MODULES=$(yarn global bin)/node_modules
+//
+// or
+//
+// export DIAGRAMS_GLOBAL_MODULES=$(npm root -g)
+
+const pathToGlobalNodeModules =
+  process.env.DIAGRAMS_GLOBAL_MODULES || "~/.config/yarn/global/node_modules";
 
 const { mkdir, copyFile, writeFile, symlink } = promises;
 
@@ -16,7 +29,19 @@ const runTsNodeForFile = async (file: string): Promise<void> => {
   );
 
   if (stdout?.length > 0) {
-    console.error("ts-node:", stdout);
+    console.log("ts-node:", stdout);
+  }
+
+  if (stderr?.length > 0) {
+    console.error("stderr:ts-node", stderr);
+  }
+};
+
+const runTsNodeForString = async (input: string): Promise<void> => {
+  const { stdout, stderr } = await execAsync(`ts-node -e '${input}'`);
+
+  if (stdout?.length > 0) {
+    console.log("ts-node:", stdout);
   }
 
   if (stderr?.length > 0) {
@@ -114,7 +139,7 @@ const createRenderDirectory = async ({
       path.join(tempDirectory, "package.json")
     ),
     await symlink(
-      `/Users/michael/.config/yarn/global/node_modules`, //TODO REPLACE WITH CHANGEABLE PATH (npm, something else...)
+      pathToGlobalNodeModules,
       path.join(tempDirectory, "node_modules"),
       "dir"
     ),
@@ -142,6 +167,9 @@ type RenderDiagramArgs = {
   outputfile?: string;
   renderer: string; //TODO "CLI" | "WASM" | "NONE";
   localImages: boolean;
+  standAlone: boolean;
+  keep: boolean;
+  show: boolean;
 };
 
 const renderDiagram = async (
@@ -153,6 +181,9 @@ const renderDiagram = async (
     outputfile: filename,
     renderer,
     localImages: useLocalImages = false,
+    standAlone = false,
+    keep = false,
+    show = false,
   }: RenderDiagramArgs
 ) => {
   if (!filename) {
@@ -161,27 +192,44 @@ const renderDiagram = async (
       path.extname(inputFile)
     )}.${outformat}`;
   }
-  try {
-    const fileToRun = await createRenderDirectory({
-      label,
-      inputFile,
-      direction,
-      outformat,
-      filename,
-      renderer,
-      useLocalImages,
-    });
-    await runTsNodeForFile(fileToRun);
-  } catch (error) {
-    console.error(error);
-  } finally {
-    rimrafAsync(process.pid.toString());
+  if (standAlone) {
+    try {
+      const fileToRun = await createRenderDirectory({
+        label,
+        inputFile,
+        direction,
+        outformat,
+        filename,
+        renderer,
+        useLocalImages,
+      });
+      await runTsNodeForFile(fileToRun);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      if (!keep) {
+        await rimrafAsync(process.pid.toString());
+      }
+    }
+  } else {
+    await runTsNodeForString(
+      getRenderFileContent({
+        label,
+        inputFile,
+        direction,
+        outformat,
+        filename,
+        renderer,
+        useLocalImages,
+      })
+    );
+  }
+  if (show) {
+    await open(filename);
   }
 };
 
-// TODO use "open" as option
-// TODO keep output directory as option
-// TODO make standalone optional and Path to modules chooseable
+// TODO Allow only the right output formats!
 
 export const renderCommand = (): commander.Command => {
   const render = new Command("render");
@@ -211,6 +259,12 @@ export const renderCommand = (): commander.Command => {
     "-i,--local-images ",
     "retrieve images from URLs and use local version of images"
   );
+  render.option("-a,--stand-alone", "run outside of typescript project");
+  render.option(
+    "-k,--keep",
+    "keep the working directory, only works with 'stand-alone' mode"
+  );
+  render.option("-s,--show", "show file after rendering");
   render.action(renderDiagram);
   return render;
 };
