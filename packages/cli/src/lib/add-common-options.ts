@@ -13,4 +13,8 @@ export const addCommonOptions = (command: commander.Command): void => {
     "-k,--keep",
     "keep the working directory, only works with 'stand-alone' mode"
   );
+  command.option(
+    "-i,--local-images ",
+    "retrieve images from URLs and use local version of images"
+  );
 };

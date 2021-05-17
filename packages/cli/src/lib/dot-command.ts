@@ -8,7 +8,7 @@ import { addCommonOptions } from "./add-common-options";
 
 const rimrafAsync = promisify(rimraf);
 
-type RenderDiagramArgs = {
+type DotDiagramArgs = {
   label: string;
   inputFile: string;
   direction: string; //TODO "LR" | "TB" | "RL" | "BT";
@@ -23,12 +23,17 @@ type RenderDiagramArgs = {
 
 const renderDot = async (
   inputFile: string,
-  { label, direction, standAlone = false, keep = false }: RenderDiagramArgs
+  {
+    label,
+    direction,
+    standAlone = false,
+    keep = false,
+    localImages: useLocalImages = false,
+  }: DotDiagramArgs
 ) => {
   const outformat = "dot";
   const filename = "not used";
   const renderer = "NONE";
-  const useLocalImages = false;
 
   if (standAlone) {
     try {

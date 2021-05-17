@@ -148,10 +148,6 @@ export const renderCommand = (): commander.Command => {
     'the renderer to use "CLI" (requires installed graphviz) ,"WASM" or "NONE"',
     "WASM"
   );
-  render.option(
-    "-i,--local-images ",
-    "retrieve images from URLs and use local version of images"
-  );
   render.option("-s,--show", "show file after rendering");
   render.action(renderDiagram);
   return render;
