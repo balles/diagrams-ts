@@ -3,7 +3,11 @@ import { promisify } from "util";
 import path from "path";
 import rimraf from "rimraf";
 import open from "open";
-import { getRenderFileContent } from "./get-renderer-content";
+import {
+  Direction,
+  getRenderFileContent,
+  Renderer,
+} from "./get-renderer-content";
 import { createRenderDirectory } from "./create-render-directory";
 import { runTsNodeForFile, runTsNodeForString } from "./ts-node-wrapper";
 import { addCommonOptions } from "./add-common-options";
@@ -21,24 +25,20 @@ const validateInput = (input: {
   renderer: string;
   outformat: string;
   useLocalImages: boolean;
-}) => {
-  if (!["LR", "TB", "RL", "BT"].includes(input.direction)) {
+}): { renderer: Renderer; direction: Direction } => {
+  if (!Object.keys(Direction).includes(input.direction)) {
     throw Error(`Invalid input direction: ${input.direction}`);
   }
-  if (!["CLI", "WASM", "NONE"].includes(input.renderer)) {
+  if (!Object.keys(Renderer).includes(input.renderer)) {
     throw Error(`Invalid input renderer: ${input.renderer}`);
   }
   if (
-    !formatToRendererMap[input.renderer as "CLI" | "WASM" | "NONE"].includes(
-      input.outformat
-    )
+    !formatToRendererMap[input.renderer as Renderer].includes(input.outformat)
   ) {
     throw Error(
       `Invalid input format: ${input.outformat}. Renderer ${
         input.renderer
-      } only accepts ${
-        formatToRendererMap[input.renderer as "CLI" | "WASM" | "NONE"]
-      }`
+      } only accepts ${formatToRendererMap[input.renderer as Renderer]}`
     );
   }
   if (
@@ -50,6 +50,10 @@ const validateInput = (input: {
       "Rendering binary images won't work for images from an URL. You'll need to add the -i flag to fetch the images before creating the output."
     );
   }
+  return {
+    renderer: input.renderer as Renderer,
+    direction: input.direction as Direction,
+  };
 };
 
 type RenderDiagramArgs = {
@@ -79,7 +83,10 @@ const renderDiagram = async (
     show = false,
   }: RenderDiagramArgs
 ) => {
-  validateInput({
+  const {
+    renderer: validatedRenderer,
+    direction: validatedDirection,
+  } = validateInput({
     direction,
     outformat,
     renderer,
@@ -97,10 +104,10 @@ const renderDiagram = async (
       const fileToRun = await createRenderDirectory({
         label,
         inputFile,
-        direction,
+        direction: validatedDirection,
         outformat,
         filename,
-        renderer,
+        renderer: validatedRenderer,
         useLocalImages,
       });
       await runTsNodeForFile(fileToRun);
@@ -116,10 +123,10 @@ const renderDiagram = async (
       getRenderFileContent({
         label,
         inputFile,
-        direction,
+        direction: validatedDirection,
         outformat,
         filename,
-        renderer,
+        renderer: validatedRenderer,
         useLocalImages,
       })
     );

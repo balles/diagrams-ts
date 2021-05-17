@@ -12,13 +12,25 @@ const rendererMap = {
   NONE: "passThroughRenderer",
 };
 
+export enum Direction {
+  LR = "LR",
+  TB = "TB",
+  RL = "RL",
+  BT = "BT",
+}
+export enum Renderer {
+  CLI = "CLI",
+  WASM = "WASM",
+  NONE = "NONE",
+}
+
 export type GetRenderFileContentArgs = {
   label: string;
   inputFile: string;
-  direction: string; //TODO "LR" | "TB" | "RL" | "BT";
+  direction: Direction;
   outformat: string;
   filename?: string;
-  renderer: string; //TODO "CLI" | "WASM" | "NONE";
+  renderer: Renderer;
   useLocalImages: boolean;
 };
 
@@ -31,12 +43,10 @@ export const getRenderFileContent = ({
   renderer,
   useLocalImages,
 }: GetRenderFileContentArgs): string => {
-  // TODO replace missing parameters with other parameters/defaults
-  // TODO remove typecast in map
   const importFileName = path.basename(inputFile, path.extname(inputFile));
   return `
     import { createDiagramCore } from "@diagrams-ts/core";
-    ${rendererToImportMap[renderer as "CLI" | "WASM" | "NONE"]};
+    ${rendererToImportMap[renderer]};
     import diagramToRender from "./${importFileName}";
     import { Renderer } from "@diagrams-ts/graphviz-functional-ts";
     ${
@@ -53,9 +63,7 @@ export const getRenderFileContent = ({
           filename: "${filename}",
           direction: "${direction}",
           outformat: "${outformat}",
-          renderer: ${
-            rendererMap[renderer as "CLI" | "WASM" | "NONE"]
-          } as Renderer<string>,
+          renderer: ${rendererMap[renderer]} as Renderer<string>,
           nodePlugins: ${useLocalImages ? "[LocalImageCachePlugin]" : "[]"},
         })(diagramToRender());
         console.log(result);

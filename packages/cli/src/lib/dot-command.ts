@@ -1,7 +1,11 @@
 import commander, { Command } from "commander";
 import { promisify } from "util";
 import rimraf from "rimraf";
-import { getRenderFileContent } from "./get-renderer-content";
+import {
+  getRenderFileContent,
+  Direction,
+  Renderer,
+} from "./get-renderer-content";
 import { createRenderDirectory } from "./create-render-directory";
 import { runTsNodeForFile, runTsNodeForString } from "./ts-node-wrapper";
 import { addCommonOptions } from "./add-common-options";
@@ -10,15 +14,18 @@ const rimrafAsync = promisify(rimraf);
 
 type DotDiagramArgs = {
   label: string;
-  inputFile: string;
-  direction: string; //TODO "LR" | "TB" | "RL" | "BT";
+  direction: string;
   format: string;
-  outputfile?: string;
-  renderer: string; //TODO "CLI" | "WASM" | "NONE";
   localImages: boolean;
-  standAlone: boolean;
   keep: boolean;
-  show: boolean;
+  standAlone: boolean;
+};
+
+const verifyDirection = (direction: string): Direction => {
+  if (!Object.keys(Direction).includes(direction)) {
+    throw Error(`Input direction is invalid: ${direction}`);
+  }
+  return direction as Direction;
 };
 
 const renderDot = async (
@@ -33,14 +40,14 @@ const renderDot = async (
 ) => {
   const outformat = "dot";
   const filename = "not used";
-  const renderer = "NONE";
+  const renderer = "NONE" as Renderer;
 
   if (standAlone) {
     try {
       const fileToRun = await createRenderDirectory({
         label,
         inputFile,
-        direction,
+        direction: verifyDirection(direction),
         outformat,
         filename,
         renderer,
@@ -59,7 +66,7 @@ const renderDot = async (
       getRenderFileContent({
         label,
         inputFile,
-        direction,
+        direction: verifyDirection(direction),
         outformat,
         filename,
         renderer,
