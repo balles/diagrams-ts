@@ -1,0 +1,45 @@
+{
+  "name": "@diagrams-ts/cli",
+  "version": "0.3.8",
+  "description": "CLI for diagrams-ts",
+  "keywords": [
+    "diagrams",
+    "graphviz",
+    "architecture",
+    "cloud",
+    "documentation"
+  ],
+  "author": "balles",
+  "homepage": "https://github.com/balles/diagrams-ts#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balles/diagrams-ts.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/balles/diagrams-ts/issues"
+  },
+  "scripts": {
+    "build": "yarn rimraf dist && tsc"
+  },
+  "bin": {
+    "diagrams-ts": "./dist/index.js"
+  },
+  "dependencies": {
+    "@diagrams-ts/core": "*",
+    "@diagrams-ts/graphviz-cli-renderer": "*",
+    "@diagrams-ts/graphviz-functional-ts": "*",
+    "@diagrams-ts/graphviz-wasm-renderer": "*",
+    "@diagrams-ts/local-image-cache-plugin": "*",
+    "commander": "7.2.0",
+    "open": "8.0.7",
+    "rimraf": "3.0.2",
+    "ts-node": "9.1.1",
+    "typescript": "4.1.2"
+  }
+}
