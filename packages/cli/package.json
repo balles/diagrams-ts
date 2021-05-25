@@ -1,6 +1,6 @@
 {
   "name": "@diagrams-ts/cli",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "CLI for diagrams-ts",
   "keywords": [
     "diagrams",
@@ -31,11 +31,11 @@
     "diagrams-ts": "./dist/index.js"
   },
   "dependencies": {
-    "@diagrams-ts/core": "^0.4.0",
-    "@diagrams-ts/graphviz-cli-renderer": "^0.4.0",
-    "@diagrams-ts/graphviz-functional-ts": "^0.4.0",
-    "@diagrams-ts/graphviz-wasm-renderer": "^0.4.0",
-    "@diagrams-ts/local-image-cache-plugin": "^0.4.0",
+    "@diagrams-ts/core": "^0.5.0",
+    "@diagrams-ts/graphviz-cli-renderer": "^0.5.0",
+    "@diagrams-ts/graphviz-functional-ts": "^0.5.0",
+    "@diagrams-ts/graphviz-wasm-renderer": "^0.5.0",
+    "@diagrams-ts/local-image-cache-plugin": "^0.5.0",
     "commander": "7.2.0",
     "open": "8.0.7",
     "rimraf": "3.0.2",
