@@ -12,6 +12,7 @@ import * as openstack from "./providers/generated/openstack/index";
 import * as outscale from "./providers/generated/outscale/index";
 import * as programming from "./providers/generated/programming/index";
 import * as saas from "./providers/generated/saas/index";
+import * as ibm from "./providers/generated/ibm/index";
 import {
   cluster,
   EdgeAttributes,
@@ -38,6 +39,7 @@ export const providers = {
   firebase,
   gcp,
   generic,
+  ibm,
   k8s,
   oci,
   onprem,
