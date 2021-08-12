@@ -15,6 +15,9 @@ export const Firecracker = createProvider(
 export const Gvisor = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/container/gvisor.png"
 );
+export const K3s = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/container/k3s.png"
+);
 export const Lxc = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/container/lxc.png"
 );

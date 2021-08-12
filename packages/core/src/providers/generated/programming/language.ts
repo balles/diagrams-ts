@@ -33,6 +33,9 @@ export const Javascript = createProvider(
 export const Kotlin = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/programming/language/kotlin.png"
 );
+export const Latex = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/programming/language/latex.png"
+);
 export const Matlab = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/programming/language/matlab.png"
 );
