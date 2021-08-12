@@ -1,11 +1,5 @@
 import { createProvider } from "../../create-provider";
 
-export const Enterprise = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/general/Enterprise.png"
-);
-export const Internet = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/general/Internet.png"
-);
 export const CloudMessaging = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/general/cloud-messaging.png"
 );
@@ -20,6 +14,9 @@ export const CognitiveServices = createProvider(
 );
 export const DataSecurity = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/general/data-security.png"
+);
+export const Enterprise = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/general/enterprise.png"
 );
 export const GovernanceRiskCompliance = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/general/governance-risk-compliance.png"
@@ -38,6 +35,9 @@ export const IdentityProvider = createProvider(
 );
 export const InfrastructureSecurity = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/general/infrastructure-security.png"
+);
+export const Internet = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/general/internet.png"
 );
 export const IotCloud = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/general/iot-cloud.png"

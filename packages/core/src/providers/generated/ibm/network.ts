@@ -1,37 +1,22 @@
 import { createProvider } from "../../create-provider";
 
 export const Bridge = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/Bridge.png"
-);
-export const Enterprise = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/Enterprise.png"
-);
-export const Firewall = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/Firewall.png"
-);
-export const Gateway = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/Gateway.png"
-);
-export const Region = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/Region.png"
-);
-export const Router = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/Router.png"
-);
-export const Rules = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/Rules.png"
-);
-export const Subnet = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/Subnet.png"
-);
-export const VPC = createProvider(
-  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/VPC.png"
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/bridge.png"
 );
 export const DirectLink = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/direct-link.png"
 );
+export const Enterprise = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/enterprise.png"
+);
+export const Firewall = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/firewall.png"
+);
 export const FloatingIp = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/floating-ip.png"
+);
+export const Gateway = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/gateway.png"
 );
 export const InternetServices = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/internet-services.png"
@@ -51,8 +36,23 @@ export const LoadBalancingRouting = createProvider(
 export const PublicGateway = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/public-gateway.png"
 );
+export const Region = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/region.png"
+);
+export const Router = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/router.png"
+);
+export const Rules = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/rules.png"
+);
+export const Subnet = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/subnet.png"
+);
 export const TransitGateway = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/transit-gateway.png"
+);
+export const Vpc = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/vpc.png"
 );
 export const VpnConnection = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/ibm/network/vpn-connection.png"
