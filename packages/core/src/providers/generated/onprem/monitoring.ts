@@ -6,6 +6,9 @@ export const Cortex = createProvider(
 export const Datadog = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/monitoring/datadog.png"
 );
+export const Dynatrace = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/monitoring/dynatrace.png"
+);
 export const Grafana = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/monitoring/grafana.png"
 );

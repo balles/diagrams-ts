@@ -12,3 +12,6 @@ export const Github = createProvider(
 export const Gitlab = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/vcs/gitlab.png"
 );
+export const Svn = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/vcs/svn.png"
+);
