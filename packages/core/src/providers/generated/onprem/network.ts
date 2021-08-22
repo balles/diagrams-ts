@@ -75,6 +75,9 @@ export const Tomcat = createProvider(
 export const Traefik = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/network/traefik.png"
 );
+export const Tyk = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/network/tyk.png"
+);
 export const Vyos = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/onprem/network/vyos.png"
 );

@@ -36,6 +36,9 @@ export const React = createProvider(
 export const Spring = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/spring.png"
 );
+export const Starlette = createProvider(
+  "https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/starlette.png"
+);
 export const Vue = createProvider(
   "https://github.com/mingrammer/diagrams/raw/master/resources/programming/framework/vue.png"
 );

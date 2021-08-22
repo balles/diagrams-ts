@@ -1,29 +1,39 @@
-import * as adjacentenablers from "./adjacentenablers";
 import * as apiproxies from "./apiproxies";
 import * as applicationlifecycle from "./applicationlifecycle";
 import * as baremetal from "./baremetal";
+import * as billing from "./billing";
 import * as compute from "./compute";
+import * as containerservices from "./containerservices";
+import * as deployment from "./deployment";
 import * as frontend from "./frontend";
-import * as lifecyclemanagement from "./lifecyclemanagement";
+import * as monitoring from "./monitoring";
+import * as multiregion from "./multiregion";
 import * as networking from "./networking";
-import * as operations from "./operations";
+import * as nfv from "./nfv";
+import * as optimization from "./optimization";
 import * as orchestration from "./orchestration";
+import * as packaging from "./packaging";
 import * as sharedservices from "./sharedservices";
 import * as storage from "./storage";
 import * as user from "./user";
 import * as workloadprovisioning from "./workloadprovisioning";
 
 export {
-  adjacentenablers,
   apiproxies,
   applicationlifecycle,
   baremetal,
+  billing,
   compute,
+  containerservices,
+  deployment,
   frontend,
-  lifecyclemanagement,
+  monitoring,
+  multiregion,
   networking,
-  operations,
+  nfv,
+  optimization,
   orchestration,
+  packaging,
   sharedservices,
   storage,
   user,

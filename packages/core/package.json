@@ -10,7 +10,7 @@
   "engines": {
     "node": ">=12"
   },
-  "diagrams-python-sha": "7fd04c251087cdde450f9f2c88dd8a701ab8c70e",
+  "diagrams-python-sha": "6d9610b0ff3ac8740f285c47272f7140dc1cae0c",
   "repository": {
     "type": "git",
     "url": "https://github.com/balles/diagrams-ts.git",
