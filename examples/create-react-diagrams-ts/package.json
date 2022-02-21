@@ -3,7 +3,7 @@
   "version": "0.5.2",
   "private": true,
   "dependencies": {
-    "@babel/core": "7.12.3",
+    "@babel/core": "7.17.5",
     "@diagrams-ts/core": "^0.5.2",
     "@diagrams-ts/graphviz-cli-renderer": "^0.5.0",
     "@diagrams-ts/graphviz-functional-ts": "^0.5.0",
