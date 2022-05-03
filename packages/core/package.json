@@ -24,7 +24,7 @@
     "generate-providers": "yarn ts-node scripts/generate-providers master && yarn format"
   },
   "devDependencies": {
-    "@types/jest": "26.0.22",
+    "@types/jest": "27.5.0",
     "@types/node": "15.0.1",
     "@types/node-fetch": "2.5.10",
     "@types/rimraf": "3.0.0",
